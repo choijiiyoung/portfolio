@@ -50,4 +50,52 @@ header .header_inner a {
   color: #464644;
 }
 
+#visual {
+  padding-top: 70px;
+  margin-bottom: 110px;
+}
+#visual .title {
+  display: flex;
+  font: bold 140px "arial";
+  align-items: center;
+  margin-bottom: 30px;
+  letter-spacing: -0.01em;
+}
+#visual .title p:nth-of-type(2) {
+  margin-left: 30px;
+}
+#visual .title p.small {
+  padding: 50px 40px 0 0;
+  margin-left: 30px;
+  font-size: 14px;
+  letter-spacing: 0em;
+}
+#visual .title p.small span {
+  display: block;
+}
+#visual .title p.small span.line {
+  width: 170px;
+  height: 1px;
+  margin-top: 10px;
+  background-color: #222;
+}
+#visual .title p.last {
+  font-style: italic;
+}
+#visual .img {
+  width: 100%;
+  height: 400px;
+  background-color: #efefef;
+  margin-bottom: 20px;
+}
+#visual .txt_wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.inner {
+  width: 1200px;
+  margin: 0 auto;
+}
+
 /*# sourceMappingURL=style.css.map */
