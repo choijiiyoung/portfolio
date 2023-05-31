@@ -1,0 +1,45 @@
+header {
+	width: 100%;
+	height: 70px;
+	background: #efefef;
+
+	.header_inner {
+		display: flex;
+		max-width: 1920px;
+		margin: 0 auto;
+		padding: 21px 2% 0;
+
+		h1 {
+			margin-top: -9px;
+		}
+
+		nav {
+			margin-left: 50px;
+
+			.gnb {
+				display: flex;
+				gap: 20px;
+
+				a {
+					font: 16px 'arial';
+				}
+			}
+		}
+
+		.util {
+			display: flex;
+			gap: 15px;
+			margin-left: auto;
+
+			li {
+				a {
+					font: 16px 'arial';
+				}
+			}
+		}
+
+		a {
+			color: #464644;
+		}
+	}
+}

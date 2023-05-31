@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  width: 100%;
+  height: 70px;
+  background: #efefef;
+}
+header .header_inner {
+  display: flex;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 21px 2% 0;
+}
+header .header_inner h1 {
+  margin-top: -9px;
+}
+header .header_inner nav {
+  margin-left: 50px;
+}
+header .header_inner nav .gnb {
+  display: flex;
+  gap: 20px;
+}
+header .header_inner nav .gnb a {
+  font: 16px "arial";
+}
+header .header_inner .util {
+  display: flex;
+  gap: 15px;
+  margin-left: auto;
+}
+header .header_inner .util li a {
+  font: 16px "arial";
+}
+header .header_inner a {
+  color: #464644;
+}
+
+/*# sourceMappingURL=style.css.map */
