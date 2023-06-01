@@ -5,10 +5,11 @@
 //main
 @import 'main/visual';
 @import 'main/newproduct';
+@import 'main/imprv';
 
 main {
 	section {
-		margin-bottom: 110px;
+		margin-bottom: 180px;
 
 		&:last-child {
 			margin-bottom: 0;
