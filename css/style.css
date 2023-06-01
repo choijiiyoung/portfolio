@@ -50,54 +50,54 @@ header .header_inner a {
   color: #464644;
 }
 
-#visual {
+.visual_wrap {
   padding-top: 70px;
   margin-bottom: 110px;
 }
-#visual h1 {
+.visual_wrap h1 {
   display: flex;
   font: bold 140px "arial";
   align-items: center;
   margin-bottom: 30px;
   letter-spacing: -0.01em;
 }
-#visual h1 .title:nth-of-type(2) {
+.visual_wrap h1 .title:nth-of-type(2) {
   margin-left: 30px;
 }
-#visual h1 .title.small {
+.visual_wrap h1 .title.small {
   padding: 50px 40px 0 0;
   margin-left: 30px;
   font-size: 14px;
   letter-spacing: 0em;
 }
-#visual h1 .title.small span {
+.visual_wrap h1 .title.small span {
   display: block;
 }
-#visual h1 .title.small span.line {
+.visual_wrap h1 .title.small span.line {
   width: 170px;
   height: 1px;
   margin-top: 10px;
   background-color: #222;
 }
-#visual h1 .title.last {
+.visual_wrap h1 .title.last {
   font-style: italic;
 }
-#visual .img {
+.visual_wrap .img {
   width: 100%;
   height: 400px;
   background-color: #efefef;
   margin-bottom: 20px;
 }
-#visual .txt_wrap {
+.visual_wrap .txt_wrap {
   display: flex;
   justify-content: space-between;
 }
-#visual .txt_wrap .txt {
+.visual_wrap .txt_wrap .txt {
   position: relative;
   width: 50%;
   padding-top: 10px;
 }
-#visual .txt_wrap .txt::before {
+.visual_wrap .txt_wrap .txt::before {
   content: "";
   position: absolute;
   left: 0;
@@ -106,7 +106,7 @@ header .header_inner a {
   height: 2px;
   background-color: #efefee;
 }
-#visual .txt_wrap .txt .dot {
+.visual_wrap .txt_wrap .txt .dot {
   position: absolute;
   right: 0;
   top: 10px;
@@ -115,7 +115,7 @@ header .header_inner a {
   background-color: #222;
   border-radius: 100%;
 }
-#visual .txt_wrap .btn {
+.visual_wrap .txt_wrap .btn {
   display: inline-block;
   width: 140px;
   height: 28px;
