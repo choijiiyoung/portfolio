@@ -126,6 +126,65 @@ header .header_inner a {
   color: #fff;
 }
 
+.new_product .content {
+  display: flex;
+  gap: 30px;
+}
+.new_product .content .txt_area {
+  flex-shrink: 0;
+  width: 140px;
+}
+.new_product .content .product_area {
+  flex-grow: 1;
+}
+.new_product .content .product_area .product_list::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.new_product .content .product_area .product_list .item {
+  float: left;
+  width: 240px;
+}
+.new_product .content .product_area .product_list .item .slide_wrap {
+  width: 100%;
+  height: 240px;
+  margin-bottom: 10px;
+  background: #efefef;
+}
+.new_product .content .product_area .product_list .item.center {
+  margin-left: 20px;
+  width: 410px;
+}
+.new_product .content .product_area .product_list .item.center .slide_wrap {
+  width: 100%;
+  height: 410px;
+}
+.new_product .content .product_area .product_list .item.last {
+  margin-left: 110px;
+}
+.new_product .content .product_area .product_list .item a {
+  display: flex;
+  justify-content: space-between;
+  color: #222;
+}
+.new_product .content .product_area .product_list .item a .info .name {
+  font-weight: 600;
+}
+.new_product .content .product_area .product_list .item a .info .txt {
+  color: #888;
+}
+.new_product .content .product_area .product_list .item a .price {
+  font-weight: 600;
+}
+
+main section {
+  margin-bottom: 110px;
+}
+main section:last-child {
+  margin-bottom: 0;
+}
+
 .inner {
   width: 1200px;
   margin: 0 auto;
