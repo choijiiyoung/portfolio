@@ -278,6 +278,37 @@ header .header_inner a {
   color: #000;
 }
 
+.prod_wrap .prod_list {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+.prod_wrap .prod_list li {
+  position: relative;
+}
+.prod_wrap .prod_list li + li {
+  border-top: 1px solid #ddd;
+}
+.prod_wrap .prod_list li a {
+  display: flex;
+  gap: 425px;
+  align-items: center;
+  padding: 15px 0;
+}
+.prod_wrap .prod_list li a p {
+  font-size: 24px;
+  color: #777;
+}
+.prod_wrap .prod_list li .img {
+  opacity: 0;
+  position: absolute;
+  right: 150px;
+  top: -35px;
+  width: 120px;
+  height: 120px;
+  background-color: #888;
+  z-index: 1;
+}
+
 main section {
   margin-bottom: 180px;
 }
