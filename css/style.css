@@ -110,8 +110,6 @@ header .header_inner a {
   position: absolute;
   right: 0;
   top: 10px;
-  width: 10px;
-  height: 10px;
   background-color: #222;
   border-radius: 100%;
 }
@@ -207,29 +205,62 @@ header .header_inner a {
   display: flex;
   gap: 220px;
   padding: 15px 0;
+  color: #222;
+  font: bold 18px "arial";
 }
 .imprv_wrap .acco_wrap .list li a .num {
   flex-shrink: 0;
   width: 210px;
 }
 .imprv_wrap .acco_wrap .list li a .icon {
+  position: relative;
   margin-left: auto;
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   border: 1px solid #222;
   border-radius: 50%;
 }
+.imprv_wrap .acco_wrap .list li a .icon::before, .imprv_wrap .acco_wrap .list li a .icon::after {
+  content: "";
+  position: absolute;
+  background-color: #222;
+}
+.imprv_wrap .acco_wrap .list li a .icon::before {
+  left: 50%;
+  top: 6px;
+  bottom: 6px;
+  width: 2px;
+  transform: translateX(-50%);
+}
+.imprv_wrap .acco_wrap .list li a .icon::after {
+  top: 50%;
+  left: 6px;
+  right: 6px;
+  height: 2px;
+  transform: translateY(-50%);
+}
 .imprv_wrap .acco_wrap .list li .box {
-  display: flex;
-  gap: 220px;
-  padding-bottom: 20px;
+  gap: 130px;
+  padding-bottom: 30px;
   display: none;
 }
-.imprv_wrap .acco_wrap .list li .box .img {
+.imprv_wrap .acco_wrap .list li .box .img_area {
   flex-shrink: 0;
-  width: 180px;
-  height: 180px;
+  width: 300px;
+}
+.imprv_wrap .acco_wrap .list li .box .img_area .img {
+  width: 150px;
+  height: 150px;
   background-color: #ddd;
+}
+.imprv_wrap .acco_wrap .list li .box .txt {
+  width: 410px;
+}
+.imprv_wrap .acco_wrap .list li .box .txt p + P {
+  margin-top: 20px;
+}
+.imprv_wrap .acco_wrap .list li.on .box {
+  display: flex;
 }
 .imprv_wrap .btn_wrap {
   display: flex;
@@ -238,11 +269,11 @@ header .header_inner a {
 }
 .imprv_wrap .btn_wrap .btn {
   display: inline-block;
-  width: 140px;
-  height: 28px;
-  font: 12px/26px "arial";
+  height: 40px;
+  padding: 0 30px;
+  font: 12px/38px "arial";
   border: 1px solid #000;
-  border-radius: 14px;
+  border-radius: 20px;
   text-align: center;
   color: #000;
 }
@@ -257,6 +288,13 @@ main section:last-child {
 .inner {
   width: 1200px;
   margin: 0 auto;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: #222;
+  border-radius: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

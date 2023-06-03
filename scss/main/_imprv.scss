@@ -36,6 +36,8 @@
 					display: flex;
 					gap: 220px;
 					padding: 15px 0;
+					color: #222;
+					font: bold 18px 'arial';
 
 					.num {
 						flex-shrink: 0;
@@ -43,25 +45,66 @@
 					}
 
 					.icon {
+						position: relative;
 						margin-left: auto;
-						width: 20px;
-						height: 20px;
+						width: 30px;
+						height: 30px;
 						border: 1px solid #222;
 						border-radius: 50%;
+
+						&::before,
+						&::after {
+							content: '';
+							position: absolute;
+							background-color: #222;
+						}
+
+						&::before {
+							left: 50%;
+							top: 6px;
+							bottom: 6px;
+							width: 2px;
+							transform: translateX(-50%);
+						}
+
+						&::after {
+							top: 50%;
+							left: 6px;
+							right: 6px;
+							height: 2px;
+							transform: translateY(-50%);
+						}
 					}
 				}
 
 				.box {
-					display: flex;
-					gap: 220px;
-					padding-bottom: 20px;
+					gap: 130px;
+					padding-bottom: 30px;
 					display: none;
 
-					.img {
+					.img_area {
 						flex-shrink: 0;
-						width: 180px;
-						height: 180px;
-						background-color: #ddd;
+						width: 300px;
+
+						.img {
+							width: 150px;
+							height: 150px;
+							background-color: #ddd;
+						}
+					}
+
+					.txt {
+						width: 410px;
+
+						p + P {
+							margin-top: 20px;
+						}
+					}
+				}
+
+				&.on {
+					.box {
+						display: flex;
 					}
 				}
 			}
@@ -75,11 +118,11 @@
 
 		.btn {
 			display: inline-block;
-			width: 140px;
-			height: 28px;
-			font: 12px/26px 'arial';
+			height: 40px;
+			padding: 0 30px;
+			font: 12px/38px 'arial';
 			border: 1px solid #000;
-			border-radius: 14px;
+			border-radius: 20px;
 			text-align: center;
 			color: #000;
 		}
