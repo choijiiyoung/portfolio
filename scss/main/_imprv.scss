@@ -1,13 +1,13 @@
 .imprv_wrap {
 	.content {
 		display: flex;
-		gap: 220px;
+		gap: 235px;
 		margin-bottom: 50px;
 
-		.title_area {
-			flex-shrink: 0;
-			width: 210px;
-		}
+		// .title_area {
+		// 	flex-shrink: 0;
+		// 	width: 210px;
+		// }
 
 		.txt_area {
 			width: 410px;
@@ -34,7 +34,9 @@
 
 				a {
 					display: flex;
-					gap: 220px;
+					justify-content: center;
+					align-items: center;
+					gap: 230px;
 					padding: 15px 0;
 					color: #222;
 					font: bold 18px 'arial';
@@ -78,17 +80,17 @@
 				}
 
 				.box {
-					gap: 130px;
+					gap: 240px;
 					padding-bottom: 30px;
 					display: none;
 
 					.img_area {
 						flex-shrink: 0;
-						width: 300px;
+						width: 200px;
 
 						.img {
-							width: 150px;
-							height: 150px;
+							width: 100%;
+							height: 200px;
 							background-color: #ddd;
 						}
 					}
@@ -96,7 +98,7 @@
 					.txt {
 						width: 410px;
 
-						p + P {
+						p + p {
 							margin-top: 20px;
 						}
 					}
@@ -125,6 +127,90 @@
 			border-radius: 20px;
 			text-align: center;
 			color: #000;
+		}
+	}
+}
+
+@media screen and (max-width: $tablet) {
+	.imprv_wrap {
+		.content {
+			gap: 0;
+			flex-wrap: wrap;
+
+			.title_area {
+				width: 100%;
+				margin-bottom: 30px;
+			}
+
+			.txt_area {
+				width: 100%;
+			}
+		}
+
+		.acco_wrap {
+			.list {
+				li {
+					a {
+						gap: 5%;
+
+						.num {
+							width: 3%;
+						}
+
+						.icon {
+							&::before {
+								top: 8px;
+								bottom: 8px;
+							}
+
+							&::after {
+								left: 8px;
+								right: 8px;
+							}
+						}
+					}
+
+					.box {
+						gap: 8%;
+						flex-direction: row-reverse;
+						justify-content: space-between;
+
+						.txt {
+							width: 100%;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $mobile) {
+	.imprv_wrap {
+		.acco_wrap {
+			.list {
+				li {
+					.box {
+						flex-wrap: wrap;
+						gap: 8%;
+						flex-direction: row-reverse;
+						justify-content: space-between;
+
+						.img_area {
+							width: 100%;
+							margin-bottom: 20px;
+
+							.img {
+								width: 100%;
+							}
+						}
+
+						.txt {
+							width: 100%;
+						}
+					}
+				}
+			}
 		}
 	}
 }
