@@ -5,11 +5,14 @@
 
 	.prs_wrap {
 		display: flex;
-		gap: 2%;
 
 		.item {
-			width: 48%;
+			width: 49%;
 			border-top: 1px solid #ddd;
+
+			+ .item {
+				margin-left: 2%;
+			}
 
 			.name {
 				padding: 10px 0;

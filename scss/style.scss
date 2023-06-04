@@ -9,6 +9,11 @@
 @import 'main/prod';
 @import 'main/collab';
 @import 'main/partner';
+@import 'main/news';
+
+.wrap {
+	padding-bottom: 120px;
+}
 
 main {
 	section {
