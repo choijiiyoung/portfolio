@@ -1,0 +1,63 @@
+.collab {
+	h1 {
+		margin-bottom: 10px;
+	}
+
+	.collab_list {
+		display: flex;
+		border: 1px solid #ddd;
+
+		li {
+			flex: 1;
+
+			+ li {
+				border-left: 1px solid #ddd;
+			}
+
+			a {
+				display: block;
+				padding: 20px 0;
+				height: 100%;
+				text-align: center;
+
+				.name {
+					writing-mode: tb;
+					// transform: rotateZ(180deg);
+				}
+			}
+
+			.box {
+				display: none;
+
+				.txt_area {
+					display: flex;
+					padding: 25px 20px;
+					justify-content: space-between;
+					align-items: center;
+					border-bottom: 1px solid #ddd;
+				}
+				.img_area {
+					padding: 30px;
+
+					.img {
+						width: 400px;
+						height: 400px;
+						background: #000;
+					}
+				}
+			}
+
+			&.on {
+				flex-shrink: 0;
+
+				a {
+					display: none;
+				}
+
+				.box {
+					display: block;
+				}
+			}
+		}
+	}
+}

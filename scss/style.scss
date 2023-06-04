@@ -7,6 +7,7 @@
 @import 'main/newproduct';
 @import 'main/imprv';
 @import 'main/prod';
+@import 'main/collab';
 
 main {
 	section {
@@ -24,6 +25,7 @@ main {
 }
 
 .dot {
+	display: inline-block;
 	width: 10px;
 	height: 10px;
 	background-color: #222;

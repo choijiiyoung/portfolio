@@ -309,6 +309,56 @@ header .header_inner a {
   z-index: 1;
 }
 
+.collab h1 {
+  margin-bottom: 10px;
+}
+.collab .collab_list {
+  display: flex;
+  border: 1px solid #ddd;
+}
+.collab .collab_list li {
+  flex: 1;
+}
+.collab .collab_list li + li {
+  border-left: 1px solid #ddd;
+}
+.collab .collab_list li a {
+  display: block;
+  padding: 20px 0;
+  height: 100%;
+  text-align: center;
+}
+.collab .collab_list li a .name {
+  writing-mode: tb;
+}
+.collab .collab_list li .box {
+  display: none;
+}
+.collab .collab_list li .box .txt_area {
+  display: flex;
+  padding: 25px 20px;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+}
+.collab .collab_list li .box .img_area {
+  padding: 30px;
+}
+.collab .collab_list li .box .img_area .img {
+  width: 400px;
+  height: 400px;
+  background: #000;
+}
+.collab .collab_list li.on {
+  flex-shrink: 0;
+}
+.collab .collab_list li.on a {
+  display: none;
+}
+.collab .collab_list li.on .box {
+  display: block;
+}
+
 main section {
   margin-bottom: 180px;
 }
@@ -322,6 +372,7 @@ main section:last-child {
 }
 
 .dot {
+  display: inline-block;
   width: 10px;
   height: 10px;
   background-color: #222;
