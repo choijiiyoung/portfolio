@@ -82,3 +82,89 @@
 		}
 	}
 }
+
+@media screen and (max-width: 1300px) {
+	.visual_wrap {
+		margin-bottom: 50px;
+
+		h1 {
+			display: flex;
+			font: bold 10vw 'arial';
+			align-items: center;
+			margin-bottom: 30px;
+			letter-spacing: -0.01em;
+
+			.title {
+				&:nth-of-type(2) {
+					margin-left: 30px;
+				}
+				&.small {
+					padding: 50px 40px 0 0;
+					margin-left: 30px;
+					font-size: 14px;
+					letter-spacing: 0em;
+
+					span {
+						display: block;
+
+						&.line {
+							width: 170px;
+							height: 1px;
+							margin-top: 10px;
+							background-color: #222;
+						}
+					}
+				}
+				&.last {
+					font-style: italic;
+				}
+			}
+		}
+
+		.img {
+			width: 100%;
+			height: 400px;
+			background-color: #efefef;
+			margin-bottom: 20px;
+		}
+
+		.txt_wrap {
+			display: flex;
+			justify-content: space-between;
+
+			.txt {
+				position: relative;
+				width: 50%;
+				padding-top: 10px;
+
+				&::before {
+					content: '';
+					position: absolute;
+					left: 0;
+					top: 0;
+					width: 100%;
+					height: 2px;
+					background-color: #efefee;
+				}
+
+				.dot {
+					position: absolute;
+					right: 0;
+					top: 10px;
+					background-color: #222;
+					border-radius: 100%;
+				}
+			}
+			.btn {
+				display: inline-block;
+				width: 140px;
+				height: 28px;
+				font: 12px/28px 'arial';
+				background-color: #000;
+				border-radius: 14px;
+				text-align: center;
+				color: #fff;
+			}
+		}
+	}
+}
