@@ -344,6 +344,7 @@ footer .lower address {
     height: 40px;
     font: 12px/40px "arial";
     border-radius: 20px;
+    margin: 0 auto;
   }
 }
 .new_product .content {
