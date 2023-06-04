@@ -39,3 +39,9 @@ main {
 	background-color: #222;
 	border-radius: 100%;
 }
+
+@media screen and (max-width: 1300px) {
+	.inner {
+		width: 100%;
+	}
+}

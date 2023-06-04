@@ -75,7 +75,7 @@ footer {
 
 			.sns_list {
 				display: flex;
-				gap: 10px;
+				gap: 9px;
 				li {
 					a {
 						display: flex;
@@ -100,6 +100,94 @@ footer {
 
 		address {
 			font-style: normal;
+		}
+	}
+}
+
+@media screen and (max-width: 1300px) {
+	footer {
+		.footer_inner {
+			width: 100%;
+			padding: 0 4%;
+		}
+
+		.upper {
+			.list {
+				margin-left: 100px;
+			}
+
+			.util_wrap {
+				margin-left: 100px;
+			}
+		}
+
+		.lower {
+			padding: 30px 0 60px;
+		}
+	}
+}
+
+@media screen and (max-width: $tablet) {
+	footer {
+		.upper {
+			flex-wrap: wrap;
+
+			.list {
+				margin-left: auto;
+			}
+
+			.util_wrap {
+				margin: 50px 0 0 0;
+				width: 100%;
+			}
+		}
+
+		.lower {
+			display: block;
+
+			p {
+				margin-bottom: 10px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $mobile) {
+	footer {
+		.upper {
+			display: block;
+
+			.logo {
+				margin-bottom: 20px;
+			}
+
+			.list {
+				display: block;
+				margin-left: 0;
+				gap: 0;
+				font-size: 0;
+
+				> li {
+					display: inline-block;
+					width: 48%;
+
+					&:nth-child(n + 3) {
+						margin-top: 40px;
+					}
+
+					&:nth-child(even) {
+						margin-left: 4%;
+					}
+				}
+			}
+		}
+
+		.lower {
+			display: block;
+
+			p {
+				margin-bottom: 10px;
+			}
 		}
 	}
 }

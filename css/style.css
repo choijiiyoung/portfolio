@@ -23,7 +23,7 @@ header .header_inner {
   display: flex;
   width: 1200px;
   margin: 0 auto;
-  padding: 21px 2% 0;
+  padding: 21px 0 0;
 }
 header .header_inner h1 {
   margin-top: -9px;
@@ -46,10 +46,32 @@ header .header_inner .util {
 header .header_inner .util li a {
   font: 16px "arial";
 }
+header .header_inner .btn_mo {
+  display: none;
+  margin-left: auto;
+}
 header .header_inner a {
   color: #464644;
 }
 
+@media screen and (max-width: 1300px) {
+  header .header_inner {
+    width: 100%;
+    padding: 21px 4% 0;
+  }
+}
+@media screen and (max-width: 999px) {
+  header .header_inner nav {
+    display: none;
+  }
+  header .header_inner .util {
+    display: none;
+  }
+  header .header_inner .btn_mo {
+    display: block;
+    font-size: 20px;
+  }
+}
 footer .footer_inner {
   width: 1200px;
   margin: 0 auto;
@@ -110,7 +132,7 @@ footer .upper .util_wrap .util .chk_wrap label {
 }
 footer .upper .util_wrap .sns_list {
   display: flex;
-  gap: 10px;
+  gap: 9px;
 }
 footer .upper .util_wrap .sns_list li a {
   display: flex;
@@ -132,6 +154,69 @@ footer .lower address {
   font-style: normal;
 }
 
+@media screen and (max-width: 1300px) {
+  footer .footer_inner {
+    width: 100%;
+    padding: 0 4%;
+  }
+  footer .upper .list {
+    margin-left: 100px;
+  }
+  footer .upper .util_wrap {
+    margin-left: 100px;
+  }
+  footer .lower {
+    padding: 30px 0 60px;
+  }
+}
+@media screen and (max-width: 999px) {
+  footer .upper {
+    flex-wrap: wrap;
+  }
+  footer .upper .list {
+    margin-left: auto;
+  }
+  footer .upper .util_wrap {
+    margin: 50px 0 0 0;
+    width: 100%;
+  }
+  footer .lower {
+    display: block;
+  }
+  footer .lower p {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 639px) {
+  footer .upper {
+    display: block;
+  }
+  footer .upper .logo {
+    margin-bottom: 20px;
+  }
+  footer .upper .list {
+    display: block;
+    margin-left: 0;
+    gap: 0;
+    font-size: 0;
+  }
+  footer .upper .list > li {
+    display: inline-block;
+    width: 48%;
+  }
+  footer .upper .list > li:nth-child(n+3) {
+    margin-top: 40px;
+  }
+  footer .upper .list > li:nth-child(even) {
+    margin-left: 4%;
+  }
+  footer .lower {
+    display: block;
+  }
+  footer .lower p {
+    margin-bottom: 10px;
+  }
+}
 .visual_wrap {
   padding-top: 70px;
   margin-bottom: 110px;
@@ -548,6 +633,12 @@ main section:last-child {
   height: 10px;
   background-color: #222;
   border-radius: 100%;
+}
+
+@media screen and (max-width: 1300px) {
+  .inner {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

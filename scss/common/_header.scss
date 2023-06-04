@@ -7,7 +7,7 @@ header {
 		display: flex;
 		width: 1200px;
 		margin: 0 auto;
-		padding: 21px 2% 0;
+		padding: 21px 0 0;
 
 		h1 {
 			margin-top: -9px;
@@ -38,8 +38,41 @@ header {
 			}
 		}
 
+		.btn_mo {
+			display: none;
+			margin-left: auto;
+		}
+
 		a {
 			color: #464644;
+		}
+	}
+}
+
+@media screen and (max-width: 1300px) {
+	header {
+		.header_inner {
+			width: 100%;
+			padding: 21px 4% 0;
+		}
+	}
+}
+
+@media screen and (max-width: $tablet) {
+	header {
+		.header_inner {
+			nav {
+				display: none;
+			}
+
+			.util {
+				display: none;
+			}
+
+			.btn_mo {
+				display: block;
+				font-size: 20px;
+			}
 		}
 	}
 }
