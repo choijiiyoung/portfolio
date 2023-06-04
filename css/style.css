@@ -745,6 +745,21 @@ footer .lower address {
   background: #ddd;
 }
 
+@media screen and (max-width: 999px) {
+  .partnership .prs_wrap {
+    flex-wrap: wrap;
+  }
+  .partnership .prs_wrap .item {
+    width: 100%;
+    border-top: 1px solid #ddd;
+  }
+  .partnership .prs_wrap .item + .item {
+    margin-left: 0;
+  }
+  .partnership .prs_wrap .item .img_area .img {
+    height: 300px;
+  }
+}
 .news .content {
   display: flex;
   gap: 220px;
