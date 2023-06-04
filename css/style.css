@@ -50,6 +50,88 @@ header .header_inner a {
   color: #464644;
 }
 
+footer .footer_inner {
+  width: 1200px;
+  margin: 0 auto;
+}
+footer .upper {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #ddd;
+}
+footer .upper .list {
+  margin-left: 150px;
+  display: flex;
+  gap: 60px;
+}
+footer .upper .list > li > a {
+  display: block;
+  margin-bottom: 10px;
+  color: #222;
+  font: bold 15px "arial";
+}
+footer .upper .list > li ul li {
+  padding: 8px 0;
+}
+footer .upper .list > li ul li a {
+  display: block;
+  font-size: 14px;
+  color: #888;
+}
+footer .upper .util_wrap {
+  margin-left: 280px;
+}
+footer .upper .util_wrap .util .input_wrap {
+  margin-bottom: 10px;
+}
+footer .upper .util_wrap .util .input_wrap label {
+  display: block;
+  font-weight: bold;
+}
+footer .upper .util_wrap .util .input_wrap input[type=text] {
+  width: 100%;
+  height: 40px;
+  border: 0;
+  border-bottom: 1px solid #000;
+}
+footer .upper .util_wrap .util .chk_wrap {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+footer .upper .util_wrap .util .chk_wrap input[type=checkbox] {
+  position: absolute;
+  left: 0;
+  top: 7px;
+}
+footer .upper .util_wrap .util .chk_wrap label {
+  font-size: 14px;
+}
+footer .upper .util_wrap .sns_list {
+  display: flex;
+  gap: 10px;
+}
+footer .upper .util_wrap .sns_list li a {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #888;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  color: #222;
+}
+footer .lower {
+  display: flex;
+  gap: 50px;
+  padding: 30px 0 100px;
+  color: #888;
+}
+footer .lower address {
+  font-style: normal;
+}
+
 .visual_wrap {
   padding-top: 70px;
   margin-bottom: 110px;
@@ -445,10 +527,9 @@ header .header_inner a {
   font-size: 14px;
 }
 
-.wrap {
-  padding-bottom: 120px;
+main {
+  padding-bottom: 200px;
 }
-
 main section {
   margin-bottom: 180px;
 }

@@ -1,6 +1,7 @@
 //common
 @import 'common/reset';
 @import 'common/header';
+@import 'common/footer';
 
 //main
 @import 'main/visual';
@@ -11,11 +12,9 @@
 @import 'main/partner';
 @import 'main/news';
 
-.wrap {
-	padding-bottom: 120px;
-}
-
 main {
+	padding-bottom: 200px;
+
 	section {
 		margin-bottom: 180px;
 
