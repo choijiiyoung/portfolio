@@ -687,6 +687,36 @@ footer .lower address {
   display: block;
 }
 
+@media screen and (max-width: 999px) {
+  .collab .collab_list li .box .img_area .img {
+    width: 280px;
+    height: 280px;
+  }
+}
+@media screen and (max-width: 639px) {
+  .collab .collab_list {
+    flex-wrap: wrap;
+  }
+  .collab .collab_list li {
+    flex: none;
+    width: 100%;
+  }
+  .collab .collab_list li + li {
+    border-left: 0;
+    border-top: 1px solid #ddd;
+  }
+  .collab .collab_list li a {
+    padding: 25px 20px;
+    text-align: left;
+  }
+  .collab .collab_list li a .name {
+    writing-mode: unset;
+  }
+  .collab .collab_list li .box .img_area .img {
+    width: 280px;
+    height: 280px;
+  }
+}
 .partnership h1 {
   margin-bottom: 20px;
 }
