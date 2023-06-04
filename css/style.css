@@ -818,6 +818,98 @@ footer .lower address {
   font-size: 14px;
 }
 
+@media screen and (max-width: 1300px) {
+  .news .content {
+    gap: 20px;
+  }
+  .news .content .title_area {
+    width: calc(100% - 790px);
+  }
+  .news .content .title_area .btn_view {
+    width: 62px;
+  }
+  .news .content .txt_area {
+    flex: 1;
+  }
+  .news .content .txt_area .news_list {
+    display: flex;
+  }
+  .news .content .txt_area .news_list li {
+    width: 410px;
+    padding: 20px;
+    border: 1px solid #222;
+  }
+  .news .content .txt_area .news_list li .inner_area {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+  .news .content .txt_area .news_list li .inner_area .cont {
+    padding-bottom: 100px;
+  }
+  .news .content .txt_area .news_list li .inner_area .cont span {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: #888;
+  }
+  .news .content .txt_area .news_list li .inner_area .cont .title {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+  .news .content .txt_area .news_list li + li {
+    width: 360px;
+    padding-right: 80px;
+    border-left: 0;
+    border-top-right-radius: 170px;
+    border-bottom-right-radius: 170px;
+  }
+  .news .content .btn_view {
+    display: inline-block;
+    width: 80px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #000;
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 999px) {
+  .news .content {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .news .content .title_area {
+    width: 100%;
+    flex-direction: unset;
+  }
+  .news .content .txt_area .news_list li {
+    width: 50%;
+  }
+  .news .content .txt_area .news_list li + li {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 639px) {
+  .news .content .title_area .btn_view {
+    width: 30%;
+    text-align: center;
+  }
+  .news .content .txt_area .news_list {
+    flex-wrap: wrap;
+  }
+  .news .content .txt_area .news_list li {
+    width: 100%;
+  }
+  .news .content .txt_area .news_list li + li {
+    width: 100%;
+    border-top: 0;
+    border-left: 1px solid #222;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .news .content .btn_view {
+    width: 100%;
+  }
+}
 main {
   padding-bottom: 200px;
 }
