@@ -1,4 +1,4 @@
-.prod_wrap {
+#prod {
 	.prod_list {
 		border-top: 1px solid #ddd;
 		border-bottom: 1px solid #ddd;
@@ -36,7 +36,7 @@
 }
 
 @media screen and (max-width: $tablet) {
-	.prod_wrap {
+	#prod {
 		.prod_list {
 			li {
 				a {

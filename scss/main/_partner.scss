@@ -1,4 +1,4 @@
-.partnership {
+#partnership {
 	h1 {
 		margin-bottom: 20px;
 	}
@@ -35,7 +35,7 @@
 }
 
 @media screen and (max-width: $tablet) {
-	.partnership {
+	#partnership {
 		.prs_wrap {
 			flex-wrap: wrap;
 			.item {

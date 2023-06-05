@@ -1,4 +1,4 @@
-.imprv_wrap {
+#imprv {
 	.content {
 		display: flex;
 		gap: 235px;
@@ -132,7 +132,7 @@
 }
 
 @media screen and (max-width: $tablet) {
-	.imprv_wrap {
+	#imprv {
 		.content {
 			gap: 0;
 			flex-wrap: wrap;
@@ -186,7 +186,7 @@
 }
 
 @media screen and (max-width: $mobile) {
-	.imprv_wrap {
+	#imprv {
 		.acco_wrap {
 			.list {
 				li {

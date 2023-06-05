@@ -1,4 +1,4 @@
-.news {
+#news {
 	.content {
 		display: flex;
 		gap: 220px;
@@ -70,7 +70,7 @@
 }
 
 @media screen and (max-width: 1300px) {
-	.news {
+	#news {
 		.content {
 			gap: 20px;
 
@@ -137,7 +137,7 @@
 }
 
 @media screen and (max-width: $tablet) {
-	.news {
+	#news {
 		.content {
 			gap: 20px;
 			flex-wrap: wrap;
@@ -163,7 +163,7 @@
 }
 
 @media screen and (max-width: $mobile) {
-	.news {
+	#news {
 		.content {
 			.title_area {
 				.btn_view {

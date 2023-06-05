@@ -1,4 +1,4 @@
-.new_product {
+#newProduct {
 	.content {
 		display: flex;
 		gap: 30px;
@@ -68,7 +68,7 @@
 }
 
 @media screen and (max-width: 1200px) {
-	.new_product {
+	#newProduct {
 		.content {
 			.product_area {
 				.item {
@@ -93,7 +93,7 @@
 }
 
 @media screen and (max-width: $tablet) {
-	.new_product {
+	#newProduct {
 		.content {
 			display: block;
 
@@ -124,7 +124,7 @@
 }
 
 @media screen and (max-width: $mobile) {
-	.new_product {
+	#newProduct {
 		.content {
 			.product_area {
 				flex-wrap: wrap;
