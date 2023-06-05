@@ -1,0 +1,62 @@
+{
+  "members": [
+    {
+      "name": "Richard Naish",
+      "position": "Executive Directior",
+      "dept": "BIO",
+      "pic": "member1.jpg"
+    },
+    {
+      "name": "Aaliyah",
+      "position": "Executive Directior",
+      "dept": "BIO",
+      "pic": "member2.jpg"
+    },
+    {
+      "name": "Ben Hayes",
+      "position": "Directior",
+      "dept": "BIO",
+      "pic": "member3.jpg"
+    },
+    {
+      "name": "Aaliyah",
+      "position": "Executive Directior",
+      "dept": "BIO",
+      "pic": "member4.jpg"
+    },
+    {
+      "name": "Aaliyah",
+      "position": "Executive Directior",
+      "dept": "BIO",
+      "pic": "member5.jpg"
+    },
+    {
+      "name": "Aaliyah",
+      "position": "Executive Directior",
+      "dept": "BIO",
+      "pic": "member6.jpg"
+    }
+  ],
+  "schedule": [
+    {
+      "subj": "Architecture NZ",
+      "date": "House 9/10"
+    },
+    {
+      "subj": "House",
+      "date": "c3 House 9/10"
+    },
+    {
+      "subj": "Architecture NZ",
+      "date": "House 9/10"
+    },
+    {
+      "subj": "Architecture NZ",
+      "date": "House 9/10"
+    },
+    {
+      "subj": "Architecture NZ",
+      "date": "House 9/10"
+    }
+  ]
+}
