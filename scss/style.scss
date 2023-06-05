@@ -5,6 +5,7 @@ $mobile: 639px;
 @import 'common/reset';
 @import 'common/header';
 @import 'common/footer';
+@import 'common/layout';
 
 //main
 @import 'main/visual';
@@ -17,38 +18,3 @@ $mobile: 639px;
 
 //sub
 @import 'sub/department';
-
-main {
-	padding-bottom: 200px;
-
-	section {
-		margin-bottom: 180px;
-
-		&:last-child {
-			margin-bottom: 0;
-		}
-	}
-
-	.inner {
-		max-width: 1200px;
-		width: auto;
-		margin: 0 auto;
-	}
-}
-
-.dot {
-	display: inline-block;
-	width: 10px;
-	height: 10px;
-	background-color: #222;
-	border-radius: 100%;
-}
-
-@media screen and (max-width: 1300px) {
-	main {
-		.inner {
-			width: 100%;
-			padding: 0 3%;
-		}
-	}
-}

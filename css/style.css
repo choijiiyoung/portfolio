@@ -217,6 +217,51 @@ footer .lower address {
     margin-bottom: 10px;
   }
 }
+main {
+  padding-bottom: 200px;
+}
+main section {
+  margin-bottom: 180px;
+}
+main section:last-child {
+  margin-bottom: 0;
+}
+main .inner {
+  max-width: 1200px;
+  width: auto;
+  margin: 0 auto;
+}
+main .dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #222;
+  border-radius: 100%;
+}
+
+@media screen and (max-width: 1300px) {
+  main .inner {
+    width: 100%;
+    padding: 0 3%;
+  }
+}
+.content {
+  padding-bottom: 150px;
+}
+.content section .inner {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+.content section:first-of-type {
+  padding-top: 100px;
+}
+.content .subVisual {
+  width: 100%;
+  height: 250px;
+  background: gray;
+}
+
 #visualWrap {
   padding-top: 70px;
   margin-bottom: 110px;
@@ -908,34 +953,59 @@ footer .lower address {
     width: 100%;
   }
 }
-main {
-  padding-bottom: 200px;
+.department section.first {
+  margin-bottom: 100px;
+  border-top: 2px solid #222;
 }
-main section {
-  margin-bottom: 180px;
+.department section.first .line {
+  margin-top: 30px;
 }
-main section:last-child {
-  margin-bottom: 0;
+.department section .cont_wrap {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
 }
-main .inner {
-  max-width: 1200px;
-  width: auto;
-  margin: 0 auto;
+.department section .cont_wrap .left {
+  width: 30%;
 }
-
-.dot {
+.department section .cont_wrap .left p {
+  font-size: 20px;
+}
+.department section .cont_wrap .right {
+  width: calc(70% - 100px);
+}
+.department section .cont_wrap .right .box.line .btn_view {
   display: inline-block;
-  width: 10px;
-  height: 10px;
-  background-color: #222;
-  border-radius: 100%;
+  margin-top: 50px;
+  color: #222;
+  border-bottom: 1px solid #000;
 }
-
-@media screen and (max-width: 1300px) {
-  main .inner {
-    width: 100%;
-    padding: 0 3%;
-  }
+.department section .cont_wrap .right .box h1 {
+  margin-bottom: 20px;
+}
+.department section .cont_wrap .right .cont_area {
+  display: flex;
+  justify-content: space-between;
+}
+.department section .cont_wrap .right .cont_area .item {
+  width: calc(50% - 50px);
+}
+.department section .cont_wrap .right .cont_area .txt {
+  word-break: break-all;
+}
+.department section .cont_wrap .right .cont_area .txt p + p {
+  margin-top: 20px;
+}
+.department section .cont_wrap .right .cont_area article {
+  height: 500px;
+  background: #000;
+}
+.department section .cont_wrap .line {
+  padding-top: 10px;
+  border-top: 2px solid #222;
+}
+.department section.last .left p {
+  font-size: 18px;
 }
 
 /*# sourceMappingURL=style.css.map */
