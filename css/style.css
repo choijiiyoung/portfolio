@@ -713,7 +713,7 @@ footer .lower address {
     writing-mode: unset;
   }
   #collab .collab_list li .box .img_area .img {
-    width: 280px;
+    width: 100%;
     height: 280px;
   }
 }
@@ -917,9 +917,9 @@ main section {
 main section:last-child {
   margin-bottom: 0;
 }
-
-.inner {
-  width: 1200px;
+main .inner {
+  max-width: 1200px;
+  width: auto;
   margin: 0 auto;
 }
 
@@ -932,7 +932,7 @@ main section:last-child {
 }
 
 @media screen and (max-width: 1300px) {
-  .inner {
+  main .inner {
     width: 100%;
     padding: 0 3%;
   }
