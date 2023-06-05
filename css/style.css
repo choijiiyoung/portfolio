@@ -731,13 +731,10 @@ footer .lower address {
   margin-left: 2%;
 }
 .partnership .prs_wrap .item .name {
-  padding: 10px 0;
+  padding: 20px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-.partnership .prs_wrap .item .img_area {
-  padding: 20px 0;
 }
 .partnership .prs_wrap .item .img_area .img {
   width: 100%;
