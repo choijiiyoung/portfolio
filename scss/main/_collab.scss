@@ -1,4 +1,4 @@
-.collab {
+#collab {
 	h1 {
 		margin-bottom: 10px;
 	}
@@ -63,7 +63,7 @@
 }
 
 @media screen and (max-width: $tablet) {
-	.collab {
+	#collab {
 		.collab_list {
 			li {
 				.box {
@@ -80,7 +80,7 @@
 }
 
 @media screen and (max-width: $mobile) {
-	.collab {
+	#collab {
 		.collab_list {
 			flex-wrap: wrap;
 			li {

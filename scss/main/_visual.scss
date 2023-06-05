@@ -1,4 +1,4 @@
-.visual_wrap {
+#visualWrap {
 	padding-top: 70px;
 	margin-bottom: 110px;
 
@@ -83,7 +83,7 @@
 }
 
 @media screen and (max-width: 1300px) {
-	.visual_wrap {
+	#visualWrap {
 		h1 {
 			font-size: 10vw;
 		}
@@ -97,7 +97,7 @@
 }
 
 @media screen and (max-width: $tablet) {
-	.visual_wrap {
+	#visualWrap {
 		h1 {
 			font-size: 8vw;
 
@@ -112,7 +112,7 @@
 }
 
 @media screen and (max-width: $mobile) {
-	.visual_wrap {
+	#visualWrap {
 		padding-top: 30px;
 
 		h1 {
