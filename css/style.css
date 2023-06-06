@@ -954,11 +954,17 @@ main .dot {
   }
 }
 .department section.first {
-  margin-bottom: 100px;
+  margin-bottom: 80px;
+}
+.department section.first .cont_wrap {
   border-top: 2px solid #222;
 }
 .department section.first .line {
   margin-top: 30px;
+}
+.department section.first article {
+  height: 500px;
+  background-color: #000;
 }
 .department section .cont_wrap {
   display: flex;
@@ -966,13 +972,13 @@ main .dot {
   padding-top: 20px;
 }
 .department section .cont_wrap .left {
-  width: 30%;
+  width: 20%;
 }
 .department section .cont_wrap .left p {
   font-size: 20px;
 }
 .department section .cont_wrap .right {
-  width: calc(70% - 100px);
+  width: calc(80% - 100px);
 }
 .department section .cont_wrap .right .box.line .btn_view {
   display: inline-block;
@@ -996,16 +1002,36 @@ main .dot {
 .department section .cont_wrap .right .cont_area .txt p + p {
   margin-top: 20px;
 }
-.department section .cont_wrap .right .cont_area article {
-  height: 500px;
-  background: #000;
-}
 .department section .cont_wrap .line {
   padding-top: 10px;
   border-top: 2px solid #222;
 }
 .department section.last .left p {
   font-size: 18px;
+}
+.department section.last .right .cont_area {
+  flex-wrap: wrap;
+  gap: 100px 5%;
+}
+.department section.last .right .cont_area article {
+  width: 30%;
+}
+.department section.last .right .cont_area article .pic {
+  height: 250px;
+  margin-bottom: 20px;
+}
+.department section.last .right .cont_area article .pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.department section.last .right .cont_area article .info p {
+  font-weight: bold;
+}
+.department section.last .right .cont_area article .info .dept {
+  display: inline-block;
+  margin-top: 15px;
+  color: #888;
 }
 
 /*# sourceMappingURL=style.css.map */

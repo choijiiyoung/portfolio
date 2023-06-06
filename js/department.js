@@ -1,5 +1,5 @@
-const section = document.querySelectorAll('section.last');
-const contArea = document.querySelector('.cont_area');
+const section = document.querySelectorAll('section')[1];
+const contArea = section.querySelector('.cont_area');
 console.log(contArea);
 
 let tags = '';
@@ -16,11 +16,13 @@ fetch('DB/department.json')
 			tags += `
        <article>
           <div class='pic'>
-            <img src='img/${data.pic}' />
+            <img src='img/department/${data.pic}' />
           </div>
-          <p>${data.name}</p>
-          <p>${data.position}</p>
-          <span>${data.dept}</span>
+					<div class="info">
+						<p class="name">${data.name}</p>
+						<p class="pos">${data.position}</p>
+						<span class="dept">${data.dept}</span>
+					</div>
        </article>
       `;
 		});
