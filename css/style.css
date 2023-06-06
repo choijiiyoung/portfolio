@@ -986,8 +986,8 @@ main .dot {
   color: #222;
   border-bottom: 1px solid #000;
 }
-.department section .cont_wrap .right .box h1 {
-  margin-bottom: 20px;
+.department section .cont_wrap .right .box h2 {
+  margin-bottom: 30px;
 }
 .department section .cont_wrap .right .cont_area {
   display: flex;
@@ -1009,16 +1009,19 @@ main .dot {
 .department section.last .left p {
   font-size: 18px;
 }
+.department section.last .right .box + .box {
+  margin-top: 100px;
+}
 .department section.last .right .cont_area {
   flex-wrap: wrap;
-  gap: 100px 5%;
+  gap: 50px 5%;
 }
 .department section.last .right .cont_area article {
   width: 30%;
 }
 .department section.last .right .cont_area article .pic {
   height: 250px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 .department section.last .right .cont_area article .pic img {
   width: 100%;
@@ -1032,6 +1035,21 @@ main .dot {
   display: inline-block;
   margin-top: 15px;
   color: #888;
+}
+.department section.last .right .list_area ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px 5%;
+}
+.department section.last .right .list_area ul li {
+  width: 45%;
+}
+.department section.last .right .list_area ul li .title {
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  font: bold 16px "arial";
+  border-bottom: 1px solid #000;
 }
 
 /*# sourceMappingURL=style.css.map */

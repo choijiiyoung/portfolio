@@ -1,8 +1,9 @@
 const section = document.querySelectorAll('section')[1];
 const contArea = section.querySelector('.cont_area');
-console.log(contArea);
+const contLi = section.querySelector('ul');
 
 let tags = '';
+let tags2 = '';
 
 fetch('DB/department.json')
 	.then((res) => {
@@ -10,8 +11,6 @@ fetch('DB/department.json')
 	})
 	.then((data) => {
 		const memberData = data.members;
-		// const scheduleData = data.schedule;
-
 		memberData.map((data) => {
 			tags += `
        <article>
@@ -27,6 +26,19 @@ fetch('DB/department.json')
       `;
 		});
 		contArea.innerHTML = tags;
+
+		const scheduleData = data.schedule;
+		scheduleData.map((data) => {
+			tags2 += `
+				<li>
+					<p class="title">${data.subj}</p>
+					<div class="place">
+						<p>${data.date}</p>
+					</div>
+				</li>
+			`;
+		});
+		contLi.innerHTML = tags2;
 	})
 	.catch((err) => {
 		console.log(err);

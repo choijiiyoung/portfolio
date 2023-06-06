@@ -42,8 +42,8 @@
 						}
 					}
 
-					h1 {
-						margin-bottom: 20px;
+					h2 {
+						margin-bottom: 30px;
 					}
 				}
 
@@ -81,15 +81,19 @@
 			}
 
 			.right {
+				.box + .box {
+					margin-top: 100px;
+				}
+
 				.cont_area {
 					flex-wrap: wrap;
-					gap: 100px 5%;
+					gap: 50px 5%;
 
 					article {
 						width: 30%;
 						.pic {
 							height: 250px;
-							margin-bottom: 20px;
+							margin-bottom: 15px;
 
 							img {
 								width: 100%;
@@ -107,6 +111,26 @@
 								display: inline-block;
 								margin-top: 15px;
 								color: #888;
+							}
+						}
+					}
+				}
+
+				.list_area {
+					ul {
+						display: flex;
+						flex-wrap: wrap;
+						justify-content: space-between;
+						gap: 30px 5%;
+
+						li {
+							width: 45%;
+
+							.title {
+								padding-bottom: 5px;
+								margin-bottom: 10px;
+								font: bold 16px 'arial';
+								border-bottom: 1px solid #000;
 							}
 						}
 					}
