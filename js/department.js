@@ -40,6 +40,7 @@ fetch('DB/department.json')
 		});
 		contLi.innerHTML = tags2;
 	})
+
 	.catch((err) => {
 		console.log(err);
 	});

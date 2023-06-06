@@ -40,15 +40,15 @@
   "schedule": [
     {
       "subj": "Architecture NZ",
-      "date": "House 9/10"
-    },
-    {
-      "subj": "Houses",
-      "date": "c3 House 9/10<br>c3 House 9/10<br>c3 House 9/10"
+      "date": "Iron bank 9/10"
     },
     {
       "subj": "Home",
-      "date": "RTA studio 9/13"
+      "date": "Black Estate vineyard 9/10<br>C3 House 9/10<br>House for five 9/10"
+    },
+    {
+      "subj": "Houses",
+      "date": "C3 House 9/13<br>RTA studio 9/13"
     },
     {
       "subj": "Interior",
@@ -56,7 +56,7 @@
     },
     {
       "subj": "Urbis",
-      "date": "House 9/10"
+      "date": "Black Estate Winery<br>House for five 9/10"
     }
   ]
 }
