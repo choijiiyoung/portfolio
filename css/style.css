@@ -221,15 +221,16 @@ main {
   padding-bottom: 200px;
 }
 main section {
-  margin-bottom: 180px;
+  margin-bottom: 150px;
 }
 main section:last-child {
   margin-bottom: 0;
 }
 main .inner {
-  max-width: 1200px;
+  max-width: 1240px;
   width: auto;
   margin: 0 auto;
+  padding: 0 2vw;
 }
 main .dot {
   display: inline-block;
@@ -244,32 +245,37 @@ main .dot {
     width: 100%;
   }
 }
-.content {
+@media screen and (max-width: 999px) {
+  main .inner {
+    padding: 0 5vw;
+  }
+}
+.container {
   padding-bottom: 150px;
 }
-.content section .inner {
+.container section .inner {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
   padding: 0 5vw;
 }
-.content section:first-of-type {
+.container section:first-of-type {
   padding-top: 100px;
 }
-.content .subVisual {
+.container .subVisual {
   width: 100%;
   height: 250px;
   background: gray;
 }
 
 @media screen and (max-width: 1300px) {
-  .content section .inner {
+  .container section .inner {
     max-width: 100%;
   }
 }
 #visualWrap {
   padding-top: 70px;
-  margin-bottom: 110px;
+  margin-bottom: 180px;
 }
 #visualWrap h1 {
   display: flex;
@@ -440,18 +446,21 @@ main .dot {
 }
 
 @media screen and (max-width: 1200px) {
+  #newProduct .content .product_area {
+    gap: 20px;
+  }
   #newProduct .content .product_area .item {
-    width: 240px;
+    flex: 1;
   }
   #newProduct .content .product_area .item.center {
-    margin-left: 10px;
-    width: 340px;
+    margin-left: 0;
+    flex: 1;
   }
   #newProduct .content .product_area .item.center .slide_wrap {
     height: 340px;
   }
   #newProduct .content .product_area .item.last {
-    margin-left: 10px;
+    margin-left: 0;
   }
 }
 @media screen and (max-width: 999px) {
@@ -461,18 +470,8 @@ main .dot {
   #newProduct .content .title_area {
     margin-bottom: 30px;
   }
-  #newProduct .content .product_area .item {
-    flex: 1;
-  }
-  #newProduct .content .product_area .item.center {
-    margin-left: 1%;
-    width: 33%;
-  }
   #newProduct .content .product_area .item.center .slide_wrap {
     height: 240px;
-  }
-  #newProduct .content .product_area .item.last {
-    margin-left: 1%;
   }
 }
 @media screen and (max-width: 639px) {
