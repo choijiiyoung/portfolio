@@ -242,7 +242,6 @@ main .dot {
 @media screen and (max-width: 1300px) {
   main .inner {
     width: 100%;
-    padding: 0 3%;
   }
 }
 .content {
@@ -252,6 +251,7 @@ main .dot {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
+  padding: 0 5vw;
 }
 .content section:first-of-type {
   padding-top: 100px;
@@ -262,6 +262,11 @@ main .dot {
   background: gray;
 }
 
+@media screen and (max-width: 1300px) {
+  .content section .inner {
+    max-width: 100%;
+  }
+}
 #visualWrap {
   padding-top: 70px;
   margin-bottom: 110px;
