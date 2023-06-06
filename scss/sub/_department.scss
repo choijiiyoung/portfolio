@@ -21,6 +21,7 @@
 			display: flex;
 			justify-content: space-between;
 			padding-top: 20px;
+			flex-wrap: wrap;
 
 			.left {
 				width: 20%;
@@ -50,6 +51,7 @@
 				.cont_area {
 					display: flex;
 					justify-content: space-between;
+					flex-wrap: wrap;
 
 					.item {
 						width: calc(50% - 50px);
@@ -77,6 +79,11 @@
 			.left {
 				p {
 					font-size: 18px;
+
+					span {
+						display: block;
+						font-weight: bold;
+					}
 				}
 			}
 
@@ -131,6 +138,129 @@
 								margin-bottom: 10px;
 								font: bold 16px 'arial';
 								border-bottom: 1px solid #000;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $tablet) {
+	.department {
+		section {
+			&.first {
+				article {
+					height: 500px;
+				}
+
+				.cont_area {
+					gap: 50px;
+				}
+			}
+
+			.cont_wrap {
+				.left {
+					width: 100%;
+					margin-bottom: 30px;
+
+					p {
+						font-size: 18px;
+
+						span {
+							display: inline-block;
+						}
+					}
+				}
+
+				.right {
+					width: 100%;
+				}
+			}
+
+			&.last {
+				.left {
+					p {
+						font-size: 18px;
+					}
+				}
+
+				.right {
+					.line {
+						border-top: 0;
+					}
+
+					.box + .box {
+						margin-top: 50px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $mobile) {
+	.department {
+		section {
+			&.first {
+				margin-bottom: 40px;
+
+				article {
+					height: 300px;
+					margin-top: 40px;
+				}
+
+				.cont_area {
+					gap: 0;
+				}
+			}
+
+			.cont_wrap {
+				.right {
+					width: 100%;
+
+					.box {
+						&.line {
+							.btn_view {
+								margin: 20px 0;
+							}
+						}
+					}
+
+					.cont_area {
+						.item {
+							width: 100%;
+						}
+
+						.txt {
+							p {
+								+ p {
+									margin-top: 10px;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			&.last {
+				.right {
+					.cont_area {
+						flex-wrap: wrap;
+						gap: 50px 0;
+
+						article {
+							width: 100%;
+						}
+					}
+
+					.list_area {
+						ul {
+							gap: 30px 0;
+
+							li {
+								width: 100%;
 							}
 						}
 					}

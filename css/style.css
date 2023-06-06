@@ -974,6 +974,7 @@ main .dot {
   display: flex;
   justify-content: space-between;
   padding-top: 20px;
+  flex-wrap: wrap;
 }
 .department section .cont_wrap .left {
   width: 20%;
@@ -996,6 +997,7 @@ main .dot {
 .department section .cont_wrap .right .cont_area {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .department section .cont_wrap .right .cont_area .item {
   width: calc(50% - 50px);
@@ -1012,6 +1014,10 @@ main .dot {
 }
 .department section.last .left p {
   font-size: 18px;
+}
+.department section.last .left p span {
+  display: block;
+  font-weight: bold;
 }
 .department section.last .right .box + .box {
   margin-top: 100px;
@@ -1054,6 +1060,74 @@ main .dot {
   margin-bottom: 10px;
   font: bold 16px "arial";
   border-bottom: 1px solid #000;
+}
+
+@media screen and (max-width: 999px) {
+  .department section.first article {
+    height: 500px;
+  }
+  .department section.first .cont_area {
+    gap: 50px;
+  }
+  .department section .cont_wrap .left {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .department section .cont_wrap .left p {
+    font-size: 18px;
+  }
+  .department section .cont_wrap .left p span {
+    display: inline-block;
+  }
+  .department section .cont_wrap .right {
+    width: 100%;
+  }
+  .department section.last .left p {
+    font-size: 18px;
+  }
+  .department section.last .right .line {
+    border-top: 0;
+  }
+  .department section.last .right .box + .box {
+    margin-top: 50px;
+  }
+}
+@media screen and (max-width: 639px) {
+  .department section.first {
+    margin-bottom: 40px;
+  }
+  .department section.first article {
+    height: 300px;
+    margin-top: 40px;
+  }
+  .department section.first .cont_area {
+    gap: 0;
+  }
+  .department section .cont_wrap .right {
+    width: 100%;
+  }
+  .department section .cont_wrap .right .box.line .btn_view {
+    margin: 20px 0;
+  }
+  .department section .cont_wrap .right .cont_area .item {
+    width: 100%;
+  }
+  .department section .cont_wrap .right .cont_area .txt p + p {
+    margin-top: 10px;
+  }
+  .department section.last .right .cont_area {
+    flex-wrap: wrap;
+    gap: 50px 0;
+  }
+  .department section.last .right .cont_area article {
+    width: 100%;
+  }
+  .department section.last .right .list_area ul {
+    gap: 30px 0;
+  }
+  .department section.last .right .list_area ul li {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
