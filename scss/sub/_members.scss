@@ -37,8 +37,10 @@
 					&.line {
 						.btn_view {
 							display: inline-block;
-							padding: 10px 30px;
+							height: 40px;
+							padding: 0 30px;
 							margin-top: 50px;
+							font: 14px/40px 'arial';
 							background-color: #222;
 							text-align: center;
 							color: #fff;
@@ -73,7 +75,7 @@
 			}
 
 			.line {
-				padding-top: 10px;
+				padding-top: 20px;
 				border-top: 2px solid #222;
 			}
 		}
@@ -114,6 +116,7 @@
 
 						.info {
 							.name {
+								margin-bottom: 5px;
 								font-weight: bold;
 							}
 
