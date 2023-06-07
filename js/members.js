@@ -1,4 +1,4 @@
-// fetch('DB/department.json')
+// fetch('DB/members.json')
 // 	.then((res) => {
 // 		return res.json();
 // 	})
@@ -12,7 +12,7 @@
 // 				tags += `
 // 					<article>
 // 						<div class='pic'>
-// 							<img src='img/department/${data.pic}' />
+// 							<img src='img/members/${data.pic}' />
 // 						</div>
 // 						<div class="info">
 // 							<p class="name">${data.name}</p>
@@ -53,7 +53,7 @@ fetchData();
 
 //데이터 fetching 함수
 async function fetchData() {
-	const data = await fetch('DB/department.json');
+	const data = await fetch('DB/members.json');
 	const json = await data.json();
 
 	console.log(json, 'json');
@@ -72,7 +72,7 @@ function createMember(arr) {
 		tags += `
 				<article>
 					<div class='pic'>
-						<img src='img/department/${data.pic}' />
+						<img src='img/members/${data.pic}' />
 					</div>
 					<div class="info">
 						<p class="name">${data.name}</p>

@@ -1,4 +1,4 @@
-.department {
+.members {
 	section {
 		&.first {
 			margin-bottom: 80px;
@@ -148,7 +148,7 @@
 }
 
 @media screen and (max-width: $tablet) {
-	.department {
+	.members {
 		section {
 			&.first {
 				article {
@@ -201,7 +201,7 @@
 }
 
 @media screen and (max-width: $mobile) {
-	.department {
+	.members {
 		section {
 			&.first {
 				margin-bottom: 40px;

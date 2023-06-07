@@ -962,105 +962,105 @@ main .dot {
     border-bottom-right-radius: 0;
   }
 }
-.department section.first {
+.members section.first {
   margin-bottom: 80px;
 }
-.department section.first .cont_wrap {
+.members section.first .cont_wrap {
   border-top: 2px solid #222;
 }
-.department section.first .line {
+.members section.first .line {
   margin-top: 30px;
 }
-.department section.first article {
+.members section.first article {
   height: 500px;
   background-color: #000;
 }
-.department section .cont_wrap {
+.members section .cont_wrap {
   display: flex;
   justify-content: space-between;
   padding-top: 20px;
   flex-wrap: wrap;
 }
-.department section .cont_wrap .left {
+.members section .cont_wrap .left {
   width: 20%;
 }
-.department section .cont_wrap .left p {
+.members section .cont_wrap .left p {
   font-size: 20px;
 }
-.department section .cont_wrap .right {
+.members section .cont_wrap .right {
   width: calc(80% - 100px);
 }
-.department section .cont_wrap .right .box.line .btn_view {
+.members section .cont_wrap .right .box.line .btn_view {
   display: inline-block;
   margin-top: 50px;
   color: #222;
   border-bottom: 1px solid #000;
 }
-.department section .cont_wrap .right .box h2 {
+.members section .cont_wrap .right .box h2 {
   margin-bottom: 30px;
 }
-.department section .cont_wrap .right .cont_area {
+.members section .cont_wrap .right .cont_area {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.department section .cont_wrap .right .cont_area .item {
+.members section .cont_wrap .right .cont_area .item {
   width: calc(50% - 50px);
 }
-.department section .cont_wrap .right .cont_area .txt {
+.members section .cont_wrap .right .cont_area .txt {
   word-break: break-all;
 }
-.department section .cont_wrap .right .cont_area .txt p + p {
+.members section .cont_wrap .right .cont_area .txt p + p {
   margin-top: 20px;
 }
-.department section .cont_wrap .line {
+.members section .cont_wrap .line {
   padding-top: 10px;
   border-top: 2px solid #222;
 }
-.department section.last .left p {
+.members section.last .left p {
   font-size: 18px;
 }
-.department section.last .left p span {
+.members section.last .left p span {
   display: block;
   font-weight: bold;
 }
-.department section.last .right .box + .box {
+.members section.last .right .box + .box {
   margin-top: 100px;
 }
-.department section.last .right .cont_area {
+.members section.last .right .cont_area {
   flex-wrap: wrap;
   gap: 50px 5%;
 }
-.department section.last .right .cont_area article {
+.members section.last .right .cont_area article {
   width: 30%;
 }
-.department section.last .right .cont_area article .pic {
+.members section.last .right .cont_area article .pic {
   height: 250px;
   margin-bottom: 15px;
 }
-.department section.last .right .cont_area article .pic img {
+.members section.last .right .cont_area article .pic img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.department section.last .right .cont_area article .info p {
+.members section.last .right .cont_area article .info p {
   font-weight: bold;
 }
-.department section.last .right .cont_area article .info .dept {
+.members section.last .right .cont_area article .info .dept {
   display: inline-block;
   margin-top: 15px;
   color: #888;
 }
-.department section.last .right .list_area ul {
+.members section.last .right .list_area ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 30px 5%;
 }
-.department section.last .right .list_area ul li {
+.members section.last .right .list_area ul li {
   width: 45%;
 }
-.department section.last .right .list_area ul li .title {
+.members section.last .right .list_area ul li .title {
   padding-bottom: 5px;
   margin-bottom: 10px;
   font: bold 16px "arial";
@@ -1068,69 +1068,69 @@ main .dot {
 }
 
 @media screen and (max-width: 999px) {
-  .department section.first article {
+  .members section.first article {
     height: 500px;
   }
-  .department section.first .cont_area {
+  .members section.first .cont_area {
     gap: 50px;
   }
-  .department section .cont_wrap .left {
+  .members section .cont_wrap .left {
     width: 100%;
     margin-bottom: 30px;
   }
-  .department section .cont_wrap .left p {
+  .members section .cont_wrap .left p {
     font-size: 18px;
   }
-  .department section .cont_wrap .left p span {
+  .members section .cont_wrap .left p span {
     display: inline-block;
   }
-  .department section .cont_wrap .right {
+  .members section .cont_wrap .right {
     width: 100%;
   }
-  .department section.last .left p {
+  .members section.last .left p {
     font-size: 18px;
   }
-  .department section.last .right .line {
+  .members section.last .right .line {
     border-top: 0;
   }
-  .department section.last .right .box + .box {
+  .members section.last .right .box + .box {
     margin-top: 50px;
   }
 }
 @media screen and (max-width: 639px) {
-  .department section.first {
+  .members section.first {
     margin-bottom: 40px;
   }
-  .department section.first article {
+  .members section.first article {
     height: 300px;
     margin-top: 40px;
   }
-  .department section.first .cont_area {
+  .members section.first .cont_area {
     gap: 0;
   }
-  .department section .cont_wrap .right {
+  .members section .cont_wrap .right {
     width: 100%;
   }
-  .department section .cont_wrap .right .box.line .btn_view {
+  .members section .cont_wrap .right .box.line .btn_view {
     margin: 20px 0;
   }
-  .department section .cont_wrap .right .cont_area .item {
+  .members section .cont_wrap .right .cont_area .item {
     width: 100%;
   }
-  .department section .cont_wrap .right .cont_area .txt p + p {
+  .members section .cont_wrap .right .cont_area .txt p + p {
     margin-top: 10px;
   }
-  .department section.last .right .cont_area {
+  .members section.last .right .cont_area {
     flex-wrap: wrap;
     gap: 50px 0;
   }
-  .department section.last .right .cont_area article {
+  .members section.last .right .cont_area article {
     width: 100%;
   }
-  .department section.last .right .list_area ul {
+  .members section.last .right .list_area ul {
     gap: 30px 0;
   }
-  .department section.last .right .list_area ul li {
+  .members section.last .right .list_area ul li {
     width: 100%;
   }
 }
