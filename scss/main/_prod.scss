@@ -20,6 +20,11 @@
 					font-size: 24px;
 					color: #777;
 				}
+
+				i {
+					opacity: 0;
+					visibility: hidden;
+				}
 			}
 
 			.img {
@@ -36,6 +41,11 @@
 			&.on {
 				.img {
 					opacity: 1;
+				}
+
+				i {
+					opacity: 1;
+					visibility: visible;
 				}
 			}
 		}
@@ -54,7 +64,7 @@
 				}
 
 				.img {
-					right: 0;
+					right: 10vw;
 					width: 150px;
 					height: 180px;
 				}

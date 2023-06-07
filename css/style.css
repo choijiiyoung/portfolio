@@ -521,7 +521,7 @@ main .dot {
   justify-content: center;
   align-items: center;
   gap: 230px;
-  padding: 20px 0;
+  padding: 15px 0;
   color: #222;
   font: bold 18px "arial";
 }
@@ -534,6 +534,7 @@ main .dot {
   position: relative;
   margin-left: auto;
   width: 30px;
+  min-width: 30px;
   height: 30px;
   border: 1px solid #222;
   border-radius: 50%;
@@ -598,6 +599,17 @@ main .dot {
   color: #000;
 }
 
+@media screen and (max-width: 1200px) {
+  #imprv .content {
+    gap: 140px;
+  }
+  #imprv .acco_wrap .list li a {
+    gap: 140px;
+  }
+  #imprv .acco_wrap .list li .box {
+    gap: 150px;
+  }
+}
 @media screen and (max-width: 999px) {
   #imprv .content {
     gap: 0;
@@ -677,6 +689,10 @@ main .dot {
   font-size: 24px;
   color: #777;
 }
+#prod .prod_list li a i {
+  opacity: 0;
+  visibility: hidden;
+}
 #prod .prod_list li .img {
   opacity: 0;
   position: absolute;
@@ -690,6 +706,10 @@ main .dot {
 #prod .prod_list li.on .img {
   opacity: 1;
 }
+#prod .prod_list li.on i {
+  opacity: 1;
+  visibility: visible;
+}
 
 @media screen and (max-width: 999px) {
   #prod .prod_list li a p {
@@ -697,7 +717,7 @@ main .dot {
     font-size: 20px;
   }
   #prod .prod_list li .img {
-    right: 0;
+    right: 10vw;
     width: 150px;
     height: 180px;
   }
