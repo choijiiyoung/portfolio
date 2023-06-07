@@ -262,9 +262,9 @@ main .dot {
 .container section:first-of-type {
   padding-top: 100px;
 }
-.container .subVisual {
+.container .sub_visual {
   width: 100%;
-  height: 250px;
+  height: 300px;
   background: gray;
 }
 
