@@ -134,6 +134,10 @@
 			.title_area {
 				width: 100%;
 				flex-direction: unset;
+
+				.btn_view {
+					width: auto;
+				}
 			}
 
 			.txt_area {
@@ -154,12 +158,11 @@
 @media screen and (max-width: $mobile) {
 	#news {
 		.content {
-			.title_area {
-				.btn_view {
-					width: 19%;
-					text-align: right;
-				}
-			}
+			// .title_area {
+			// 	.btn_view {
+			// 		width: auto;
+			// 	}
+			// }
 
 			.txt_area {
 				.news_list {
