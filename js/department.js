@@ -49,30 +49,28 @@
 const section = document.querySelectorAll('section')[1];
 const contArea = section.querySelector('.cont_area');
 const contLi = section.querySelector('ul');
+let tags;
 
 fetchData();
 
-//데이터 fetching
+//데이터 fetching 함수
 async function fetchData() {
 	const data = await fetch('DB/department.json');
 	const json = await data.json();
 
 	console.log(json, 'json');
 
-	createDom(json);
+	createMember(json);
+	createSchedule(json);
 }
 
-//동적 생성
-function createDom(arr) {
-	let tags;
-	// console.log(arr);
-
-	//member data
+//member data 동적 생성
+function createMember(arr) {
+	tags = '';
 	const memberData = arr.members;
-	if (memberData.length > 0) {
-		tags = '';
-		memberData.map((data) => {
-			tags += `
+
+	memberData.map((data) => {
+		tags += `
 				<article>
 					<div class='pic'>
 						<img src='img/department/${data.pic}' />
@@ -84,24 +82,24 @@ function createDom(arr) {
 					</div>
 				</article>
 			`;
-		});
-		contArea.innerHTML = tags;
-	}
+	});
+	contArea.innerHTML = tags;
+}
 
-	//schedule data
+//schedule data 동적 생성
+function createSchedule(arr) {
+	tags = '';
 	const scheduleData = arr.schedule;
-	if (scheduleData.length > 0) {
-		tags = '';
-		scheduleData.map((data) => {
-			tags += `
-				<li>
-					<p class="title">${data.subj}</p>
-					<div class="place">
-						<p>${data.date}</p>
-					</div>
-				</li>
-			`;
-		});
-		contLi.innerHTML = tags;
-	}
+
+	scheduleData.map((data) => {
+		tags += `
+			<li>
+				<p class="title">${data.subj}</p>
+				<div class="place">
+					<p>${data.date}</p>
+				</div>
+			</li>
+		`;
+	});
+	contLi.innerHTML = tags;
 }
