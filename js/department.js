@@ -47,8 +47,6 @@
 // 	});
 
 const section = document.querySelectorAll('section')[1];
-const contArea = section.querySelector('.cont_area');
-const contLi = section.querySelector('ul');
 let tags;
 
 fetchData();
@@ -67,6 +65,7 @@ async function fetchData() {
 //member data 동적 생성
 function createMember(arr) {
 	tags = '';
+	const contArea = section.querySelector('.cont_area');
 	const memberData = arr.members;
 
 	memberData.map((data) => {
@@ -89,9 +88,11 @@ function createMember(arr) {
 //schedule data 동적 생성
 function createSchedule(arr) {
 	tags = '';
+	const ul = document.createElement('ul');
+	const listArea = section.querySelector('.list_area');
 	const scheduleData = arr.schedule;
 
-	scheduleData.map((data) => {
+	scheduleData.forEach((data) => {
 		tags += `
 			<li>
 				<p class="title">${data.subj}</p>
@@ -101,5 +102,6 @@ function createSchedule(arr) {
 			</li>
 		`;
 	});
-	contLi.innerHTML = tags;
+	ul.innerHTML = tags;
+	listArea.append(ul);
 }
