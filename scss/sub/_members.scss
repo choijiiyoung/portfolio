@@ -37,9 +37,12 @@
 					&.line {
 						.btn_view {
 							display: inline-block;
+							padding: 10px 30px;
 							margin-top: 50px;
-							color: #222;
-							border-bottom: 1px solid #000;
+							background-color: #222;
+							text-align: center;
+							color: #fff;
+							border-radius: 20px;
 						}
 					}
 
