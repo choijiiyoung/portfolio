@@ -11,10 +11,9 @@ main {
 	}
 
 	.inner {
-		max-width: 1240px;
+		max-width: 1200px;
 		width: auto;
 		margin: 0 auto;
-		padding: 0 2vw;
 	}
 
 	.dot {
@@ -29,7 +28,8 @@ main {
 @media screen and (max-width: 1300px) {
 	main {
 		.inner {
-			width: 100%;
+			max-width: 100%;
+			padding: 0 3vw;
 		}
 	}
 }

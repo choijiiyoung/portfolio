@@ -226,10 +226,9 @@ main section:last-child {
   margin-bottom: 0;
 }
 main .inner {
-  max-width: 1240px;
+  max-width: 1200px;
   width: auto;
   margin: 0 auto;
-  padding: 0 2vw;
 }
 main .dot {
   display: inline-block;
@@ -241,7 +240,8 @@ main .dot {
 
 @media screen and (max-width: 1300px) {
   main .inner {
-    width: 100%;
+    max-width: 100%;
+    padding: 0 3vw;
   }
 }
 @media screen and (max-width: 999px) {
@@ -521,7 +521,7 @@ main .dot {
   justify-content: center;
   align-items: center;
   gap: 230px;
-  padding: 15px 0;
+  padding: 20px 0;
   color: #222;
   font: bold 18px "arial";
 }
