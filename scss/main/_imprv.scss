@@ -60,6 +60,7 @@
 						}
 
 						&::before {
+							display: none;
 							left: 50%;
 							width: 2px;
 							height: 60%;
@@ -99,6 +100,14 @@
 				}
 
 				&.on {
+					a {
+						.icon {
+							&::before {
+								display: block;
+							}
+						}
+					}
+
 					.box {
 						display: flex;
 					}
@@ -151,7 +160,14 @@
 							width: auto;
 						}
 
+						p {
+							font-size: 14px;
+						}
+
 						.icon {
+							flex: none;
+							display: inline-block;
+
 							&::before {
 								height: 50%;
 							}

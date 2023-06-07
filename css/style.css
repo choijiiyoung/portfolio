@@ -543,6 +543,7 @@ main .dot {
   transform: translate(-50%, -50%);
 }
 #imprv .acco_wrap .list li a .icon::before {
+  display: none;
   left: 50%;
   width: 2px;
   height: 60%;
@@ -571,6 +572,9 @@ main .dot {
 }
 #imprv .acco_wrap .list li .box .txt p + p {
   margin-top: 20px;
+}
+#imprv .acco_wrap .list li.on a .icon::before {
+  display: block;
 }
 #imprv .acco_wrap .list li.on .box {
   display: flex;
@@ -608,6 +612,13 @@ main .dot {
   }
   #imprv .acco_wrap .list li a .num {
     width: auto;
+  }
+  #imprv .acco_wrap .list li a p {
+    font-size: 14px;
+  }
+  #imprv .acco_wrap .list li a .icon {
+    flex: none;
+    display: inline-block;
   }
   #imprv .acco_wrap .list li a .icon::before {
     height: 50%;
@@ -666,11 +677,14 @@ main .dot {
   opacity: 0;
   position: absolute;
   right: 150px;
-  top: -25px;
+  top: -6vw;
   width: 200px;
   height: 240px;
   background-color: #888;
   z-index: 1;
+}
+#prod .prod_list li.on .img {
+  opacity: 1;
 }
 
 @media screen and (max-width: 999px) {
@@ -678,7 +692,11 @@ main .dot {
     display: flex;
     gap: 5%;
   }
+  #prod .prod_list li a p {
+    font-size: 20px;
+  }
   #prod .prod_list li .img {
+    right: 0;
     width: 150px;
     height: 180px;
   }
@@ -797,7 +815,7 @@ main .dot {
     border-top: 1px solid #ddd;
   }
   #partnership .prs_wrap .item + .item {
-    margin-left: 0;
+    margin: 80px 0 0 0;
   }
   #partnership .prs_wrap .item .img_area .img {
     height: 300px;
@@ -868,9 +886,6 @@ main .dot {
   #news .content .title_area {
     width: calc(100% - 790px);
   }
-  #news .content .title_area .btn_view {
-    width: 62px;
-  }
   #news .content .txt_area {
     flex: 1;
   }
@@ -907,13 +922,6 @@ main .dot {
     border-top-right-radius: 170px;
     border-bottom-right-radius: 170px;
   }
-  #news .content .btn_view {
-    display: inline-block;
-    width: 80px;
-    padding-bottom: 5px;
-    border-bottom: 1px solid #000;
-    font-size: 14px;
-  }
 }
 @media screen and (max-width: 999px) {
   #news .content {
@@ -933,8 +941,8 @@ main .dot {
 }
 @media screen and (max-width: 639px) {
   #news .content .title_area .btn_view {
-    width: 30%;
-    text-align: center;
+    width: 19%;
+    text-align: right;
   }
   #news .content .txt_area .news_list {
     flex-wrap: wrap;
@@ -949,9 +957,6 @@ main .dot {
     border-left: 1px solid #222;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
-  }
-  #news .content .btn_view {
-    width: 100%;
   }
 }
 .department section.first {

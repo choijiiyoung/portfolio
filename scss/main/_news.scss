@@ -76,9 +76,6 @@
 
 			.title_area {
 				width: calc(100% - 790px);
-				.btn_view {
-					width: 62px;
-				}
 			}
 
 			.txt_area {
@@ -124,14 +121,6 @@
 					}
 				}
 			}
-
-			.btn_view {
-				display: inline-block;
-				width: 80px;
-				padding-bottom: 5px;
-				border-bottom: 1px solid #000;
-				font-size: 14px;
-			}
 		}
 	}
 }
@@ -167,8 +156,8 @@
 		.content {
 			.title_area {
 				.btn_view {
-					width: 30%;
-					text-align: center;
+					width: 19%;
+					text-align: right;
 				}
 			}
 
@@ -188,10 +177,6 @@
 						}
 					}
 				}
-			}
-
-			.btn_view {
-				width: 100%;
 			}
 		}
 	}
