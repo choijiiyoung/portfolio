@@ -1046,7 +1046,7 @@ main .dot {
   height: 100%;
   object-fit: cover;
 }
-.members section.last .right .cont_area article .info p {
+.members section.last .right .cont_area article .info .name {
   font-weight: bold;
 }
 .members section.last .right .cont_area article .info .dept {

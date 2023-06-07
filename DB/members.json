@@ -1,38 +1,38 @@
 {
   "members": [
     {
-      "name": "Richard Naish",
-      "position": "Executive Directior",
+      "name": "Julia Jung",
+      "position": "President",
       "dept": "BIO",
       "pic": "member1.jpg"
     },
     {
-      "name": "Aaliyah",
-      "position": "Executive Directior",
+      "name": "David Choi",
+      "position": "Vice President",
       "dept": "BIO",
       "pic": "member2.jpg"
     },
     {
-      "name": "Ben Hayes",
-      "position": "Directior",
+      "name": "Emily Simpson",
+      "position": "UI Designer",
       "dept": "BIO",
       "pic": "member3.jpg"
     },
     {
-      "name": "Aaliyah",
-      "position": "Executive Directior",
+      "name": "Paul Davison",
+      "position": "Front-end Engineer",
       "dept": "BIO",
       "pic": "member4.jpg"
     },
     {
-      "name": "Aaliyah",
-      "position": "Executive Directior",
+      "name": "Sara Kim",
+      "position": "Back-end Engineer",
       "dept": "BIO",
       "pic": "member5.jpg"
     },
     {
-      "name": "Aaliyah",
-      "position": "Executive Directior",
+      "name": "Michael",
+      "position": "Project Manager",
       "dept": "BIO",
       "pic": "member6.jpg"
     }
