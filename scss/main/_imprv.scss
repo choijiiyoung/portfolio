@@ -4,11 +4,6 @@
 		gap: 235px;
 		margin-bottom: 50px;
 
-		// .title_area {
-		// 	flex-shrink: 0;
-		// 	width: 210px;
-		// }
-
 		.txt_area {
 			width: 410px;
 
@@ -42,6 +37,7 @@
 					font: bold 18px 'arial';
 
 					.num {
+						display: inline-block;
 						flex-shrink: 0;
 						width: 210px;
 					}
@@ -58,23 +54,21 @@
 						&::after {
 							content: '';
 							position: absolute;
+							top: 50%;
 							background-color: #222;
+							transform: translate(-50%, -50%);
 						}
 
 						&::before {
 							left: 50%;
-							top: 6px;
-							bottom: 6px;
 							width: 2px;
-							transform: translateX(-50%);
+							height: 60%;
 						}
 
 						&::after {
-							top: 50%;
-							left: 6px;
-							right: 6px;
+							left: 50%;
+							width: 60%;
 							height: 2px;
-							transform: translateY(-50%);
 						}
 					}
 				}
@@ -154,18 +148,16 @@
 						gap: 5%;
 
 						.num {
-							width: 3%;
+							width: auto;
 						}
 
 						.icon {
 							&::before {
-								top: 8px;
-								bottom: 8px;
+								height: 50%;
 							}
 
 							&::after {
-								left: 8px;
-								right: 8px;
+								width: 50%;
 							}
 						}
 					}

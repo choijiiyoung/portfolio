@@ -523,6 +523,7 @@ main .dot {
   font: bold 18px "arial";
 }
 #imprv .acco_wrap .list li a .num {
+  display: inline-block;
   flex-shrink: 0;
   width: 210px;
 }
@@ -537,21 +538,19 @@ main .dot {
 #imprv .acco_wrap .list li a .icon::before, #imprv .acco_wrap .list li a .icon::after {
   content: "";
   position: absolute;
+  top: 50%;
   background-color: #222;
+  transform: translate(-50%, -50%);
 }
 #imprv .acco_wrap .list li a .icon::before {
   left: 50%;
-  top: 6px;
-  bottom: 6px;
   width: 2px;
-  transform: translateX(-50%);
+  height: 60%;
 }
 #imprv .acco_wrap .list li a .icon::after {
-  top: 50%;
-  left: 6px;
-  right: 6px;
+  left: 50%;
+  width: 60%;
   height: 2px;
-  transform: translateY(-50%);
 }
 #imprv .acco_wrap .list li .box {
   gap: 240px;
@@ -608,15 +607,13 @@ main .dot {
     gap: 5%;
   }
   #imprv .acco_wrap .list li a .num {
-    width: 3%;
+    width: auto;
   }
   #imprv .acco_wrap .list li a .icon::before {
-    top: 8px;
-    bottom: 8px;
+    height: 50%;
   }
   #imprv .acco_wrap .list li a .icon::after {
-    left: 8px;
-    right: 8px;
+    width: 50%;
   }
   #imprv .acco_wrap .list li .box {
     gap: 8%;
