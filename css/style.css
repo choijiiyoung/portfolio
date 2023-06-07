@@ -668,11 +668,12 @@ main .dot {
 }
 #prod .prod_list li a {
   display: flex;
-  gap: 425px;
+  justify-content: space-between;
   align-items: center;
   padding: 15px 0;
 }
 #prod .prod_list li a p {
+  width: 26%;
   font-size: 24px;
   color: #777;
 }
@@ -691,11 +692,8 @@ main .dot {
 }
 
 @media screen and (max-width: 999px) {
-  #prod .prod_list li a {
-    display: flex;
-    gap: 5%;
-  }
   #prod .prod_list li a p {
+    width: calc(100% - 60px);
     font-size: 20px;
   }
   #prod .prod_list li .img {
