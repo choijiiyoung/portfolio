@@ -589,11 +589,11 @@ main .dot {
 }
 #imprv .btn_wrap .btn {
   display: inline-block;
-  height: 40px;
+  height: 50px;
   padding: 0 30px;
-  font: 12px/38px "arial";
+  font: 14px/48px "arial";
   border: 1px solid #000;
-  border-radius: 20px;
+  border-radius: 25px;
   text-align: center;
   color: #000;
 }
