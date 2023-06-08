@@ -50,28 +50,39 @@
 
 					.cross {
 						margin-left: auto;
-						width: 30px;
-						min-width: 30px;
-						height: 30px;
+						// width: 30px;
+						// min-width: 30px;
+						// height: 30px;
+						min-width: 32px;
 						border: 1px solid #222;
 						border-radius: 50%;
 						display: flex;
 						justify-content: center;
 						align-items: center;
 
+						// span {
+						// 	&.row {
+						// 		left: 6px;
+						// 		width: 16px;
+						// 		height: 2px;
+						// 		margin-top: -1px;
+						// 	}
+
+						// 	&.col {
+						// 		top: 6px;
+						// 		width: 2px;
+						// 		height: 16px;
+						// 		margin-left: -1px;
+						// 	}
+						// }
+
 						span {
 							&.row {
-								left: 6px;
-								width: 16px;
 								height: 2px;
-								margin-top: -1px;
 							}
 
 							&.col {
-								top: 6px;
 								width: 2px;
-								height: 16px;
-								margin-left: -1px;
 							}
 						}
 					}

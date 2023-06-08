@@ -232,26 +232,27 @@ main .inner {
 }
 main .cross {
   position: relative;
-  width: 20px;
-  height: 20px;
+  width: 32px;
+  height: 32px;
 }
 main .cross span {
   position: absolute;
-  background: #222;
+  background-color: #222;
 }
 main .cross span.row {
+  left: 50%;
   top: 50%;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  margin-top: -2px;
+  transform: translate(-50%, -50%);
+  width: 15px;
+  height: 3px;
 }
 main .cross span.col {
-  top: 0;
+  position: absolute;
   left: 50%;
-  width: 4px;
-  height: 100%;
-  margin-left: -2px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 3px;
+  height: 15px;
 }
 
 @media screen and (max-width: 1300px) {
@@ -551,9 +552,7 @@ main .cross span.col {
 }
 #imprv .acco_wrap .list li a .cross {
   margin-left: auto;
-  width: 30px;
-  min-width: 30px;
-  height: 30px;
+  min-width: 32px;
   border: 1px solid #222;
   border-radius: 50%;
   display: flex;
@@ -561,16 +560,10 @@ main .cross span.col {
   align-items: center;
 }
 #imprv .acco_wrap .list li a .cross span.row {
-  left: 6px;
-  width: 16px;
   height: 2px;
-  margin-top: -1px;
 }
 #imprv .acco_wrap .list li a .cross span.col {
-  top: 6px;
   width: 2px;
-  height: 16px;
-  margin-left: -1px;
 }
 #imprv .acco_wrap .list li .box {
   gap: 240px;
@@ -738,6 +731,18 @@ main .cross span.col {
 #collab .collab_list li + li {
   border-left: 1px solid #ddd;
 }
+#collab .collab_list li.on {
+  flex-shrink: 0;
+}
+#collab .collab_list li.on a {
+  display: none;
+}
+#collab .collab_list li.on .box {
+  display: block;
+}
+#collab .collab_list li.on .box .name {
+  font-weight: bold;
+}
 #collab .collab_list li a {
   display: block;
   padding: 20px 0;
@@ -766,15 +771,6 @@ main .cross span.col {
   width: 400px;
   height: 400px;
   background: #000;
-}
-#collab .collab_list li.on {
-  flex-shrink: 0;
-}
-#collab .collab_list li.on a {
-  display: none;
-}
-#collab .collab_list li.on .box {
-  display: block;
 }
 
 @media screen and (max-width: 999px) {
@@ -827,6 +823,9 @@ main .cross span.col {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+#partnership .prs_wrap .item .name p {
+  padding-left: 10px;
 }
 #partnership .prs_wrap .item .img_area .img {
   width: 100%;

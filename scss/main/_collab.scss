@@ -14,6 +14,22 @@
 				border-left: 1px solid #ddd;
 			}
 
+			&.on {
+				flex-shrink: 0;
+
+				a {
+					display: none;
+				}
+
+				.box {
+					display: block;
+
+					.name {
+						font-weight: bold;
+					}
+				}
+			}
+
 			a {
 				display: block;
 				padding: 20px 0;
@@ -45,18 +61,6 @@
 						height: 400px;
 						background: #000;
 					}
-				}
-			}
-
-			&.on {
-				flex-shrink: 0;
-
-				a {
-					display: none;
-				}
-
-				.box {
-					display: block;
 				}
 			}
 		}
