@@ -230,12 +230,28 @@ main .inner {
   width: auto;
   margin: 0 auto;
 }
-main .dot {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  background-color: #222;
-  border-radius: 100%;
+main .cross {
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+main .cross span {
+  position: absolute;
+  background: #222;
+}
+main .cross span.row {
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  margin-top: -2px;
+}
+main .cross span.col {
+  top: 0;
+  left: 50%;
+  width: 4px;
+  height: 100%;
+  margin-left: -2px;
 }
 
 @media screen and (max-width: 1300px) {
@@ -329,7 +345,7 @@ main .dot {
   height: 2px;
   background-color: #efefee;
 }
-#visualWrap .txt_wrap .txt .dot {
+#visualWrap .txt_wrap .txt .cross {
   position: absolute;
   right: 0;
   top: 10px;
@@ -393,7 +409,7 @@ main .dot {
     width: 100%;
     margin-bottom: 30px;
   }
-  #visualWrap .txt_wrap .txt .dot {
+  #visualWrap .txt_wrap .txt .cross {
     display: none;
   }
   #visualWrap .txt_wrap .btn {
@@ -678,11 +694,18 @@ main .dot {
 #prod .prod_list li + li {
   border-top: 1px solid #ddd;
 }
+#prod .prod_list li.on .img {
+  opacity: 1;
+}
+#prod .prod_list li.on i {
+  opacity: 1;
+  visibility: visible;
+}
 #prod .prod_list li a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 0;
+  padding: 20px 0;
 }
 #prod .prod_list li a p {
   width: 26%;
@@ -702,13 +725,6 @@ main .dot {
   height: 240px;
   background-color: #888;
   z-index: 1;
-}
-#prod .prod_list li.on .img {
-  opacity: 1;
-}
-#prod .prod_list li.on i {
-  opacity: 1;
-  visibility: visible;
 }
 
 @media screen and (max-width: 999px) {

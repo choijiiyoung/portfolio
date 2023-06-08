@@ -9,11 +9,22 @@
 				border-top: 1px solid #ddd;
 			}
 
+			&.on {
+				.img {
+					opacity: 1;
+				}
+
+				i {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+
 			a {
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
-				padding: 15px 0;
+				padding: 20px 0;
 
 				p {
 					width: 26%;
@@ -36,17 +47,6 @@
 				height: 240px;
 				background-color: #888;
 				z-index: 1;
-			}
-
-			&.on {
-				.img {
-					opacity: 1;
-				}
-
-				i {
-					opacity: 1;
-					visibility: visible;
-				}
 			}
 		}
 	}
