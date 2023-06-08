@@ -244,7 +244,7 @@ main .cross span.row {
   left: 0;
   width: 100%;
   height: 4px;
-  margin-top: -2px;
+  margin-top: -3px;
 }
 main .cross span.col {
   top: 0;
@@ -532,6 +532,9 @@ main .cross span.col {
 #imprv .acco_wrap .list li:last-of-type {
   border: 0;
 }
+#imprv .acco_wrap .list li.on .box {
+  display: flex;
+}
 #imprv .acco_wrap .list li a {
   display: flex;
   justify-content: center;
@@ -546,32 +549,28 @@ main .cross span.col {
   flex-shrink: 0;
   width: 210px;
 }
-#imprv .acco_wrap .list li a .icon {
-  position: relative;
+#imprv .acco_wrap .list li a .cross {
   margin-left: auto;
   width: 30px;
   min-width: 30px;
   height: 30px;
   border: 1px solid #222;
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-#imprv .acco_wrap .list li a .icon::before, #imprv .acco_wrap .list li a .icon::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  background-color: #222;
-  transform: translate(-50%, -50%);
-}
-#imprv .acco_wrap .list li a .icon::before {
-  display: none;
-  left: 50%;
-  width: 2px;
-  height: 60%;
-}
-#imprv .acco_wrap .list li a .icon::after {
-  left: 50%;
-  width: 60%;
+#imprv .acco_wrap .list li a .cross span.row {
+  left: 6px;
+  width: 16px;
   height: 2px;
+  margin-top: -1px;
+}
+#imprv .acco_wrap .list li a .cross span.col {
+  top: 6px;
+  width: 2px;
+  height: 16px;
+  margin-left: -1px;
 }
 #imprv .acco_wrap .list li .box {
   gap: 240px;
@@ -592,12 +591,6 @@ main .cross span.col {
 }
 #imprv .acco_wrap .list li .box .txt p + p {
   margin-top: 20px;
-}
-#imprv .acco_wrap .list li.on a .icon::before {
-  display: block;
-}
-#imprv .acco_wrap .list li.on .box {
-  display: flex;
 }
 #imprv .btn_wrap {
   display: flex;
@@ -650,12 +643,6 @@ main .cross span.col {
   #imprv .acco_wrap .list li a .icon {
     flex: none;
     display: inline-block;
-  }
-  #imprv .acco_wrap .list li a .icon::before {
-    height: 50%;
-  }
-  #imprv .acco_wrap .list li a .icon::after {
-    width: 50%;
   }
   #imprv .acco_wrap .list li .box {
     gap: 8%;

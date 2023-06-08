@@ -27,6 +27,12 @@
 					border: 0;
 				}
 
+				&.on {
+					.box {
+						display: flex;
+					}
+				}
+
 				a {
 					display: flex;
 					justify-content: center;
@@ -42,35 +48,31 @@
 						width: 210px;
 					}
 
-					.icon {
-						position: relative;
+					.cross {
 						margin-left: auto;
 						width: 30px;
 						min-width: 30px;
 						height: 30px;
 						border: 1px solid #222;
 						border-radius: 50%;
+						display: flex;
+						justify-content: center;
+						align-items: center;
 
-						&::before,
-						&::after {
-							content: '';
-							position: absolute;
-							top: 50%;
-							background-color: #222;
-							transform: translate(-50%, -50%);
-						}
+						span {
+							&.row {
+								left: 6px;
+								width: 16px;
+								height: 2px;
+								margin-top: -1px;
+							}
 
-						&::before {
-							display: none;
-							left: 50%;
-							width: 2px;
-							height: 60%;
-						}
-
-						&::after {
-							left: 50%;
-							width: 60%;
-							height: 2px;
+							&.col {
+								top: 6px;
+								width: 2px;
+								height: 16px;
+								margin-left: -1px;
+							}
 						}
 					}
 				}
@@ -97,20 +99,6 @@
 						p + p {
 							margin-top: 20px;
 						}
-					}
-				}
-
-				&.on {
-					a {
-						.icon {
-							&::before {
-								display: block;
-							}
-						}
-					}
-
-					.box {
-						display: flex;
 					}
 				}
 			}
@@ -190,14 +178,6 @@
 						.icon {
 							flex: none;
 							display: inline-block;
-
-							&::before {
-								height: 50%;
-							}
-
-							&::after {
-								width: 50%;
-							}
 						}
 					}
 
