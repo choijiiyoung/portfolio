@@ -21,7 +21,9 @@
 				text-align: center;
 
 				.name {
-					writing-mode: tb;
+					display: inline-flex;
+					text-align: center;
+					transform: translateY(100%) rotate(-90deg);
 				}
 			}
 
@@ -96,7 +98,9 @@
 					text-align: left;
 
 					.name {
-						writing-mode: unset;
+						display: block;
+						transform: none;
+						text-align: left;
 					}
 				}
 

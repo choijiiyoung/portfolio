@@ -745,7 +745,9 @@ main .cross span.col {
   text-align: center;
 }
 #collab .collab_list li a .name {
-  writing-mode: tb;
+  display: inline-flex;
+  text-align: center;
+  transform: translateY(100%) rotate(-90deg);
 }
 #collab .collab_list li .box {
   display: none;
@@ -798,7 +800,9 @@ main .cross span.col {
     text-align: left;
   }
   #collab .collab_list li a .name {
-    writing-mode: unset;
+    display: block;
+    transform: none;
+    text-align: left;
   }
   #collab .collab_list li .box .img_area .img {
     width: 100%;
