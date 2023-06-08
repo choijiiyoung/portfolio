@@ -674,12 +674,12 @@ main .cross span.col {
 #prod .prod_list li + li {
   border-top: 1px solid #ddd;
 }
-#prod .prod_list li.on .img {
-  opacity: 1;
-}
-#prod .prod_list li.on i {
+#prod .prod_list li.on a i {
   opacity: 1;
   visibility: visible;
+}
+#prod .prod_list li.on .img {
+  opacity: 1;
 }
 #prod .prod_list li a {
   display: flex;
@@ -695,6 +695,7 @@ main .cross span.col {
 #prod .prod_list li a i {
   opacity: 0;
   visibility: hidden;
+  transform: rotate(50deg);
 }
 #prod .prod_list li .img {
   opacity: 0;

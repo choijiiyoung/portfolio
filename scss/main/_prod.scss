@@ -10,13 +10,15 @@
 			}
 
 			&.on {
-				.img {
-					opacity: 1;
+				a {
+					i {
+						opacity: 1;
+						visibility: visible;
+					}
 				}
 
-				i {
+				.img {
 					opacity: 1;
-					visibility: visible;
 				}
 			}
 
@@ -35,6 +37,7 @@
 				i {
 					opacity: 0;
 					visibility: hidden;
+					transform: rotate(50deg);
 				}
 			}
 
