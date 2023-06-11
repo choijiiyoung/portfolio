@@ -1488,12 +1488,13 @@ main .cross span.col {
     min-height: auto;
   }
 }
+.gallery img {
+  width: 100%;
+}
 .gallery .gallery_wrap {
   display: flex;
   flex-wrap: wrap;
-}
-.gallery .gallery_wrap li {
-  flex: 1;
+  gap: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

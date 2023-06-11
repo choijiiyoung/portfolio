@@ -1,10 +1,11 @@
 .gallery {
+	img {
+		width: 100%;
+	}
+
 	.gallery_wrap {
 		display: flex;
 		flex-wrap: wrap;
-
-		li {
-			flex: 1;
-		}
+		gap: 20px;
 	}
 }

@@ -1,6 +1,6 @@
 const gallery = document.querySelector('.gallery .gallery_wrap');
 const api_key = 'db5673d91b2fb6704d13f6b0181efd99';
-const num = 30;
+const num = 20;
 const myId = '198483448@N02';
 const baseURL = `https://www.flickr.com/services/rest/?format=json&nojsoncallback=1&api_key=${api_key}&per_page=${num}&method=`;
 const method_interest = 'flickr.interestingness.getList';
@@ -16,17 +16,17 @@ async function fetchData(url) {
 	console.log(items);
 
 	let tags = '';
-	items.forEach((item) => {
+	items.forEach((item, idx) => {
 		tags += `
 			<li class='item'>
 				<div>
+					<p>${item.title === '' ? 'Have a good day!!' : item.title}</p> 
           <a> 
             <img class='pic' src='https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_m.jpg' alt='https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_b.jpg'/>
           </a>
-
-					<p>${item.title === '' ? 'Have a good day!!' : item.title}</p> 
+					
 					<article class='profile'>
-            <span>${item.owner}</span>
+						<span>${item.owner}</span>
 						<img src='http://farm${item.farm}.staticflickr.com/${item.server}/buddyicons/${item.owner}.jpg' />
 					</article>
 				</div>
