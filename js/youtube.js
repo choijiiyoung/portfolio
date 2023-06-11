@@ -145,7 +145,7 @@ function createList(arr) {
 					</div>
 
 					<div class='title'>
-						<h3>${tit.length > 40 ? tit.substr(0, 40) + '...' : tit}</h3>
+						<h3>${tit.length > 30 ? tit.substr(0, 30) + '...' : tit}</h3>
 						<p>${date.split('T')[0].split('-').join('.')}</p>
 					</div>
 					<p class='txt'>${desc.length > 100 ? desc.substr(0, 100) + '...' : desc}</p>
