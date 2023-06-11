@@ -6,6 +6,7 @@ $mobile: 639px;
 @import 'common/header';
 @import 'common/footer';
 @import 'common/layout';
+@import 'common/pop';
 
 //main
 @import 'main/visual';
@@ -18,3 +19,4 @@ $mobile: 639px;
 
 //sub
 @import 'sub/department';
+@import 'sub/youtube';
