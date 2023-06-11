@@ -1,6 +1,8 @@
-const ytbWrap = document.querySelector('.youtube .ytb_wrap');
+const ytbWrap = document.querySelector('.youtube');
 const elSlide = ytbWrap.querySelector('.slide_wrap');
 const elTxt = ytbWrap.querySelector('.info_wrap .txt_wrap');
+const elList = ytbWrap.querySelector('.ytb_list');
+console.log(elList);
 let tags;
 
 fetchData();
@@ -20,13 +22,13 @@ document.body.addEventListener('click', (e) => {
 // 		tags = '';
 // 		json.items.forEach((item, idx) => {
 // 			let thumb = item.snippet.thumbnails.standard.url;
-// 			let videId = item.snippet.resourceId.videoId;
+// 			let videoId = item.snippet.resourceId.videoId;
 // 			let date = item.snippet.publishedAt;
 
 // 			tags += `
 // 				<article>
 // 					<div class='pic'>
-// 						<img class="thumb" src="${thumb}" alt=${videId}/>
+// 						<img class="thumb" src="${thumb}" alt=${videoId}/>
 // 						<span class='num'>0${idx + 1}</span>
 // 					</div>
 
@@ -64,7 +66,7 @@ document.body.addEventListener('click', (e) => {
 async function fetchData() {
 	const key = 'AIzaSyAuF0TpI6-3VX54rC1jnTjptdGcBXybDGU';
 	const list = 'PLFAS7kFpzjoPZEvZ5LcpGZkgyn_FOx9Qg';
-	const num = 3;
+	const num = 4;
 	const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${list}&key=${key}&maxResults=${num}`;
 
 	const data = await fetch(url);
@@ -74,6 +76,7 @@ async function fetchData() {
 
 	createSlide(json.items);
 	createTxt(json.items);
+	createList(json.items);
 }
 
 //슬라이드 영역 생성 함수
@@ -81,13 +84,13 @@ function createSlide(arr) {
 	tags = '';
 	arr.forEach((item, idx) => {
 		let thumb = item.snippet.thumbnails.standard.url;
-		let videId = item.snippet.resourceId.videoId;
+		let videoId = item.snippet.resourceId.videoId;
 		let date = item.snippet.publishedAt;
 
 		tags += `
 				<article>
 					<div class='pic'>
-						<img class="thumb" src="${thumb}" alt=${videId}/>
+						<img class="thumb" src="${thumb}" alt=${videoId} />
 						<span class='num'>0${idx + 1}</span>
 					</div>
 
@@ -122,6 +125,35 @@ function createTxt(arr) {
 	});
 	elTxt.innerHTML = tags;
 	elTxt.querySelectorAll('.panel')[2].classList.add('on');
+}
+
+//리스트 영역 생성 함수
+function createList(arr) {
+	tags = '';
+	arr.forEach((item) => {
+		let thumb = item.snippet.thumbnails.standard.url;
+		let tit = item.snippet.title;
+		let date = item.snippet.publishedAt;
+		let desc = item.snippet.description;
+		let videoId = item.snippet.resourceId.videoId;
+
+		tags += `
+			<li>
+				<article>
+					<div class='pic'>
+						<img class="thumb" src="${thumb}" alt=${videoId} />
+					</div>
+
+					<div class='title'>
+						<h3>${tit.length > 40 ? tit.substr(0, 40) + '...' : tit}</h3>
+						<p>${date.split('T')[0].split('-').join('.')}</p>
+					</div>
+					<p class='txt'>${desc.length > 100 ? desc.substr(0, 100) + '...' : desc}</p>
+				</article>
+			</li>
+		`;
+	});
+	elList.innerHTML = tags;
 }
 
 //팝업 생성 함수
