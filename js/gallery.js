@@ -20,6 +20,12 @@ btnSearch.addEventListener('click', () => {
 	fetchData(url_search);
 });
 
+document.body.addEventListener('click', (e) => {
+	console.log(e.target.className);
+	if (e.target.className === 'thumb') createPop(e.target.getAttribute('alt'));
+	if (e.target.className === 'close') removePop();
+});
+
 async function fetchData(url) {
 	const res = await fetch(url);
 	const json = await res.json();
@@ -50,4 +56,32 @@ function createList(arr) {
 		`;
 	});
 	gallery.innerHTML = tags;
+}
+
+//팝업 동적 생성 함수
+function createPop(url) {
+	const tags = `
+		<div class='con'>
+			<img src='${url}'/>
+		</div>
+
+		<span class='close'>close</span>
+	`;
+
+	const aside = document.createElement('aside');
+	aside.className = 'pop';
+	aside.innerHTML = tags;
+
+	setTimeout(() => aside.classList.add('on'), 0);
+	document.body.append(aside);
+	document.body.style.overflow = 'hidden';
+}
+
+//팝업 제거 함수
+function removePop() {
+	document.querySelector('.pop').classList.remove('on');
+	setTimeout(() => {
+		document.querySelector('.pop').remove();
+	}, 1000);
+	document.body.style.overflow = 'auto';
 }

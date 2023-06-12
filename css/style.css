@@ -299,7 +299,7 @@ main .cross span.col {
   padding: 100px;
   z-index: 5;
   opacity: 0;
-  transition: opacity 0.5s;
+  transition: opacity 1s;
 }
 .pop.on {
   opacity: 1;
