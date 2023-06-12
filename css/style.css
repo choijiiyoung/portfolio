@@ -1356,6 +1356,7 @@ main .cross span.col {
 }
 .youtube .ytb_list li .pic {
   margin-bottom: 20px;
+  height: 160px;
 }
 .youtube .ytb_list li .title {
   padding: 10px 0;
@@ -1478,6 +1479,9 @@ main .cross span.col {
   .youtube .ytb_list li {
     flex: none;
     width: 100%;
+  }
+  .youtube .ytb_list li .pic {
+    height: 180px;
   }
   .youtube .ytb_list li .title {
     padding: 10px 0;

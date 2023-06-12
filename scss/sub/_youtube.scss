@@ -187,6 +187,7 @@
 
 			.pic {
 				margin-bottom: 20px;
+				height: 160px;
 			}
 
 			.title {
@@ -350,6 +351,10 @@
 			li {
 				flex: none;
 				width: 100%;
+
+				.pic {
+					height: 180px;
+				}
 
 				.title {
 					padding: 10px 0;
