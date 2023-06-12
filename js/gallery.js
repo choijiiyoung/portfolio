@@ -4,32 +4,39 @@ const btnSearch = document.querySelector('.gallery .btn_search');
 const api_key = 'db5673d91b2fb6704d13f6b0181efd99';
 const num = 10;
 const myId = '198483448@N02';
-const baseURL = `https://www.flickr.com/services/rest/?format=json&nojsoncallback=1&api_key=${api_key}&per_page=${num}&method=`;
-const method_interest = 'flickr.interestingness.getList';
-const method_user = 'flickr.people.getPhotos';
-const method_search = 'flickr.photos.search';
-const interest_url = `${baseURL}${method_interest}`;
-const user_url = `${baseURL}${method_user}&user_id=${myId}`;
 
-fetchData(interest_url);
+fetchData(setURL('interest'));
 
 btnSearch.addEventListener('click', getSearch);
 
 //input 키보드 이벤트
 input.addEventListener('keypress', (e) => e.code === 'Enter' && getSearch());
 
+//이벤트 위임
 document.body.addEventListener('click', (e) => {
 	console.log(e.target);
 	if (e.target.className === 'thumb') createPop(e.target.getAttribute('alt'));
 	if (e.target.className === 'close') removePop();
-	if (e.target.className === 'userid') userGallery(e.target);
+	if (e.target.className === 'userid') fetchData(setURL('user', e.target.innerText));
 });
 
+//인수값에 따른 데이터 호출 URL반환 함수
+function setURL(type, opt) {
+	const baseURL = `https://www.flickr.com/services/rest/?format=json&nojsoncallback=1&api_key=${api_key}&per_page=${num}&method=`;
+	const method_interest = 'flickr.interestingness.getList';
+	const method_user = 'flickr.people.getPhotos';
+	const method_search = 'flickr.photos.search';
+
+	if (type === 'interest') return `${baseURL}${method_interest}`;
+	if (type === 'search') return `${baseURL}${method_search}&tags=${opt}`;
+	if (type === 'user') return `${baseURL}${method_user}&user_id=${opt}`;
+}
+
 function getSearch() {
-	const inputVal = input.value.trim();
-	if (inputVal === '') alert('검색어를 입력해주세요.');
-	const url_search = `${baseURL}${method_search}&tags=${inputVal}`;
-	fetchData(url_search);
+	const value = input.value.trim();
+	input.value = '';
+	if (value === '') alert('검색어를 입력해주세요.');
+	fetchData(setURL('search', value));
 }
 
 async function fetchData(url) {
@@ -38,14 +45,13 @@ async function fetchData(url) {
 	const items = json.photos.photo;
 
 	console.log(items);
-
 	createList(items);
 }
 
 //갤러리 동적 생성 함수
 function createList(arr) {
 	let tags = '';
-	arr.forEach((item, idx) => {
+	arr.forEach((item) => {
 		tags += `
 			<li class='item'>
 				<div>
@@ -88,9 +94,4 @@ function removePop() {
 	pop.classList.remove('on');
 	setTimeout(() => pop.remove(), 1000);
 	document.body.style.overflow = 'auto';
-}
-
-//사용자 갤러리 출력 함수
-function userGallery(el) {
-	fetchData(`${baseURL}${method_user}&user_id=${el.innerText}`);
 }
