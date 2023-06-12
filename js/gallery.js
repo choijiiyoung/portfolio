@@ -13,12 +13,10 @@ const user_url = `${baseURL}${method_user}&user_id=${myId}`;
 
 fetchData(interest_url);
 
-btnSearch.addEventListener('click', () => {
-	const inputVal = input.value.trim();
-	if (inputVal === '') alert('검색어를 입력해주세요.');
-	const url_search = `${baseURL}${method_search}&tags=${inputVal}`;
-	fetchData(url_search);
-});
+btnSearch.addEventListener('click', getSearch);
+
+//input 키보드 이벤트
+input.addEventListener('keypress', (e) => e.code === 'Enter' && getSearch());
 
 document.body.addEventListener('click', (e) => {
 	console.log(e.target);
@@ -26,6 +24,13 @@ document.body.addEventListener('click', (e) => {
 	if (e.target.className === 'close') removePop();
 	if (e.target.className === 'userid') userGallery(e.target);
 });
+
+function getSearch() {
+	const inputVal = input.value.trim();
+	if (inputVal === '') alert('검색어를 입력해주세요.');
+	const url_search = `${baseURL}${method_search}&tags=${inputVal}`;
+	fetchData(url_search);
+}
 
 async function fetchData(url) {
 	const res = await fetch(url);
