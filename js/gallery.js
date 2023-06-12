@@ -37,6 +37,7 @@ async function fetchData(url) {
 	createList(items);
 }
 
+//갤러리 동적 생성 함수
 function createList(arr) {
 	let tags = '';
 	arr.forEach((item, idx) => {
@@ -61,6 +62,8 @@ function createList(arr) {
 
 //팝업 동적 생성 함수
 function createPop(url) {
+	const aside = document.createElement('aside');
+	aside.className = 'pop';
 	const tags = `
 		<div class='con'>
 			<img src='${url}'/>
@@ -68,22 +71,17 @@ function createPop(url) {
 
 		<span class='close'>close</span>
 	`;
-
-	const aside = document.createElement('aside');
-	aside.className = 'pop';
 	aside.innerHTML = tags;
-
-	setTimeout(() => aside.classList.add('on'), 0);
 	document.body.append(aside);
+	setTimeout(() => aside.classList.add('on'), 0);
 	document.body.style.overflow = 'hidden';
 }
 
 //팝업 제거 함수
 function removePop() {
-	document.querySelector('.pop').classList.remove('on');
-	setTimeout(() => {
-		document.querySelector('.pop').remove();
-	}, 1000);
+	const pop = document.querySelector('.pop');
+	pop.classList.remove('on');
+	setTimeout(() => pop.remove(), 1000);
 	document.body.style.overflow = 'auto';
 }
 
