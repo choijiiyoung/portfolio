@@ -21,9 +21,10 @@ btnSearch.addEventListener('click', () => {
 });
 
 document.body.addEventListener('click', (e) => {
-	console.log(e.target.className);
+	console.log(e.target);
 	if (e.target.className === 'thumb') createPop(e.target.getAttribute('alt'));
 	if (e.target.className === 'close') removePop();
+	if (e.target.className === 'userid') userGallery(e.target);
 });
 
 async function fetchData(url) {
@@ -49,7 +50,7 @@ function createList(arr) {
 					<article class='profile'>
 						<img src='http://farm${item.farm}.staticflickr.com/${item.server}/buddyicons/${item.owner}.jpg' />
 						<p>${item.title === '' ? 'Have a good day!!' : item.title}</p> 
-						<span>${item.owner}</span>
+						<span class='userid'>${item.owner}</span>
 					</article>
 				</div>
 			</li>
@@ -84,4 +85,9 @@ function removePop() {
 		document.querySelector('.pop').remove();
 	}, 1000);
 	document.body.style.overflow = 'auto';
+}
+
+//사용자 갤러리 출력 함수
+function userGallery(el) {
+	fetchData(`${baseURL}${method_user}&user_id=${el.innerText}`);
 }
