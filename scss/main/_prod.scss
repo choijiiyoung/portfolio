@@ -11,6 +11,10 @@
 
 			&.on {
 				a {
+					color: #050505;
+					p {
+						font-weight: 600;
+					}
 					i {
 						opacity: 1;
 						visibility: visible;
@@ -27,11 +31,11 @@
 				justify-content: space-between;
 				align-items: center;
 				padding: 20px 0;
+				color: #787775;
 
 				p {
 					width: 26%;
 					font-size: 24px;
-					color: #777;
 				}
 
 				i {
