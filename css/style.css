@@ -1506,6 +1506,8 @@ main .cross span.col {
 }
 .gallery .search_box .btn_search {
   padding: 10px 20px;
+  background-color: #dee3dd;
+  border: 1px solid #6f746e;
 }
 .gallery .gallery_wrap {
   display: flex;
@@ -1518,7 +1520,7 @@ main .cross span.col {
 }
 .gallery .gallery_wrap li > div {
   padding: 20px 15px;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0 15px 25px, rgba(0, 0, 0, 0.05) 0 5px 10px;
 }
 .gallery .gallery_wrap li > div .pic {
   height: 300px;
@@ -1542,7 +1544,7 @@ main .cross span.col {
   border: 5px solid #fff;
   transform: translateX(-50%);
   margin-top: -25px;
-  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0 25px 20px -20px;
 }
 .gallery .gallery_wrap li > div .profile p {
   margin-bottom: 10px;
@@ -1558,6 +1560,17 @@ main .cross span.col {
   }
 }
 @media screen and (max-width: 639px) {
+  .gallery .search_box {
+    margin-bottom: 20px;
+  }
+  .gallery .search_box input[type=text] {
+    width: calc(100% - 90px);
+  }
+  .gallery .search_box .btn_search {
+    padding: 10px 20px;
+    background-color: #dee3dd;
+    border: 1px solid #6f746e;
+  }
   .gallery .gallery_wrap {
     gap: 40px 0;
   }

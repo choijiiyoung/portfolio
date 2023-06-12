@@ -15,6 +15,8 @@
 
 		.btn_search {
 			padding: 10px 20px;
+			background-color: #dee3dd;
+			border: 1px solid #6f746e;
 		}
 	}
 
@@ -29,7 +31,7 @@
 
 			> div {
 				padding: 20px 15px;
-				box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+				box-shadow: rgba(0, 0, 0, 0.15) 0 15px 25px, rgba(0, 0, 0, 0.05) 0 5px 10px;
 
 				.pic {
 					height: 300px;
@@ -54,7 +56,7 @@
 						border: 5px solid #fff;
 						transform: translateX(-50%);
 						margin-top: -25px;
-						box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+						box-shadow: rgba(0, 0, 0, 0.45) 0 25px 20px -20px;
 					}
 
 					p {
@@ -70,7 +72,6 @@
 		}
 	}
 }
-
 @media screen and (max-width: $tablet) {
 	.gallery {
 		.gallery_wrap {
@@ -80,9 +81,22 @@
 		}
 	}
 }
-
 @media screen and (max-width: $mobile) {
 	.gallery {
+		.search_box {
+			margin-bottom: 20px;
+
+			input[type='text'] {
+				width: calc(100% - 90px);
+			}
+
+			.btn_search {
+				padding: 10px 20px;
+				background-color: #dee3dd;
+				border: 1px solid #6f746e;
+			}
+		}
+
 		.gallery_wrap {
 			gap: 40px 0;
 
