@@ -1,6 +1,8 @@
 const gallery = document.querySelector('.gallery .gallery_wrap');
 const input = document.querySelector('.gallery #search');
 const btnSearch = document.querySelector('.gallery .btn_search');
+const btnInterest = document.querySelector('.gallery .btn_interest');
+const btnMine = document.querySelector('.gallery .btn_mine');
 const api_key = 'db5673d91b2fb6704d13f6b0181efd99';
 const num = 20;
 const myId = '198483448@N02';
@@ -8,6 +10,8 @@ const myId = '198483448@N02';
 fetchData(setURL('interest'));
 
 btnSearch.addEventListener('click', getSearch);
+btnInterest.addEventListener('click', () => fetchData(setURL('interest')));
+btnMine.addEventListener('click', () => fetchData(setURL('user', myId)));
 
 //input 키보드 이벤트
 input.addEventListener('keypress', (e) => e.code === 'Enter' && getSearch());

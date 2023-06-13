@@ -1520,14 +1520,20 @@ main .cross span.col {
     min-height: auto;
   }
 }
-.gallery .search_box {
-  margin-bottom: 50px;
+.gallery .top_wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
 }
-.gallery .search_box input[type=text] {
+.gallery .top_wrap .search_box {
+  margin-bottom: 10px;
+}
+.gallery .top_wrap .search_box input[type=text] {
   padding: 10px;
   border: 1px solid #ddd;
 }
-.gallery .search_box .btn_search {
+.gallery .top_wrap button {
   padding: 10px 20px;
   background-color: #dee3dd;
   border: 1px solid #6f746e;
@@ -1588,16 +1594,26 @@ main .cross span.col {
   }
 }
 @media screen and (max-width: 639px) {
-  .gallery .search_box {
+  .gallery .top_wrap {
+    flex-wrap: wrap;
+  }
+  .gallery .top_wrap .btn_wrap {
+    display: flex;
+    justify-content: space-between;
+    flex: none;
+    width: 100%;
     margin-bottom: 20px;
+    gap: 10px;
   }
-  .gallery .search_box input[type=text] {
+  .gallery .top_wrap .btn_wrap button {
+    width: 50%;
+  }
+  .gallery .top_wrap .search_box {
+    flex: none;
+    width: 100%;
+  }
+  .gallery .top_wrap .search_box input[type=text] {
     width: calc(100% - 90px);
-  }
-  .gallery .search_box .btn_search {
-    padding: 10px 20px;
-    background-color: #dee3dd;
-    border: 1px solid #6f746e;
   }
   .gallery .gallery_wrap {
     gap: 40px 0;

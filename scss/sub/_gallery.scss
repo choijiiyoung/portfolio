@@ -1,13 +1,20 @@
 .gallery {
-	.search_box {
-		margin-bottom: 50px;
+	.top_wrap {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		margin-bottom: 20px;
 
-		input[type='text'] {
-			padding: 10px;
-			border: 1px solid #ddd;
+		.search_box {
+			margin-bottom: 10px;
+
+			input[type='text'] {
+				padding: 10px;
+				border: 1px solid #ddd;
+			}
 		}
 
-		.btn_search {
+		button {
 			padding: 10px 20px;
 			background-color: #dee3dd;
 			border: 1px solid #6f746e;
@@ -72,6 +79,7 @@
 		}
 	}
 }
+
 @media screen and (max-width: $tablet) {
 	.gallery {
 		.gallery_wrap {
@@ -81,19 +89,32 @@
 		}
 	}
 }
+
 @media screen and (max-width: $mobile) {
 	.gallery {
-		.search_box {
-			margin-bottom: 20px;
+		.top_wrap {
+			flex-wrap: wrap;
 
-			input[type='text'] {
-				width: calc(100% - 90px);
+			.btn_wrap {
+				display: flex;
+				justify-content: space-between;
+				flex: none;
+				width: 100%;
+				margin-bottom: 20px;
+				gap: 10px;
+
+				button {
+					width: 50%;
+				}
 			}
 
-			.btn_search {
-				padding: 10px 20px;
-				background-color: #dee3dd;
-				border: 1px solid #6f746e;
+			.search_box {
+				flex: none;
+				width: 100%;
+
+				input[type='text'] {
+					width: calc(100% - 90px);
+				}
 			}
 		}
 
