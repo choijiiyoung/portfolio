@@ -6,7 +6,8 @@ btnSubmit.addEventListener('click', (e) => {
 	if (!isPwd('pwd1', 'pwd2', 4)) e.preventDefault();
 	if (!isEmail('email', 6)) e.preventDefault();
 	if (!isCheck('hobby')) e.preventDefault();
-	// if (!isSelect()) e.preventDefault();
+	if (!isSelect('edu')) e.preventDefault();
+	if (!isTxt('comments', 10)) e.preventDefault();
 });
 
 //id 인증
@@ -15,7 +16,7 @@ function isTxt(name, len) {
 	const value = input.value.trim();
 
 	if (value.length < len) {
-		alert(`id는 ${len}글자 이상 입력하세요.`);
+		alert(`텍스트는 ${len}글자 이상 입력하세요.`);
 		return false;
 	} else {
 		return true;
@@ -64,6 +65,16 @@ function isCheck(name) {
 }
 
 //셀렉트박스 인증
-function isSelect() {
-	return true;
+function isSelect(name) {
+	const input = document.querySelector(`[name=${name}]`);
+	console.log(input);
+	const selected_index = input.options.selectedIndex;
+	const value = input.options[selected_index].value;
+
+	if (value === '') {
+		alert('해당 요소중에 하나를 선택해주세요.');
+		return false;
+	} else {
+		return true;
+	}
 }
