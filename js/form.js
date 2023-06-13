@@ -5,7 +5,7 @@ btnSubmit.addEventListener('click', (e) => {
 	if (!isTxt('userid', 5)) e.preventDefault();
 	if (!isPwd('pwd1', 'pwd2', 4)) e.preventDefault();
 	if (!isEmail('email', 6)) e.preventDefault();
-	if (!isCheck('name')) e.preventDefault();
+	if (!isCheck('hobby')) e.preventDefault();
 	// if (!isSelect()) e.preventDefault();
 });
 
@@ -51,11 +51,16 @@ function isEmail(name, len) {
 //체크박스 인증
 function isCheck(name) {
 	const inputs = document.querySelectorAll(`[name=${name}]`);
-	const isChk = false;
+	let isChecked = false;
 
-	console.log(inputs.input);
-
-	for (const input of inputs) input.cheked;
+	for (const input of inputs) input.checked && (isChecked = true);
+	console.log(isChecked);
+	if (!isChecked) {
+		alert('해당 선택사항을 하나이상 체크하세요.');
+		return false;
+	} else {
+		return true;
+	}
 }
 
 //셀렉트박스 인증
