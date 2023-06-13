@@ -3,13 +3,14 @@
 		table {
 			width: 100%;
 			border: none;
-			border-top: 2px solid #e4e4e4;
-			border-bottom: 2px solid #e4e4e4;
+			border-top: 2px solid #333;
+			border-bottom: 2px solid #333;
 
 			th,
 			td {
 				border: none;
-				padding: 20px 25px;
+				border-bottom: 1px solid #ddd;
+				padding: 16px 25px;
 			}
 			th {
 				width: 20%;
@@ -18,7 +19,7 @@
 				input[type='reset'] {
 					width: 30%;
 					height: 40px;
-					border: 1px solid #ededed;
+					border: 1px solid #333;
 					margin: 10px;
 					font: bold 14px/40px 'arial';
 					color: #555;
@@ -33,14 +34,17 @@
 			}
 
 			td {
+				border-left: 1px solid #aaa;
+
 				input[type='text'],
 				input[type='password'],
 				input[type='email'],
 				select,
 				textarea {
 					width: 60%;
+					background: rgba(0, 0, 0, 0.03);
 					padding: 10px;
-					border: 1px solid #ededed;
+					border: 1px solid #aaa;
 					resize: none;
 				}
 				input[type='checkbox'],
