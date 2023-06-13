@@ -78,3 +78,11 @@ function isSelect(name) {
 		return true;
 	}
 }
+
+//에러메세지 제거
+function resetErr(inputs) {
+	let el = null;
+	inputs.length ? (el = inputs[0]) : (el = inputs);
+	const errMsg = el.closest('td').querySelector('p');
+	if (errMsg) el.closest('td').querySelector('p').remove();
+}
