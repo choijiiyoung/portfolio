@@ -2,7 +2,7 @@ const gallery = document.querySelector('.gallery .gallery_wrap');
 const input = document.querySelector('.gallery #search');
 const btnSearch = document.querySelector('.gallery .btn_search');
 const api_key = 'db5673d91b2fb6704d13f6b0181efd99';
-const num = 10;
+const num = 20;
 const myId = '198483448@N02';
 
 fetchData(setURL('interest'));
