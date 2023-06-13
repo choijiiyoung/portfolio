@@ -1,10 +1,4 @@
 .gallery {
-	img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-	}
-
 	.search_box {
 		margin-bottom: 50px;
 
@@ -35,6 +29,12 @@
 
 				.pic {
 					height: 300px;
+
+					img {
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+					}
 				}
 
 				.profile {

@@ -1500,11 +1500,6 @@ main .cross span.col {
     min-height: auto;
   }
 }
-.gallery img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 .gallery .search_box {
   margin-bottom: 50px;
 }
@@ -1532,6 +1527,11 @@ main .cross span.col {
 }
 .gallery .gallery_wrap li > div .pic {
   height: 300px;
+}
+.gallery .gallery_wrap li > div .pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .gallery .gallery_wrap li > div .profile {
   position: relative;
