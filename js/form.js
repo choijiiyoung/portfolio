@@ -6,19 +6,24 @@ btnSubmit.addEventListener('click', (e) => {
 	if (!isPwd('pwd1', 'pwd2', 4)) e.preventDefault();
 	if (!isEmail('email', 6)) e.preventDefault();
 	if (!isCheck('hobby')) e.preventDefault();
+	if (!isCheck('gender')) e.preventDefault();
 	if (!isSelect('edu')) e.preventDefault();
 	if (!isTxt('comments', 10)) e.preventDefault();
 });
 
-//id 인증
+//텍스트항목 인증
 function isTxt(name, len) {
 	const input = document.querySelector(`[name=${name}]`);
 	const value = input.value.trim();
 
 	if (value.length < len) {
-		alert(`텍스트는 ${len}글자 이상 입력하세요.`);
+		resetErr(input);
+		const errMsg = document.createElement('p');
+		errMsg.innerText = `텍스트는 ${len}글자 이상 입력하세요.`;
+		input.closest('td').append(errMsg);
 		return false;
 	} else {
+		resetErr(input);
 		return true;
 	}
 }
@@ -57,9 +62,14 @@ function isCheck(name) {
 	for (const input of inputs) input.checked && (isChecked = true);
 	console.log(isChecked);
 	if (!isChecked) {
-		alert('해당 선택사항을 하나이상 체크하세요.');
+		resetErr(inputs);
+
+		const errMsg = document.createElement('p');
+		errMsg.innerText = `해당 선택사항을 하나이상 체크하세요.`;
+		inputs[0].closest('td').append(errMsg);
 		return false;
 	} else {
+		resetErr(inputs);
 		return true;
 	}
 }
@@ -72,9 +82,14 @@ function isSelect(name) {
 	const value = input.options[selected_index].value;
 
 	if (value === '') {
-		alert('해당 요소중에 하나를 선택해주세요.');
+		resetErr(input);
+
+		const errMsg = document.createElement('p');
+		errMsg.innerText = `해당 선택사항을 하나이상 체크하세요.`;
+		input.closest('td').append(errMsg);
 		return false;
 	} else {
+		resetErr(input);
 		return true;
 	}
 }
