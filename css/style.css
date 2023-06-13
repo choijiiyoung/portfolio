@@ -1,6 +1,7 @@
+@charset "UTF-8";
 * {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   box-sizing: border-box;
 }
 
@@ -12,6 +13,25 @@ li {
 
 a {
   text-decoration: none;
+}
+
+fieldset {
+  border: none;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+input,
+label {
+  vertical-align: middle;
+}
+
+.h {
+  position: absolute;
+  top: -99999px;
+  opacity: 0;
 }
 
 header {
@@ -1585,6 +1605,56 @@ main .cross span.col {
   .gallery .gallery_wrap li {
     width: 100%;
   }
+}
+.members form table {
+  width: 100%;
+  border: none;
+  border-top: 2px solid #e4e4e4;
+  border-bottom: 2px solid #e4e4e4;
+}
+.members form table th,
+.members form table td {
+  border: none;
+  padding: 20px 25px;
+}
+.members form table th {
+  width: 20%;
+}
+.members form table th input[type=submit],
+.members form table th input[type=reset] {
+  width: 30%;
+  height: 40px;
+  border: 1px solid #ededed;
+  margin: 10px;
+  font: bold 14px/40px "arial";
+  color: #555;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.members form table th input[type=submit]:hover,
+.members form table th input[type=reset]:hover {
+  background: #333;
+  color: #fff;
+}
+.members form table td input[type=text],
+.members form table td input[type=password],
+.members form table td input[type=email],
+.members form table td select,
+.members form table td textarea {
+  width: 60%;
+  padding: 10px;
+  border: 1px solid #ededed;
+  resize: none;
+}
+.members form table td input[type=checkbox],
+.members form table td input[type=radio] {
+  margin-right: 30px;
+}
+.members form table td p {
+  width: 100%;
+  color: hotpink;
+  margin-top: 5px;
+  font: 11px/1 "맑은 고딕";
 }
 
 /*# sourceMappingURL=style.css.map */
