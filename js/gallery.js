@@ -113,14 +113,19 @@ function removePop() {
 
 //로딩 함수
 function setLoading() {
-	const imgs = document.querySelectorAll('img');
+	const imgs = gallery.querySelectorAll('img');
 	let count = 0;
+
 	for (const el of imgs) {
+		el.onerror = () => {
+			el.setAttribute('src', 'https://www.flickr.com/images/buddyicon.gif');
+		};
 		el.onload = () => {
 			count++;
-			if (count === imgs.length) console.log('dd');
-			loading.classList.add('off');
-			gallery.classList.add('on');
+			if (count === imgs.length) {
+				loading.classList.add('off');
+				gallery.classList.add('on');
+			}
 		};
 	}
 }
