@@ -3,18 +3,19 @@ const btnSubmit = document.querySelector('input[type=submit]');
 
 btnSubmit.addEventListener('click', (e) => {
 	console.log(e);
-	if (!isTxt('userid', 5)) e.preventDefault();
-	if (!isPwd('pwd1', 'pwd2', 5)) e.preventDefault();
-	if (!isTxt('comments', 10)) e.preventDefault();
-	if (!isEmail('email')) e.preventDefault();
+	// if (!isTxt('userid', 5)) e.preventDefault();
+	// if (!isPwd('pwd1', 'pwd2', 5)) e.preventDefault();
+	// if (!isTxt('comments', 10)) e.preventDefault();
+	// if (!isEmail('email')) e.preventDefault();
+	if (!isSelect()) e.preventDefault();
 });
 
 //텍스트 인증 함수
 function isTxt(name, len) {
 	const input = document.querySelector(`[name=${name}]`);
-	const input_val = input.value.trim();
+	const value = input.value.trim();
 
-	if (input_val.length < len) {
+	if (value.length < len) {
 		alert(`${len}글자 이상 입력하세요.`);
 		return false;
 	} else {
@@ -48,12 +49,20 @@ function isEmail(name) {
 
 //셀렉트 인증 함수
 function isSelect() {
-	const input = document.querySelector('[name=edu]');
-	console.log(input);
-	return true;
-}
+	const select = document.querySelector('#edu');
+	const value = select.value;
 
-isSelect();
+	if (value === '') {
+		alert('최종학력을 선택하세요.');
+		return false;
+	} else {
+		return true;
+	}
+
+	// select.addEventListener('click', (e) => {
+	// 	console.log(select.value, 'select');
+	// });
+}
 
 //라디오, 체크 박스 인증 함수
 function isCheck() {
