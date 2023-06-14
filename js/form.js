@@ -2,14 +2,13 @@ const form = document.querySelector('#member');
 const btnSubmit = document.querySelector('input[type=submit]');
 
 btnSubmit.addEventListener('click', (e) => {
-	console.log(e);
-	// if (!isTxt('userid', 5)) e.preventDefault();
+	if (!isTxt('userid', 5)) e.preventDefault();
 	// if (!isPwd('pwd1', 'pwd2', 5)) e.preventDefault();
 	// if (!isEmail('email', 5)) e.preventDefault();
 	// if (!isSelect('edu')) e.preventDefault();
-	if (!isCheck('gender')) e.preventDefault();
-	if (!isCheck('hobby')) e.preventDefault();
-	// if (!isTxt('comments', 10)) e.preventDefault();
+	// if (!isCheck('gender')) e.preventDefault();
+	// if (!isCheck('hobby')) e.preventDefault();
+	if (!isTxt('comments', 10)) e.preventDefault();
 });
 
 //텍스트 인증 함수
@@ -18,9 +17,13 @@ function isTxt(name, len) {
 	const value = input.value.trim();
 
 	if (value.length < len) {
-		alert(`${len}글자 이상 입력하세요.`);
+		resetErr(input);
+		const errMsg = document.createElement('p');
+		errMsg.innerText = `텍스트를 ${len}글자 이상 입력하세요.`;
+		input.closest('td').append(errMsg);
 		return false;
 	} else {
+		resetErr(input);
 		return true;
 	}
 }
@@ -77,4 +80,12 @@ function isCheck(name) {
 	} else {
 		return true;
 	}
+}
+
+//에러 메세지 제거 함수
+function resetErr(inputs) {
+	let el = null;
+	inputs.length ? (el = inputs[0]) : (el = inputs);
+	const errMsg = el.closest('td').querySelector('p');
+	if (errMsg) el.closest('td').querySelector('p').remove();
 }
