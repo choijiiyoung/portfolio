@@ -1779,7 +1779,7 @@ main .cross span.col {
 .members form table td p {
   width: 100%;
   color: red;
-  margin-top: 5px;
+  margin-top: 10px;
   font: 11px/1 "맑은 고딕";
 }
 
@@ -1815,65 +1815,18 @@ main .cross span.col {
     width: 100%;
   }
   .members form table td input[type=radio] + label {
-    display: inline-block;
-    position: relative;
-    height: 20px;
-    line-height: 20px;
-    vertical-align: middle;
     margin-right: 30px;
-    padding-left: 30px;
-  }
-  .members form table td input[type=radio] + label::before, .members form table td input[type=radio] + label::after {
-    content: "";
-    display: block;
-    position: absolute;
-    border-radius: 100%;
-  }
-  .members form table td input[type=radio] + label::before {
-    left: 0;
-    top: 1px;
-    width: 20px;
-    height: 20px;
-    text-align: center;
-    border: 1px solid #d2d8f2;
-    box-sizing: border-box;
-  }
-  .members form table td input[type=radio] + label::after {
-    top: 5px;
-    left: 4px;
-    width: 12px;
-    height: 12px;
   }
   .members form table td input[type=radio] + label:last-of-type {
     margin-right: 0;
   }
-  .members form table td input[type=radio]:checked + label::before {
-    border: 1px solid #222;
-  }
-  .members form table td input[type=radio]:checked + label::after {
-    background: #222;
-  }
   .members form table td input[type=checkbox] + label {
-    position: relative;
-    padding-left: 30px;
     display: block;
     width: 100%;
     margin: 0 0 30px 0;
   }
   .members form table td input[type=checkbox] + label:last-of-type {
     margin-bottom: 0;
-  }
-  .members form table td input[type=checkbox]:checked + label::before {
-    background-color: #040404;
-  }
-  .members form table td input[type=checkbox]:checked + label::after {
-    border-color: #fff;
-  }
-  .members form table td p {
-    width: 100%;
-    color: hotpink;
-    margin-top: 5px;
-    font: 11px/1 "맑은 고딕";
   }
 }
 
