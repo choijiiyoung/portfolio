@@ -6,6 +6,7 @@ btnSubmit.addEventListener('click', (e) => {
 	if (!isTxt('userid', 5)) e.preventDefault();
 	if (!isPwd('pwd1', 'pwd2', 5)) e.preventDefault();
 	if (!isTxt('comments', 10)) e.preventDefault();
+	if (!isEmail('email')) e.preventDefault();
 });
 
 //텍스트 인증 함수
@@ -35,8 +36,14 @@ function isPwd(pwd1, pwd2, len) {
 }
 
 //이메일 인증 함수
-function isEmail() {
-	return true;
+function isEmail(name) {
+	const input = document.querySelector(`[name=${name}]`).value.trim();
+	if (input !== input.indexOf('@')) {
+		alert('이메일 주소에 @를 포함하세요.');
+		return false;
+	} else {
+		return true;
+	}
 }
 
 //셀렉트 인증 함수
