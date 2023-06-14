@@ -5,7 +5,7 @@ btnSubmit.addEventListener('click', (e) => {
 	console.log(e);
 	// if (!isTxt('userid', 5)) e.preventDefault();
 	// if (!isPwd('pwd1', 'pwd2', 5)) e.preventDefault();
-	// if (!isEmail('email')) e.preventDefault();
+	if (!isEmail('email', 5)) e.preventDefault();
 	if (!isSelect('edu')) e.preventDefault();
 	if (!isCheck('gender')) e.preventDefault();
 	// if (!isCheck('hobby')) e.preventDefault();
@@ -39,10 +39,10 @@ function isPwd(pwd1, pwd2, len) {
 }
 
 //이메일 인증 함수
-function isEmail(name) {
-	const input = document.querySelector(`[name=${name}]`).value.trim();
-	if (input !== input.indexOf('@')) {
-		alert('이메일 주소에 @를 포함하세요.');
+function isEmail(name, len) {
+	const email = document.querySelector(`[name=${name}]`).value;
+	if (email.indexOf('@') < 0 || email.length < len) {
+		alert(`이메일 주소에 @를 포함고 ${len}글자 이상 입력하세요.`);
 		return false;
 	} else {
 		return true;
@@ -58,7 +58,7 @@ function isSelect(name) {
 	console.log(value, 'value');
 
 	if (value === '') {
-		alert('항목을 하나 이상 선택하세요.');
+		alert('해당 요소중 하나를 선택해주세요.');
 		return false;
 	} else {
 		return true;
