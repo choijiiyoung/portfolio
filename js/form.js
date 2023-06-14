@@ -48,8 +48,12 @@ function isEmail(name) {
 
 //셀렉트 인증 함수
 function isSelect() {
+	const input = document.querySelector('[name=edu]');
+	console.log(input);
 	return true;
 }
+
+isSelect();
 
 //라디오, 체크 박스 인증 함수
 function isCheck() {
