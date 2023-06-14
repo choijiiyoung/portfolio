@@ -3,17 +3,18 @@ const btnSubmit = document.querySelector('input[type=submit]');
 
 btnSubmit.addEventListener('click', (e) => {
 	console.log(e);
-	if (!isTxt()) e.preventDefault();
-	if (!isPwd()) e.preventDefault();
+	if (!isTxt('userid', 5)) e.preventDefault();
+	if (!isPwd('pwd1', 'pwd2', 5)) e.preventDefault();
+	if (!isTxt('comments', 10)) e.preventDefault();
 });
 
 //텍스트 인증 함수
-function isTxt() {
-	const input = document.querySelector('input[name=userid]');
+function isTxt(name, len) {
+	const input = document.querySelector(`[name=${name}]`);
 	const input_val = input.value.trim();
 
-	if (input_val.length < 5) {
-		alert('5글자 이상 입력하세요.');
+	if (input_val.length < len) {
+		alert(`${len}글자 이상 입력하세요.`);
 		return false;
 	} else {
 		return true;
@@ -21,12 +22,12 @@ function isTxt() {
 }
 
 //비밀번호 인증 함수
-function isPwd() {
-	const pwd1_val = document.querySelector('input[name=pwd1]').value.trim();
-	const pwd2_val = document.querySelector('input[name=pwd2]').value.trim();
+function isPwd(pwd1, pwd2, len) {
+	const pwd1_val = document.querySelector(`[name=${pwd1}]`).value.trim();
+	const pwd2_val = document.querySelector(`[name=${pwd2}]`).value.trim();
 
 	if (pwd1_val < 5 || pwd1_val !== pwd2_val) {
-		alert('비밀번호 2개 항목을 동일하게 입력하고 5글자 이상 입력하세요.');
+		alert(`비밀번호 2개 항목을 동일하게 입력하고 ${len}글자 이상 입력하세요.`);
 		return false;
 	} else {
 		return true;
