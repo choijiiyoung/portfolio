@@ -2,7 +2,8 @@ const ytbWrap = document.querySelector('.youtube');
 const elSlide = ytbWrap.querySelector('.slide_wrap');
 const elTxt = ytbWrap.querySelector('.info_wrap .txt_wrap');
 const elList = ytbWrap.querySelector('.ytb_list');
-console.log(elList);
+const prev = ytbWrap.querySelector('.prev');
+const next = ytbWrap.querySelector('.next');
 let tags;
 
 fetchData();
@@ -78,6 +79,17 @@ async function fetchData() {
 	createSlide(json.items);
 	createTxt(json.items);
 	createList(json.items);
+
+	// slidePrev();
+	// slideNext();
+
+	prev.addEventListener('click', () => {
+		elSlide.append(elSlide.firstElementChild);
+	});
+
+	next.addEventListener('click', () => {
+		elSlide.append(elSlide.firstElementChild);
+	});
 }
 
 //슬라이드 영역 생성 함수
@@ -102,7 +114,7 @@ function createSlide(arr) {
 			`;
 	});
 	elSlide.innerHTML = tags;
-	elSlide.querySelectorAll('article')[2].classList.add('on');
+	elSlide.querySelectorAll('article')[3].classList.add('on');
 }
 
 //텍스트 영역 생성 함수
@@ -125,7 +137,7 @@ function createTxt(arr) {
 			`;
 	});
 	elTxt.innerHTML = tags;
-	elTxt.querySelectorAll('.panel')[2].classList.add('on');
+	elTxt.querySelectorAll('.panel')[3].classList.add('on');
 }
 
 //리스트 영역 생성 함수
@@ -181,3 +193,47 @@ function removePop() {
 	setTimeout(() => document.querySelector('.pop').remove(), 500);
 	document.body.style.overflow = 'auto';
 }
+
+//슬라이드 기능 테스트
+// function slidePrev() {
+// 	const panels = Array.from(elTxt.querySelectorAll('.panel'));
+// 	const slideItem = elSlide.querySelectorAll('article');
+// 	const slideArr = Array.from(slideItem);
+// 	let idx;
+// 	let count = 0;
+
+// 	prev.addEventListener('click', () => {
+// 		idx = count--;
+// 		console.log(idx);
+
+// 		if (count < 0) {
+// 			count = slideArr.length - 1;
+// 		}
+
+// 		active(slideArr, idx);
+// 		active(panels, idx);
+// 	});
+// }
+
+// function slideNext() {
+// 	const panels = Array.from(elTxt.querySelectorAll('.panel'));
+// 	const slideItem = elSlide.querySelectorAll('article');
+// 	const slideArr = Array.from(slideItem);
+// 	let idx;
+// 	let count = 0;
+
+// 	next.addEventListener('click', () => {
+// 		idx = count++;
+// 		if (count === slideArr.length) {
+// 			count = 0;
+// 		}
+
+// 		active(slideArr, idx);
+// 		active(panels, idx);
+// 	});
+// }
+
+// function active(arr, index) {
+// 	for (const el of arr) el.classList.remove('on');
+// 	arr[index].classList.add('on');
+// }

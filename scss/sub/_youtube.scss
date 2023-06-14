@@ -15,16 +15,40 @@
 		display: flex;
 
 		.slide_wrap {
+			position: relative;
 			display: flex;
 			gap: 20px;
 			width: 1100px;
 
 			article {
+				// position: absolute;
+				// right: 700px;
+				// top: 0;
 				width: 200px;
+				transition: 1s;
 
 				&.on {
 					width: 680px;
+					transition: 1s;
 				}
+
+				// &:nth-of-type(1) {
+				// 	right: 2100px;
+				// }
+
+				// &:nth-of-type(2) {
+				// 	right: 1400px;
+				// }
+
+				// &:nth-of-type(3) {
+				// 	right: 700px;
+				// }
+
+				// &:nth-of-type(4) {
+				// 	right: 0;
+				// 	width: 680px;
+				// 	transition: 1s;
+				// }
 
 				.pic {
 					position: relative;

@@ -1247,15 +1247,18 @@ main .cross span.col {
   display: flex;
 }
 .youtube .ytb_area .slide_wrap {
+  position: relative;
   display: flex;
   gap: 20px;
   width: 1100px;
 }
 .youtube .ytb_area .slide_wrap article {
   width: 200px;
+  transition: 1s;
 }
 .youtube .ytb_area .slide_wrap article.on {
   width: 680px;
+  transition: 1s;
 }
 .youtube .ytb_area .slide_wrap article .pic {
   position: relative;
