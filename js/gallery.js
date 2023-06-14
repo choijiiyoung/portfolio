@@ -45,9 +45,18 @@ function getSearch() {
 }
 
 async function fetchData(url) {
+	loading.classList.remove('off');
+	gallery.classList.remove('on');
+
 	const res = await fetch(url);
 	const json = await res.json();
 	const items = json.photos.photo;
+
+	if (items.length === 0) {
+		loading.classList.add('off');
+		gallery.classList.add('on');
+		alert('해당 검색어 결과의 이미지가 없습니다.');
+	}
 
 	createList(items);
 }
@@ -111,6 +120,7 @@ function setLoading() {
 			count++;
 			if (count === imgs.length) console.log('dd');
 			loading.classList.add('off');
+			gallery.classList.add('on');
 		};
 	}
 }
