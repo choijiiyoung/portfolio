@@ -10,10 +10,15 @@
 			td {
 				border: none;
 				border-bottom: 1px solid #ddd;
-				padding: 16px 25px;
+				padding: 20px 25px;
 			}
 			th {
 				width: 20%;
+				text-align: left;
+
+				&.btn_wrap {
+					text-align: center;
+				}
 
 				input[type='submit'],
 				input[type='reset'] {
@@ -25,6 +30,7 @@
 					color: #555;
 					cursor: pointer;
 					transition: 0.5s;
+					border-radius: 5px;
 
 					&:hover {
 						background: #333;
@@ -34,29 +40,269 @@
 			}
 
 			td {
-				border-left: 1px solid #aaa;
-
 				input[type='text'],
 				input[type='password'],
 				input[type='email'],
 				select,
 				textarea {
 					width: 60%;
-					background: rgba(0, 0, 0, 0.03);
 					padding: 10px;
-					border: 1px solid #aaa;
+					border: 1px solid #ececec;
 					resize: none;
 				}
 				input[type='checkbox'],
 				input[type='radio'] {
-					margin-right: 30px;
+					overflow: hidden;
+					position: absolute;
+					width: 1px;
+					height: 1px;
+					padding: 0;
+					margin: -1px;
+					clip: rect(0, 0, 0, 0);
+					border: 0;
+				}
+
+				input[type='radio'] {
+					+ label {
+						display: inline-block;
+						position: relative;
+						height: 20px;
+						line-height: 20px;
+						vertical-align: middle;
+						margin-right: 30px;
+						padding-left: 30px;
+
+						&::before,
+						&::after {
+							content: '';
+							display: block;
+							position: absolute;
+							border-radius: 100%;
+						}
+
+						&::before {
+							left: 0;
+							top: 1px;
+							width: 20px;
+							height: 20px;
+							text-align: center;
+							border: 1px solid #d2d8f2;
+							box-sizing: border-box;
+						}
+
+						&::after {
+							top: 5px;
+							left: 4px;
+							width: 12px;
+							height: 12px;
+						}
+
+						&:last-of-type {
+							margin-right: 0;
+						}
+					}
+
+					&:checked {
+						+ label {
+							&::before {
+								border: 1px solid #222;
+							}
+
+							&::after {
+								background: #222;
+							}
+						}
+					}
+				}
+
+				input[type='checkbox'] {
+					+ label {
+						position: relative;
+						margin-right: 30px;
+						padding-left: 30px;
+
+						&::before,
+						&::after {
+							content: '';
+							display: block;
+							position: absolute;
+						}
+
+						&::before {
+							left: 0;
+							top: 2px;
+							width: 20px;
+							height: 20px;
+							border: 1px solid #ececec;
+							background-color: #fff;
+							box-sizing: border-box;
+						}
+
+						&::after {
+							left: 7px;
+							top: 5px;
+							width: 5px;
+							height: 9px;
+							color: #dadada;
+							border: 1px solid #fff;
+							border-width: 0 2px 2px 0;
+							transform: rotate(45deg);
+						}
+
+						&:last-of-type {
+							margin-right: 0;
+						}
+					}
+
+					&:checked {
+						+ label {
+							&::before {
+								background-color: #040404;
+							}
+
+							&::after {
+								border-color: #fff;
+							}
+						}
+					}
 				}
 
 				p {
 					width: 100%;
-					color: hotpink;
+					color: red;
 					margin-top: 5px;
 					font: 11px/1 '맑은 고딕';
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $mobile) {
+	.members {
+		form {
+			table {
+				th,
+				td {
+					padding: 15px 0;
+				}
+				th {
+					display: block;
+					width: 100%;
+					border-bottom: 0;
+
+					input[type='submit'],
+					input[type='reset'] {
+						width: 48%;
+					}
+
+					input[type='submit'] {
+						margin: 0 0 0 2%;
+					}
+					input[type='reset'] {
+						margin: 0;
+					}
+				}
+
+				td {
+					display: block;
+					width: 100%;
+
+					input[type='text'],
+					input[type='password'],
+					input[type='email'],
+					select,
+					textarea {
+						width: 100%;
+					}
+
+					input[type='radio'] {
+						+ label {
+							display: inline-block;
+							position: relative;
+							height: 20px;
+							line-height: 20px;
+							vertical-align: middle;
+							margin-right: 30px;
+							padding-left: 30px;
+
+							&::before,
+							&::after {
+								content: '';
+								display: block;
+								position: absolute;
+								border-radius: 100%;
+							}
+
+							&::before {
+								left: 0;
+								top: 1px;
+								width: 20px;
+								height: 20px;
+								text-align: center;
+								border: 1px solid #d2d8f2;
+								box-sizing: border-box;
+							}
+
+							&::after {
+								top: 5px;
+								left: 4px;
+								width: 12px;
+								height: 12px;
+							}
+
+							&:last-of-type {
+								margin-right: 0;
+							}
+						}
+
+						&:checked {
+							+ label {
+								&::before {
+									border: 1px solid #222;
+								}
+
+								&::after {
+									background: #222;
+								}
+							}
+						}
+					}
+
+					input[type='checkbox'] {
+						+ label {
+							position: relative;
+
+							padding-left: 30px;
+							display: block;
+							width: 100%;
+
+							margin: 0 0 30px 0;
+
+							&:last-of-type {
+								margin-bottom: 0;
+							}
+						}
+
+						&:checked {
+							+ label {
+								&::before {
+									background-color: #040404;
+								}
+
+								&::after {
+									border-color: #fff;
+								}
+							}
+						}
+					}
+
+					p {
+						width: 100%;
+						color: hotpink;
+						margin-top: 5px;
+						font: 11px/1 '맑은 고딕';
+					}
 				}
 			}
 		}
