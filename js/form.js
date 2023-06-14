@@ -3,7 +3,7 @@ const btnSubmit = document.querySelector('input[type=submit]');
 
 btnSubmit.addEventListener('click', (e) => {
 	if (!isTxt('userid', 5)) e.preventDefault();
-	if (!isPwd('pwd1', 'pwd2', 5)) e.preventDefault();
+	if (!isPwd('pwd1', 'pwd2', 4)) e.preventDefault();
 	if (!isEmail('email', 5)) e.preventDefault();
 	if (!isSelect('edu')) e.preventDefault();
 	if (!isCheck('gender')) e.preventDefault();
@@ -32,15 +32,18 @@ function isTxt(name, len) {
 
 //비밀번호 인증 함수
 function isPwd(pwd1, pwd2, len) {
+	const num = /[0-9]/;
+	const eng = /[a-zA-Z]/;
+	const spc = /[!@#$%^&*()_+]/;
 	const pwdEl1 = document.querySelector(`[name=${pwd1}]`);
 	const pwd1_val = pwdEl1.value.trim();
 	const pwd2_val = document.querySelector(`[name=${pwd2}]`).value.trim();
 
-	if (pwd1_val < 5 || pwd1_val !== pwd2_val) {
+	if (pwd1_val !== pwd2_val || pwd1_val.length < len || !num.test(pwd1_val) || !eng.test(pwd1_val) || !spc.test(pwd1_val)) {
 		resetErr(pwdEl1);
 
 		const errMsg = document.createElement('p');
-		errMsg.innerText = `비밀번호 2개 항목을 동일하게 입력하고 ${len}글자 이상 입력하세요.`;
+		errMsg.innerText = `비밀번호는 ${len}글자 이상 특수문자, 영문, 숫자를 모두 포함하세요.`;
 		pwdEl1.closest('td').append(errMsg);
 
 		return false;
@@ -52,19 +55,42 @@ function isPwd(pwd1, pwd2, len) {
 
 //이메일 인증 함수
 function isEmail(name, len) {
-	const email = document.querySelector(`[name=${name}]`);
+	const email = form.querySelector(`[name=${name}]`);
 	const email_val = email.value;
-	if (email_val.indexOf('@') < 0 || email_val.length < len) {
+
+	if (/@/.test(email_val)) {
+		const [forwardTxt, backwardTxt] = email_val.split('@');
+
+		if (!forwardTxt || !backwardTxt) {
+			resetErr(email);
+
+			const errMsg = document.createElement('p');
+			errMsg.innerText = `@앞쪽이나 뒤쪽에 문자값이 없습니다.`;
+			email.closest('td').append(errMsg);
+
+			return false;
+		} else {
+			if (!/\./.test(backwardTxt)) {
+				resetErr(email);
+
+				const errMsg = document.createElement('p');
+				errMsg.innerText = `@뒤쪽의 서비스명이 올바른지 확인하세요`;
+				email.closest('td').append(errMsg);
+
+				return false;
+			} else {
+				resetErr(email);
+				return true;
+			}
+		}
+	} else {
 		resetErr(email);
 
 		const errMsg = document.createElement('p');
-		errMsg.innerText = `이메일 주소에 @를 포함고 ${len}글자 이상 입력하세요.`;
+		errMsg.innerText = `${len}글자 이상 @를 포함하세요.`;
 		email.closest('td').append(errMsg);
 
 		return false;
-	} else {
-		resetErr(email);
-		return true;
 	}
 }
 
