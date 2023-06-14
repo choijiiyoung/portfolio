@@ -1,4 +1,5 @@
 const gallery = document.querySelector('.gallery .gallery_wrap');
+const loading = document.querySelector('.gallery .loading');
 const input = document.querySelector('.gallery #search');
 const btnSearch = document.querySelector('.gallery .btn_search');
 const btnInterest = document.querySelector('.gallery .btn_interest');
@@ -48,7 +49,6 @@ async function fetchData(url) {
 	const json = await res.json();
 	const items = json.photos.photo;
 
-	console.log(items);
 	createList(items);
 }
 
@@ -73,6 +73,8 @@ function createList(arr) {
 		`;
 	});
 	gallery.innerHTML = tags;
+
+	setLoading();
 }
 
 //팝업 동적 생성 함수
@@ -98,4 +100,17 @@ function removePop() {
 	pop.classList.remove('on');
 	setTimeout(() => pop.remove(), 1000);
 	document.body.style.overflow = 'auto';
+}
+
+//로딩 함수
+function setLoading() {
+	const imgs = document.querySelectorAll('img');
+	let count = 0;
+	for (const el of imgs) {
+		el.onload = () => {
+			count++;
+			if (count === imgs.length) console.log('dd');
+			loading.classList.add('off');
+		};
+	}
 }

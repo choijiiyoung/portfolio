@@ -1520,6 +1520,19 @@ main .cross span.col {
     min-height: auto;
   }
 }
+.gallery .loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  z-index: 3;
+  transition: opacity 1s;
+}
+.gallery .loading.off {
+  opacity: 0;
+  z-index: 2;
+}
 .gallery .top_wrap {
   display: flex;
   justify-content: space-between;
