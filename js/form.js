@@ -5,10 +5,10 @@ btnSubmit.addEventListener('click', (e) => {
 	console.log(e);
 	// if (!isTxt('userid', 5)) e.preventDefault();
 	// if (!isPwd('pwd1', 'pwd2', 5)) e.preventDefault();
-	if (!isEmail('email', 5)) e.preventDefault();
-	if (!isSelect('edu')) e.preventDefault();
+	// if (!isEmail('email', 5)) e.preventDefault();
+	// if (!isSelect('edu')) e.preventDefault();
 	if (!isCheck('gender')) e.preventDefault();
-	// if (!isCheck('hobby')) e.preventDefault();
+	if (!isCheck('hobby')) e.preventDefault();
 	// if (!isTxt('comments', 10)) e.preventDefault();
 });
 
@@ -68,4 +68,13 @@ function isSelect(name) {
 //라디오, 체크 박스 인증 함수
 function isCheck(name) {
 	const inputs = document.querySelectorAll(`[name=${name}]`);
+	let isChecked = false;
+
+	for (const input of inputs) input.checked && (isChecked = true);
+	if (!isChecked) {
+		alert('해당 요소중 하나를 선택해주세요.');
+		return false;
+	} else {
+		return true;
+	}
 }
