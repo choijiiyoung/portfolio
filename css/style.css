@@ -1249,16 +1249,33 @@ main .cross span.col {
 .youtube .ytb_area .slide_wrap {
   position: relative;
   display: flex;
-  gap: 20px;
-  width: 1100px;
+  width: 1340px;
+  overflow: hidden;
 }
 .youtube .ytb_area .slide_wrap article {
+  position: absolute;
+  top: 0;
   width: 200px;
   transition: 1s;
-}
-.youtube .ytb_area .slide_wrap article.on {
-  width: 680px;
+  padding: 0 20px;
   transition: 1s;
+}
+.youtube .ytb_area .slide_wrap article:nth-of-type(4) {
+  right: -680px;
+  transition-delay: 0.3s;
+}
+.youtube .ytb_area .slide_wrap article:nth-of-type(3) {
+  right: 0;
+  width: 680px;
+  transition-delay: 0.2s;
+}
+.youtube .ytb_area .slide_wrap article:nth-of-type(2) {
+  right: calc(35% + 200px);
+  transition-delay: 0.1s;
+}
+.youtube .ytb_area .slide_wrap article:nth-of-type(1) {
+  right: calc(35% + 400px);
+  transition-delay: 0s;
 }
 .youtube .ytb_area .slide_wrap article .pic {
   position: relative;
@@ -1421,25 +1438,31 @@ main .cross span.col {
     flex-wrap: wrap;
   }
   .youtube .ytb_area .slide_wrap {
-    overflow: hidden;
     width: 100%;
     margin-bottom: 40px;
-    gap: 0;
   }
   .youtube .ytb_area .slide_wrap article {
+    position: unset;
+    padding: 0;
     width: 100%;
     flex: none;
-    display: none;
+    transition: none;
   }
-  .youtube .ytb_area .slide_wrap article.on {
+  .youtube .ytb_area .slide_wrap article:nth-of-type(4) {
+    right: 0;
+  }
+  .youtube .ytb_area .slide_wrap article:nth-of-type(3) {
+    right: 0;
     width: 100%;
-    display: block;
+    transition-delay: 0.2s;
   }
-  .youtube .ytb_area .slide_wrap article .pic {
-    box-shadow: none;
+  .youtube .ytb_area .slide_wrap article:nth-of-type(2) {
+    right: 0;
+    transition-delay: 0.1s;
   }
-  .youtube .ytb_area .slide_wrap article .pic .num {
-    font-size: 40px;
+  .youtube .ytb_area .slide_wrap article:nth-of-type(1) {
+    right: 0;
+    transition-delay: 0s;
   }
   .youtube .ytb_area .info_wrap {
     flex: none;

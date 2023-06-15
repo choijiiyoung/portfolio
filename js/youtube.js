@@ -5,6 +5,8 @@ const elList = ytbWrap.querySelector('.ytb_list');
 const prev = ytbWrap.querySelector('.prev');
 const next = ytbWrap.querySelector('.next');
 let tags;
+let idx;
+let count = 0;
 
 fetchData();
 
@@ -80,16 +82,16 @@ async function fetchData() {
 	createTxt(json.items);
 	createList(json.items);
 
-	// slidePrev();
-	// slideNext();
+	slidePrev();
+	slideNext();
 
-	prev.addEventListener('click', () => {
-		elSlide.append(elSlide.firstElementChild);
-	});
+	// prev.addEventListener('click', () => {
+	// 	elSlide.prepend(elSlide.lastElementChild);
+	// });
 
-	next.addEventListener('click', () => {
-		elSlide.append(elSlide.firstElementChild);
-	});
+	// next.addEventListener('click', () => {
+	// 	elSlide.append(elSlide.firstElementChild);
+	// });
 }
 
 //슬라이드 영역 생성 함수
@@ -114,7 +116,7 @@ function createSlide(arr) {
 			`;
 	});
 	elSlide.innerHTML = tags;
-	elSlide.querySelectorAll('article')[3].classList.add('on');
+	// elSlide.querySelectorAll('article')[2].classList.add('on');
 }
 
 //텍스트 영역 생성 함수
@@ -137,7 +139,7 @@ function createTxt(arr) {
 			`;
 	});
 	elTxt.innerHTML = tags;
-	elTxt.querySelectorAll('.panel')[3].classList.add('on');
+	elTxt.querySelectorAll('.panel')[2].classList.add('on');
 }
 
 //리스트 영역 생성 함수
@@ -194,46 +196,47 @@ function removePop() {
 	document.body.style.overflow = 'auto';
 }
 
-//슬라이드 기능 테스트
-// function slidePrev() {
-// 	const panels = Array.from(elTxt.querySelectorAll('.panel'));
-// 	const slideItem = elSlide.querySelectorAll('article');
-// 	const slideArr = Array.from(slideItem);
-// 	let idx;
-// 	let count = 0;
+//슬라이드 Prev 버튼 테스트
+function slidePrev() {
+	const panels = Array.from(elTxt.querySelectorAll('.panel'));
+	const slideItem = elSlide.querySelectorAll('article');
+	const slideArr = Array.from(slideItem);
 
-// 	prev.addEventListener('click', () => {
-// 		idx = count--;
-// 		console.log(idx);
+	prev.addEventListener('click', () => {
+		idx = count--;
+		console.log(idx, 'prev idx');
 
-// 		if (count < 0) {
-// 			count = slideArr.length - 1;
-// 		}
+		if (count < 0) {
+			count = slideArr.length - 1;
+		}
 
-// 		active(slideArr, idx);
-// 		active(panels, idx);
-// 	});
-// }
+		// active(slideArr, idx);
+		active(panels, idx);
+		elSlide.prepend(elSlide.lastElementChild);
+	});
+}
 
-// function slideNext() {
-// 	const panels = Array.from(elTxt.querySelectorAll('.panel'));
-// 	const slideItem = elSlide.querySelectorAll('article');
-// 	const slideArr = Array.from(slideItem);
-// 	let idx;
-// 	let count = 0;
+//슬라이드  Next 버튼 테스트
+function slideNext() {
+	const panels = Array.from(elTxt.querySelectorAll('.panel'));
+	const slideItem = elSlide.querySelectorAll('article');
+	const slideArr = Array.from(slideItem);
 
-// 	next.addEventListener('click', () => {
-// 		idx = count++;
-// 		if (count === slideArr.length) {
-// 			count = 0;
-// 		}
+	next.addEventListener('click', () => {
+		idx = count++;
+		console.log(idx, 'next idx');
 
-// 		active(slideArr, idx);
-// 		active(panels, idx);
-// 	});
-// }
+		if (count === slideArr.length) {
+			count = 0;
+		}
 
-// function active(arr, index) {
-// 	for (const el of arr) el.classList.remove('on');
-// 	arr[index].classList.add('on');
-// }
+		// active(slideArr, idx);
+		active(panels, idx);
+		elSlide.append(elSlide.firstElementChild);
+	});
+}
+
+function active(arr, index) {
+	for (const el of arr) el.classList.remove('on');
+	arr[index].classList.add('on');
+}

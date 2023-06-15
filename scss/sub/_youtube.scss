@@ -1,3 +1,9 @@
+// $initPos: 36%;
+// $wid: 14vw;
+
+$initPos: 35%;
+$wid: 200px;
+
 .youtube {
 	img {
 		width: 100%;
@@ -14,41 +20,116 @@
 	.ytb_area {
 		display: flex;
 
+		// .slide_wrap {
+		// 	position: relative;
+		// 	display: flex;
+		// 	gap: 20px;
+		// 	width: 1340px;
+
+		// 	article {
+		// 		width: 200px;
+		// 		transition: 1s;
+
+		// 		&.on {
+		// 			width: 680px;
+		// 		}
+
+		// 		.pic {
+		// 			position: relative;
+		// 			height: 400px;
+		// 			margin-bottom: 20px;
+		// 			box-shadow: 6px 8px 12px rgba(0, 0, 0, 0.3);
+
+		// 			.num {
+		// 				position: absolute;
+		// 				right: 0;
+		// 				bottom: 0;
+		// 				-webkit-text-stroke: 1px #fff;
+		// 				font-size: 60px;
+		// 				color: transparent;
+		// 				font-weight: bold;
+		// 			}
+		// 		}
+
+		// 		.txt {
+		// 			overflow: hidden;
+		// 			position: relative;
+		// 			padding-left: 10px;
+		// 			border-left: 3px solid #888;
+		// 			font-size: 20px;
+
+		// 			// &::before {
+		// 			// 	content: '';
+		// 			// 	display: block;
+		// 			// 	position: absolute;
+		// 			// 	left: 0;
+		// 			// 	top: 50%;
+		// 			// 	transform: translateY(-50%);
+		// 			// 	width: 3px;
+		// 			// 	height: 90%;
+		// 			// 	background-color: #888;
+		// 			// }
+		// 		}
+		// 	}
+		// }
+
 		.slide_wrap {
 			position: relative;
 			display: flex;
-			gap: 20px;
-			width: 1100px;
+			width: 1340px;
+			overflow: hidden;
 
 			article {
-				// position: absolute;
-				// right: 700px;
-				// top: 0;
-				width: 200px;
+				position: absolute;
+				top: 0;
+				width: $wid;
+				transition: 1s;
+				padding: 0 20px;
 				transition: 1s;
 
-				&.on {
-					width: 680px;
-					transition: 1s;
-				}
-
-				// &:nth-of-type(1) {
-				// 	right: 2100px;
-				// }
-
-				// &:nth-of-type(2) {
-				// 	right: 1400px;
+				// &:nth-of-type(4) {
+				// 	right: -$wid;
+				// 	transition-delay: 0.4s;
 				// }
 
 				// &:nth-of-type(3) {
-				// 	right: 700px;
+				// 	right: calc($initPos + $wid * 0);
+				// 	width: 40vw;
+				// 	transition-delay: 0.3s;
 				// }
 
-				// &:nth-of-type(4) {
-				// 	right: 0;
-				// 	width: 680px;
-				// 	transition: 1s;
+				// &:nth-of-type(2) {
+				// 	right: calc($initPos + $wid * 1);
+				// 	transition-delay: 0.2s;
 				// }
+
+				// &:nth-of-type(1) {
+				// 	right: calc($initPos + $wid * 2);
+				// 	transition-delay: 0.1s;
+				// }
+
+				&:nth-of-type(4) {
+					// right: -40vw;
+					right: -680px;
+					transition-delay: 0.3s;
+				}
+
+				&:nth-of-type(3) {
+					right: 0;
+					// width: 40vw;
+					width: 680px;
+					transition-delay: 0.2s;
+				}
+
+				&:nth-of-type(2) {
+					right: calc($initPos + $wid * 1);
+					transition-delay: 0.1s;
+				}
+
+				&:nth-of-type(1) {
+					right: calc($initPos + $wid * 2);
+					transition-delay: 0s;
+				}
 
 				.pic {
 					position: relative;
@@ -243,6 +324,9 @@
 }
 
 @media screen and (max-width: $tablet) {
+	$initPos: 0;
+	$wid: 100%;
+
 	.youtube {
 		.ytb_wrap {
 			justify-content: center;
@@ -252,28 +336,62 @@
 			display: block;
 			flex-wrap: wrap;
 
+			// .slide_wrap {
+			// 	overflow: hidden;
+			// 	width: 100%;
+			// 	margin-bottom: 40px;
+			// 	gap: 0;
+
+			// 	article {
+			// 		width: 100%;
+			// 		flex: none;
+			// 		display: none;
+
+			// 		&.on {
+			// 			width: 100%;
+			// 			display: block;
+			// 		}
+
+			// 		.pic {
+			// 			box-shadow: none;
+
+			// 			.num {
+			// 				font-size: 40px;
+			// 			}
+			// 		}
+			// 	}
+			// }
+
 			.slide_wrap {
-				overflow: hidden;
 				width: 100%;
 				margin-bottom: 40px;
-				gap: 0;
 
 				article {
+					position: unset;
+					padding: 0;
 					width: 100%;
 					flex: none;
-					display: none;
+					transition: none;
 
-					&.on {
-						width: 100%;
-						display: block;
+					&:nth-of-type(4) {
+						right: 0;
 					}
 
-					.pic {
-						box-shadow: none;
+					&:nth-of-type(3) {
+						right: 0;
 
-						.num {
-							font-size: 40px;
-						}
+						width: 100%;
+						transition-delay: 0.2s;
+					}
+
+					&:nth-of-type(2) {
+						right: 0;
+						transition-delay: 0.1s;
+					}
+
+					&:nth-of-type(1) {
+						right: 0;
+						transition-delay: 0s;
 					}
 				}
 			}

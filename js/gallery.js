@@ -74,7 +74,7 @@ function createList(arr) {
 					
 					<article class='profile'>
 						<img src='http://farm${item.farm}.staticflickr.com/${item.server}/buddyicons/${item.owner}.jpg' />
-						<p>${item.title === '' ? 'Have a good day!!' : item.title.length > 35 ? item.title.substr(0, 35) + '...' : item.title}</p> 
+						<p>${item.title === '' ? 'Have a good day!!' : item.title}</p> 
 						<span class='userid'>${item.owner}</span>
 					</article>
 				</div>
