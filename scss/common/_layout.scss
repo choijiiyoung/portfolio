@@ -70,6 +70,33 @@ main {
 			}
 		}
 	}
+
+	+ .navigation {
+		position: fixed;
+		left: 20px;
+		top: 50%;
+		transform: translateY(-50%);
+
+		li {
+			+ li {
+				margin-top: 10px;
+			}
+
+			&.on {
+				a {
+					background: #000;
+					height: 50px;
+				}
+			}
+			a {
+				display: block;
+				width: 10px;
+				height: 10px;
+				background: #efefef;
+				transition: height 1s;
+			}
+		}
+	}
 }
 
 @media screen and (max-width: 1300px) {

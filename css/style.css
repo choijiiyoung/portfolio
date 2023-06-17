@@ -274,6 +274,26 @@ main .cross span.col {
   width: 3px;
   height: 15px;
 }
+main + .navigation {
+  position: fixed;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+main + .navigation li + li {
+  margin-top: 10px;
+}
+main + .navigation li.on a {
+  background: #000;
+  height: 50px;
+}
+main + .navigation li a {
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: #efefef;
+  transition: height 1s;
+}
 
 @media screen and (max-width: 1300px) {
   main .inner {
