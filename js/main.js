@@ -21,9 +21,9 @@ window.addEventListener('scroll', () => {
 navBtns.forEach((btn, idx) => {
 	btn.addEventListener('click', (e) => {
 		e.preventDefault();
-		const li = e.target.closest('li');
-		for (el of navLi) el.classList.remove('on');
-		li.classList.add('on');
+		// const li = e.target.closest('li');
+		// for (el of navLi) el.classList.remove('on');
+		// li.classList.add('on');
 		window.scrollTo({ top: secs[idx].offsetTop, behavior: 'smooth' });
 	});
 });

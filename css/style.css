@@ -281,7 +281,7 @@ main + .navigation {
   transform: translateY(-50%);
 }
 main + .navigation li + li {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 main + .navigation li.on a {
   background: #000;
@@ -292,7 +292,7 @@ main + .navigation li a {
   width: 15px;
   height: 15px;
   background: #efefef;
-  transition: height 1s;
+  transition: 0.5s;
 }
 
 @media screen and (max-width: 1300px) {

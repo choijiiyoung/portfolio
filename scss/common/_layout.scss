@@ -79,7 +79,7 @@ main {
 
 		li {
 			+ li {
-				margin-top: 10px;
+				margin-top: 20px;
 			}
 
 			&.on {
@@ -93,7 +93,7 @@ main {
 				width: 15px;
 				height: 15px;
 				background: #efefef;
-				transition: height 1s;
+				transition: 0.5s;
 			}
 		}
 	}
