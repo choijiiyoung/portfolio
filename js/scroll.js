@@ -6,8 +6,20 @@ const baseline = -window.innerHeight / 2;
 const speed = 500;
 let enableEvent = true;
 let autoScroll = true;
+let eventBlocker = null;
 
-window.addEventListener('scroll', () => {
+window.addEventListener('scroll', activation);
+window.addEventListener('resize', modifyPos);
+autoScroll & window.addEventListener('mousewheel', moveAuto, { passive: false });
+
+navBtns.forEach((btn, idx) => {
+	btn.addEventListener('click', (e) => {
+		e.preventDefault();
+		enableEvent && moveScroll(idx);
+	});
+});
+
+function activation() {
 	const scroll = window.scrollY;
 
 	secs.forEach((_, idx) => {
@@ -19,16 +31,7 @@ window.addEventListener('scroll', () => {
 			navLi[idx].classList.add('on');
 		}
 	});
-});
-window.addEventListener('resize', modifyPos);
-autoScroll & window.addEventListener('mousewheel', moveAuto, { passive: false });
-
-navBtns.forEach((btn, idx) => {
-	btn.addEventListener('click', (e) => {
-		e.preventDefault();
-		enableEvent && moveScroll(idx);
-	});
-});
+}
 
 function moveScroll(idx) {
 	enableEvent = false;
