@@ -1001,6 +1001,9 @@ main .cross span.col {
     margin-bottom: 20px;
     font-size: 20px;
   }
+  #news .content .txt_area .news_list li .inner_area .btn_view {
+    width: max-content;
+  }
   #news .content .txt_area .news_list li + li {
     width: 360px;
     padding-right: 80px;
