@@ -5,7 +5,7 @@ const btnSearch = document.querySelector('.gallery .btn_search');
 const btnInterest = document.querySelector('.gallery .btn_interest');
 const btnMine = document.querySelector('.gallery .btn_mine');
 const api_key = 'db5673d91b2fb6704d13f6b0181efd99';
-const num = 20;
+const num = 30;
 const myId = '198483448@N02';
 
 fetchData(setURL('interest'));
@@ -86,6 +86,31 @@ function createList(arr) {
 	setLoading();
 }
 
+//로딩 함수
+function setLoading() {
+	const imgs = gallery.querySelectorAll('img');
+	let count = 0;
+
+	for (const el of imgs) {
+		el.onerror = () => {
+			el.setAttribute('src', 'https://www.flickr.com/images/buddyicon.gif');
+		};
+		el.onload = () => {
+			count++;
+			count === imgs.length && isoLayout();
+		};
+	}
+}
+
+function isoLayout() {
+	new Isotope(gallery, {
+		itemSelector: '.item',
+		transitionDuration: '0.5s',
+	});
+	gallery.classList.add('on');
+	loading.classList.add('off');
+}
+
 //팝업 동적 생성 함수
 function createPop(url) {
 	const aside = document.createElement('aside');
@@ -109,23 +134,4 @@ function removePop() {
 	pop.classList.remove('on');
 	setTimeout(() => pop.remove(), 1000);
 	document.body.style.overflow = 'auto';
-}
-
-//로딩 함수
-function setLoading() {
-	const imgs = gallery.querySelectorAll('img');
-	let count = 0;
-
-	for (const el of imgs) {
-		el.onerror = () => {
-			el.setAttribute('src', 'https://www.flickr.com/images/buddyicon.gif');
-		};
-		el.onload = () => {
-			count++;
-			if (count === imgs.length) {
-				loading.classList.add('off');
-				gallery.classList.add('on');
-			}
-		};
-	}
 }
