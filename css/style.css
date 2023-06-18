@@ -555,10 +555,10 @@ main + .navigation li a {
   #newProduct .content .product_area .item.center {
     margin-left: 0;
     flex: none;
-    width: 380px;
+    width: 360px;
   }
   #newProduct .content .product_area .item.center .slide_wrap {
-    height: 380px;
+    height: 360px;
   }
   #newProduct .content .product_area .item.last {
     margin-left: 0;
@@ -863,12 +863,6 @@ main + .navigation li a {
 }
 
 @media screen and (max-width: 999px) {
-  #collab .collab_list li .box .img_area .img {
-    width: 280px;
-    height: 280px;
-  }
-}
-@media screen and (max-width: 639px) {
   #collab .collab_list {
     flex-wrap: wrap;
   }

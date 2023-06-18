@@ -71,23 +71,6 @@
 @media screen and (max-width: $tablet) {
 	#collab {
 		.collab_list {
-			li {
-				.box {
-					.img_area {
-						.img {
-							width: 280px;
-							height: 280px;
-						}
-					}
-				}
-			}
-		}
-	}
-}
-
-@media screen and (max-width: $mobile) {
-	#collab {
-		.collab_list {
 			flex-wrap: wrap;
 			li {
 				flex: none;
