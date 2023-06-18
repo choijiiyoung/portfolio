@@ -1076,6 +1076,7 @@ main .cross span.col {
   #scroll_navi li {
     width: 15px;
     height: 15px;
+    border-radius: 8px;
   }
 }
 .department section.first {
