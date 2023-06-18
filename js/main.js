@@ -19,8 +19,20 @@ window.addEventListener('scroll', () => {
 		}
 	});
 });
-
 window.addEventListener('resize', modifyPos);
+window.addEventListener('mousewheel', (e) => {
+	e.preventDefault();
+	const active = nav.querySelector('li.on');
+	const active_index = Array.from(navLi).indexOf(active);
+
+	if (e.deltaY > 0) {
+		if (active_index === navLi.length - 1) return;
+		moveScroll(active_index + 1);
+	} else {
+		if (active_index === 0) return;
+		moveScroll(active_index - 1);
+	}
+});
 
 navBtns.forEach((btn, idx) => {
 	btn.addEventListener('click', (e) => {
@@ -42,6 +54,5 @@ function moveScroll(idx) {
 function modifyPos() {
 	const active = nav.querySelector('li.on');
 	const active_index = Array.from(navLi).indexOf(active);
-	console.log(active_index);
 	window.scrollTo({ top: secs[active_index].offsetTop, behavior: 'smooth' });
 }
