@@ -71,7 +71,7 @@ function moveAuto(e) {
 
 	if (e.deltaY > 0) {
 		console.log('wheel down');
-		// if (active_index === navLi.length - 1) return;
+		if (active_index === navLi.length - 1) return;
 		moveScroll(active_index + 1);
 	} else {
 		console.log('wheel up');
