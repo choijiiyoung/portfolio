@@ -1870,5 +1870,27 @@ main .cross span.col {
     margin-bottom: 0;
   }
 }
+.location .map_wrap #map {
+  width: 100%;
+  height: 400px;
+  background: #efefef;
+  position: relative;
+}
+.location .branch_list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  border: 1px solid #111;
+}
+.location .branch_list li {
+  flex: 1;
+  padding: 10px 0;
+  text-align: center;
+  cursor: pointer;
+}
+.location .branch_list li + li {
+  border-left: 1px solid #111;
+}
 
 /*# sourceMappingURL=style.css.map */
