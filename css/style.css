@@ -707,9 +707,6 @@ main .cross span.col {
     flex-direction: row-reverse;
     justify-content: space-between;
   }
-  #imprv .acco_wrap .list li .box .img_area {
-    flex: 2;
-  }
   #imprv .acco_wrap .list li .box .txt {
     width: 100%;
   }
@@ -789,8 +786,8 @@ main .cross span.col {
   }
   #prod .prod_list li .img {
     right: 10vw;
-    width: 180px;
-    height: 220px;
+    width: 150px;
+    height: 190px;
   }
 }
 #collab .collab_list {
@@ -1731,7 +1728,11 @@ main .cross span.col {
 }
 .members form table td input[type=checkbox],
 .members form table td input[type=radio] {
-  margin: 15px 0 10px 20px;
+  margin: 15px 0 10px 30px;
+}
+.members form table td input[type=checkbox]:first-of-type,
+.members form table td input[type=radio]:first-of-type {
+  margin-left: 0;
 }
 .members form table td p {
   width: 100%;
@@ -1754,12 +1755,6 @@ main .cross span.col {
   .members form table th input[type=reset] {
     width: 48%;
   }
-  .members form table th input[type=submit] {
-    margin: 0 0 0 2%;
-  }
-  .members form table th input[type=reset] {
-    margin: 0;
-  }
   .members form table td {
     display: block;
     width: 100%;
@@ -1771,19 +1766,9 @@ main .cross span.col {
   .members form table td textarea {
     width: 100%;
   }
-  .members form table td input[type=radio] + label {
-    margin-right: 30px;
-  }
-  .members form table td input[type=radio] + label:last-of-type {
-    margin-right: 0;
-  }
-  .members form table td input[type=checkbox] + label {
-    display: block;
-    width: 100%;
-    margin: 0 0 30px 0;
-  }
-  .members form table td input[type=checkbox] + label:last-of-type {
-    margin-bottom: 0;
+  .members form table td input[type=checkbox],
+  .members form table td input[type=radio] {
+    margin: 0 0 0 30px;
   }
 }
 .location .map_wrap #map {
