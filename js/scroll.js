@@ -8,8 +8,20 @@ let enableEvent = true;
 let autoScroll = true;
 let eventBlocker = null;
 
-window.addEventListener('scroll', activation);
-window.addEventListener('resize', modifyPos);
+window.addEventListener('scroll', () => {
+	if (eventBlocker) return;
+	eventBlocker = setTimeout(() => {
+		activation();
+		eventBlocker = null;
+	}, speed);
+});
+window.addEventListener('resize', () => {
+	if (eventBlocker) return;
+	eventBlocker = setTimeout(() => {
+		modifyPos();
+		eventBlocker - null;
+	}, speed);
+});
 autoScroll & window.addEventListener('mousewheel', moveAuto, { passive: false });
 
 navBtns.forEach((btn, idx) => {
