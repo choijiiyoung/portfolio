@@ -22,3 +22,13 @@
 		}
 	}
 }
+
+@media screen and (max-width: $tablet) {
+	#scroll_navi {
+		left: 10px;
+		li {
+			width: 15px;
+			height: 15px;
+		}
+	}
+}

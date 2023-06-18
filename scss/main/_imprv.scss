@@ -147,11 +147,13 @@
 			flex-wrap: wrap;
 
 			.title_area {
+				flex: none;
 				width: 100%;
 				margin-bottom: 30px;
 			}
 
 			.txt_area {
+				flex: none;
 				width: 100%;
 			}
 		}
@@ -176,10 +178,6 @@
 						gap: 8%;
 						flex-direction: row-reverse;
 						justify-content: space-between;
-
-						.txt {
-							width: 100%;
-						}
 					}
 				}
 			}
@@ -201,14 +199,13 @@
 						.img_area {
 							width: 100%;
 							margin-bottom: 20px;
-
-							.img {
-								width: 100%;
-							}
 						}
 
 						.txt {
+							flex: none;
 							width: 100%;
+							padding-right: 0;
+							word-break: break-all;
 						}
 					}
 				}

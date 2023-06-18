@@ -686,10 +686,12 @@ main .cross span.col {
     flex-wrap: wrap;
   }
   #imprv .content .title_area {
+    flex: none;
     width: 100%;
     margin-bottom: 30px;
   }
   #imprv .content .txt_area {
+    flex: none;
     width: 100%;
   }
   #imprv .acco_wrap .list li a {
@@ -707,9 +709,6 @@ main .cross span.col {
     flex-direction: row-reverse;
     justify-content: space-between;
   }
-  #imprv .acco_wrap .list li .box .txt {
-    width: 100%;
-  }
 }
 @media screen and (max-width: 639px) {
   #imprv .acco_wrap .list li .box {
@@ -722,11 +721,11 @@ main .cross span.col {
     width: 100%;
     margin-bottom: 20px;
   }
-  #imprv .acco_wrap .list li .box .img_area .img {
-    width: 100%;
-  }
   #imprv .acco_wrap .list li .box .txt {
+    flex: none;
     width: 100%;
+    padding-right: 0;
+    word-break: break-all;
   }
 }
 #prod .prod_list {
@@ -1067,6 +1066,15 @@ main .cross span.col {
   background: #000;
 }
 
+@media screen and (max-width: 999px) {
+  #scroll_navi {
+    left: 10px;
+  }
+  #scroll_navi li {
+    width: 15px;
+    height: 15px;
+  }
+}
 .department section.first {
   margin-bottom: 80px;
 }
