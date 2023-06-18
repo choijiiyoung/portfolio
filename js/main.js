@@ -24,8 +24,11 @@ navBtns.forEach((btn, idx) => {
 		const li = e.target.closest('li');
 		for (el of navLi) el.classList.remove('on');
 		li.classList.add('on');
-		if (li.classList.contains('on')) window.scrollTo(0, secs[idx].offsetTop);
-
-		console.log(secs[idx].offsetTop);
+		window.scrollTo(0, secs[idx].offsetTop);
 	});
+});
+
+window.addEventListener('mousewheel', () => {
+	const scroll = window.scrollY;
+	console.log(scroll);
 });
