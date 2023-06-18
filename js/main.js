@@ -5,6 +5,7 @@ const navBtns = nav.querySelectorAll('a');
 const baseline = -window.innerHeight / 2;
 const speed = 500;
 let enableEvent = true;
+let autoScroll = true;
 
 window.addEventListener('scroll', () => {
 	const scroll = window.scrollY;
@@ -20,7 +21,7 @@ window.addEventListener('scroll', () => {
 	});
 });
 window.addEventListener('resize', modifyPos);
-window.addEventListener('mousewheel', (e) => moveAuto, { passive: false });
+autoScroll & window.addEventListener('mousewheel', moveAuto, { passive: false });
 
 navBtns.forEach((btn, idx) => {
 	btn.addEventListener('click', (e) => {
