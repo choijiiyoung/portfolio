@@ -1372,7 +1372,7 @@ main .cross span.col {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
 }
 .youtube .btn_wrap button {
   position: relative;
@@ -1446,11 +1446,11 @@ main .cross span.col {
     justify-content: center;
   }
   .youtube .ytb_area {
-    display: block;
+    display: grid;
     flex-wrap: wrap;
   }
   .youtube .ytb_area .slide_wrap {
-    width: 100%;
+    width: auto;
     margin-bottom: 40px;
   }
   .youtube .ytb_area .slide_wrap article {

@@ -241,7 +241,7 @@ $wid: 200px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		gap: 20px;
+		gap: 10px;
 
 		button {
 			position: relative;
@@ -333,7 +333,7 @@ $wid: 200px;
 		}
 
 		.ytb_area {
-			display: block;
+			display: grid;
 			flex-wrap: wrap;
 
 			// .slide_wrap {
@@ -363,7 +363,7 @@ $wid: 200px;
 			// }
 
 			.slide_wrap {
-				width: 100%;
+				width: auto;
 				margin-bottom: 40px;
 
 				article {
