@@ -20,6 +20,8 @@ window.addEventListener('scroll', () => {
 	});
 });
 
+window.addEventListener('resize', modifyPos);
+
 navBtns.forEach((btn, idx) => {
 	btn.addEventListener('click', (e) => {
 		e.preventDefault();
@@ -27,7 +29,6 @@ navBtns.forEach((btn, idx) => {
 	});
 });
 
-//스크롤 이벤트
 function moveScroll(idx) {
 	enableEvent = false;
 	new Anime(window, {
@@ -36,4 +37,11 @@ function moveScroll(idx) {
 		duration: speed,
 		callback: () => (enableEvent = true),
 	});
+}
+
+function modifyPos() {
+	const active = nav.querySelector('li.on');
+	const active_index = Array.from(navLi).indexOf(active);
+	console.log(active_index);
+	window.scrollTo({ top: secs[active_index].offsetTop, behavior: 'smooth' });
 }
