@@ -5,23 +5,20 @@
 	transform: translateY(-50%);
 
 	li {
+		width: 10px;
+		height: 10px;
+		border-radius: 5px;
+		background: #efefef;
+		cursor: pointer;
+		transition: 0.5s;
+
 		+ li {
 			margin-top: 20px;
 		}
 
 		&.on {
-			a {
-				background: #000;
-				height: 80px;
-			}
-		}
-		a {
-			display: block;
-			width: 10px;
-			height: 10px;
-			border-radius: 5px;
-			background: #efefef;
-			transition: 0.5s;
+			height: 80px;
+			background: #000;
 		}
 	}
 }

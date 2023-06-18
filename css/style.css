@@ -1054,20 +1054,20 @@ main .cross span.col {
   top: 50%;
   transform: translateY(-50%);
 }
-#scroll_navi li + li {
-  margin-top: 20px;
-}
-#scroll_navi li.on a {
-  background: #000;
-  height: 80px;
-}
-#scroll_navi li a {
-  display: block;
+#scroll_navi li {
   width: 10px;
   height: 10px;
   border-radius: 5px;
   background: #efefef;
+  cursor: pointer;
   transition: 0.5s;
+}
+#scroll_navi li + li {
+  margin-top: 20px;
+}
+#scroll_navi li.on {
+  height: 80px;
+  background: #000;
 }
 
 .department section.first {

@@ -1,7 +1,6 @@
 const secs = document.querySelectorAll('.my_scroll');
 const nav = document.querySelector('#scroll_navi');
-const navLi = nav.querySelectorAll('li');
-const navBtns = nav.querySelectorAll('a');
+const navBtns = nav.querySelectorAll('li');
 const baseline = -300;
 const speed = 500;
 let enableEvent = true;
@@ -26,10 +25,7 @@ window.addEventListener('resize', () => {
 autoScroll & window.addEventListener('mousewheel', moveAuto, { passive: false });
 
 navBtns.forEach((btn, idx) => {
-	btn.addEventListener('click', (e) => {
-		e.preventDefault();
-		enableEvent && moveScroll(idx);
-	});
+	btn.addEventListener('click', () => enableEvent && moveScroll(idx));
 });
 
 function activation() {
@@ -40,8 +36,8 @@ function activation() {
 			for (const el of secs) el.classList.remove('on');
 			secs[idx].classList.add('on');
 
-			for (const el of navLi) el.classList.remove('on');
-			navLi[idx].classList.add('on');
+			for (const el of navBtns) el.classList.remove('on');
+			navBtns[idx].classList.add('on');
 		}
 	});
 }
@@ -58,18 +54,18 @@ function moveScroll(idx) {
 
 function modifyPos() {
 	const active = nav.querySelector('li.on');
-	const active_index = Array.from(navLi).indexOf(active);
+	const active_index = Array.from(navBtns).indexOf(active);
 	window.scrollTo({ top: secs[active_index].offsetTop, behavior: 'smooth' });
 }
 
 function moveAuto(e) {
 	e.preventDefault();
 	const active = nav.querySelector('li.on');
-	const active_index = Array.from(navLi).indexOf(active);
+	const active_index = Array.from(navBtns).indexOf(active);
 
 	if (e.deltaY > 0) {
 		console.log('wheel down');
-		if (active_index === navLi.length - 1) return;
+		if (active_index === navBtns.length - 1) return;
 		moveScroll(active_index + 1);
 	} else {
 		console.log('wheel up');
