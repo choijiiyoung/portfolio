@@ -27,6 +27,7 @@ navBtns.forEach((btn, idx) => {
 	});
 });
 
+//스크롤 이벤트
 function moveScroll(idx) {
 	enableEvent = false;
 	new Anime(window, {
