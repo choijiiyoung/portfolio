@@ -30,11 +30,17 @@ const markerInfo = [
 
 const map = new kakao.maps.Map(mapContainer, { center: markerInfo[0].position, level: 3 });
 
-markerInfo.forEach((info) => {
+markerInfo.forEach((info, idx) => {
 	const marker = new kakao.maps.Marker({
 		position: info.position,
 		image: new kakao.maps.MarkerImage(info.imgSrc, info.imgSize, info.imgPos),
 	});
 	marker.setMap(map);
-	info.button.addEventListener('click', () => map.panTo(info.position));
+
+	info.button.addEventListener('click', () => {
+		map.panTo(info.position);
+
+		for (const el of btns) el.classList.remove('on');
+		btns[idx].classList.add('on');
+	});
 });

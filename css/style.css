@@ -1889,5 +1889,12 @@ main .cross span.col {
   text-align: center;
   cursor: pointer;
 }
+.location .branch_list li + li {
+  border-left: 1px solid #111;
+}
+.location .branch_list li.on {
+  background: #111;
+  color: #fff;
+}
 
 /*# sourceMappingURL=style.css.map */

@@ -22,7 +22,12 @@
 			cursor: pointer;
 
 			+ li {
-				// border-left: 1px solid #111;
+				border-left: 1px solid #111;
+			}
+
+			&.on {
+				background: #111;
+				color: #fff;
 			}
 		}
 	}
