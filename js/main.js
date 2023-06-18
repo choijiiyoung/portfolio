@@ -3,6 +3,7 @@ const nav = document.querySelector('.navigation');
 const navLi = nav.querySelectorAll('li');
 const navBtns = nav.querySelectorAll('a');
 const baseline = -window.innerHeight / 2;
+const speed = 500;
 
 window.addEventListener('scroll', () => {
 	const scroll = window.scrollY;
@@ -24,6 +25,12 @@ navBtns.forEach((btn, idx) => {
 		// const li = e.target.closest('li');
 		// for (el of navLi) el.classList.remove('on');
 		// li.classList.add('on');
-		window.scrollTo({ top: secs[idx].offsetTop, behavior: 'smooth' });
+		// window.scrollTo({ top: secs[idx].offsetTop, behavior: 'smooth' });
+
+		new Anime(window, {
+			prop: 'scroll',
+			value: secs[idx].offsetTop,
+			duration: speed,
+		});
 	});
 });
