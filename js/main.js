@@ -1,20 +1,31 @@
 const secs = document.querySelectorAll('.sec');
 const nav = document.querySelector('.navigation');
-const navBtns = nav.querySelectorAll('li');
+const navLi = nav.querySelectorAll('li');
+const navBtns = nav.querySelectorAll('a');
 const baseline = -window.innerHeight / 2;
-console.log(baseline);
 
 window.addEventListener('scroll', () => {
 	const scroll = window.scrollY;
-	console.log(scroll);
 
 	secs.forEach((_, idx) => {
 		if (scroll > secs[idx].offsetTop + baseline) {
 			for (const el of secs) el.classList.remove('on');
 			secs[idx].classList.add('on');
 
-			for (const el of navBtns) el.classList.remove('on');
-			navBtns[idx].classList.add('on');
+			for (const el of navLi) el.classList.remove('on');
+			navLi[idx].classList.add('on');
 		}
+	});
+});
+
+navBtns.forEach((btn, idx) => {
+	btn.addEventListener('click', (e) => {
+		e.preventDefault();
+		const li = e.target.closest('li');
+		for (el of navLi) el.classList.remove('on');
+		li.classList.add('on');
+		if (li.classList.contains('on')) window.scrollTo(0, secs[idx].offsetTop);
+
+		console.log(secs[idx].offsetTop);
 	});
 });

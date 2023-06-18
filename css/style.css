@@ -285,12 +285,12 @@ main + .navigation li + li {
 }
 main + .navigation li.on a {
   background: #000;
-  height: 50px;
+  height: 100px;
 }
 main + .navigation li a {
   display: block;
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   background: #efefef;
   transition: height 1s;
 }

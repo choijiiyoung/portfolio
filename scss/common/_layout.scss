@@ -85,13 +85,13 @@ main {
 			&.on {
 				a {
 					background: #000;
-					height: 50px;
+					height: 100px;
 				}
 			}
 			a {
 				display: block;
-				width: 10px;
-				height: 10px;
+				width: 15px;
+				height: 15px;
 				background: #efefef;
 				transition: height 1s;
 			}
