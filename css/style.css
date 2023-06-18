@@ -1768,7 +1768,7 @@ main .cross span.col {
   }
   .members form table td input[type=checkbox],
   .members form table td input[type=radio] {
-    margin: 0 0 0 20px;
+    margin: 0 0 0 10px;
   }
 }
 .location .map_wrap #map {
