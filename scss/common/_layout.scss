@@ -74,33 +74,6 @@ main {
 			}
 		}
 	}
-
-	+ .navigation {
-		position: fixed;
-		left: 20px;
-		top: 50%;
-		transform: translateY(-50%);
-
-		li {
-			+ li {
-				margin-top: 20px;
-			}
-
-			&.on {
-				a {
-					background: #000;
-					height: 100px;
-				}
-			}
-			a {
-				display: block;
-				width: 15px;
-				height: 15px;
-				background: #efefef;
-				transition: 0.5s;
-			}
-		}
-	}
 }
 
 @media screen and (max-width: 1300px) {

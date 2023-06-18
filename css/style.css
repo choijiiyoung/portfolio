@@ -277,26 +277,6 @@ main .cross span.col {
   width: 3px;
   height: 15px;
 }
-main + .navigation {
-  position: fixed;
-  left: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-main + .navigation li + li {
-  margin-top: 20px;
-}
-main + .navigation li.on a {
-  background: #000;
-  height: 100px;
-}
-main + .navigation li a {
-  display: block;
-  width: 15px;
-  height: 15px;
-  background: #efefef;
-  transition: 0.5s;
-}
 
 @media screen and (max-width: 1300px) {
   main .inner {
@@ -1066,6 +1046,27 @@ main + .navigation li a {
     border-bottom-right-radius: 0;
   }
 }
+#scroll_navi {
+  position: fixed;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#scroll_navi li + li {
+  margin-top: 20px;
+}
+#scroll_navi li.on a {
+  background: #000;
+  height: 100px;
+}
+#scroll_navi li a {
+  display: block;
+  width: 15px;
+  height: 15px;
+  background: #efefef;
+  transition: 0.5s;
+}
+
 .department section.first {
   margin-bottom: 80px;
 }

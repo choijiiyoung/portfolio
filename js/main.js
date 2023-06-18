@@ -1,5 +1,5 @@
 const secs = document.querySelectorAll('.sec');
-const nav = document.querySelector('.navigation');
+const nav = document.querySelector('#scroll_navi');
 const navLi = nav.querySelectorAll('li');
 const navBtns = nav.querySelectorAll('a');
 const baseline = -window.innerHeight / 2;
