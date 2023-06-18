@@ -802,7 +802,7 @@ main .cross span.col {
   border-left: 1px solid #ddd;
 }
 #collab .collab_list li.on {
-  flex-shrink: 0;
+  flex: 6;
 }
 #collab .collab_list li.on a {
   display: none;
@@ -839,7 +839,7 @@ main .cross span.col {
   padding: 30px;
 }
 #collab .collab_list li .box .img_area .img {
-  width: 400px;
+  width: 100%;
   height: 400px;
   background: #000;
 }
