@@ -336,6 +336,14 @@ $wid: 200px;
 			display: grid;
 			flex-wrap: wrap;
 
+			.slide_wrap {
+				article {
+					.pic {
+						box-shadow: none;
+					}
+				}
+			}
+
 			// .slide_wrap {
 			// 	overflow: hidden;
 			// 	width: 100%;

@@ -1449,6 +1449,9 @@ main .cross span.col {
     display: grid;
     flex-wrap: wrap;
   }
+  .youtube .ytb_area .slide_wrap article .pic {
+    box-shadow: none;
+  }
   .youtube .ytb_area .slide_wrap {
     width: auto;
     margin-bottom: 40px;
