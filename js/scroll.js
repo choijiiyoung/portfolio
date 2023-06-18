@@ -1,4 +1,4 @@
-const secs = document.querySelectorAll('.sec');
+const secs = document.querySelectorAll('.my_scroll');
 const nav = document.querySelector('#scroll_navi');
 const navLi = nav.querySelectorAll('li');
 const navBtns = nav.querySelectorAll('a');
@@ -66,8 +66,6 @@ function moveAuto(e) {
 	e.preventDefault();
 	const active = nav.querySelector('li.on');
 	const active_index = Array.from(navLi).indexOf(active);
-
-	console.log(e.deltaY);
 
 	if (e.deltaY > 0) {
 		console.log('wheel down');
