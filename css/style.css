@@ -1059,12 +1059,13 @@ main .cross span.col {
 }
 #scroll_navi li.on a {
   background: #000;
-  height: 100px;
+  height: 80px;
 }
 #scroll_navi li a {
   display: block;
-  width: 15px;
-  height: 15px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
   background: #efefef;
   transition: 0.5s;
 }

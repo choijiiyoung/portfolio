@@ -2,7 +2,7 @@ const secs = document.querySelectorAll('.sec');
 const nav = document.querySelector('#scroll_navi');
 const navLi = nav.querySelectorAll('li');
 const navBtns = nav.querySelectorAll('a');
-const baseline = -window.innerHeight / 2;
+const baseline = -300;
 const speed = 500;
 let enableEvent = true;
 let autoScroll = true;
@@ -67,9 +67,11 @@ function moveAuto(e) {
 	const active = nav.querySelector('li.on');
 	const active_index = Array.from(navLi).indexOf(active);
 
+	console.log(e.deltaY);
+
 	if (e.deltaY > 0) {
 		console.log('wheel down');
-		if (active_index === navLi.length - 1) return;
+		// if (active_index === navLi.length - 1) return;
 		moveScroll(active_index + 1);
 	} else {
 		console.log('wheel up');
