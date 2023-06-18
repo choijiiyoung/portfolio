@@ -39,8 +39,11 @@ markerInfo.forEach((info, idx) => {
 
 	info.button.addEventListener('click', () => {
 		map.panTo(info.position);
-
-		for (const el of btns) el.classList.remove('on');
-		btns[idx].classList.add('on');
+		active(btns, idx);
 	});
 });
+
+function active(btn, idx) {
+	for (const el of btn) el.classList.remove('on');
+	btn[idx].classList.add('on');
+}
