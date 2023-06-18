@@ -25,6 +25,8 @@ window.addEventListener('mousewheel', (e) => {
 	const active = nav.querySelector('li.on');
 	const active_index = Array.from(navLi).indexOf(active);
 
+	console.log(e.deltaY);
+
 	if (e.deltaY > 0) {
 		if (active_index === navLi.length - 1) return;
 		moveScroll(active_index + 1);
