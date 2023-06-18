@@ -1,5 +1,5 @@
 #visualWrap {
-	padding-top: 70px;
+	padding-top: 150px;
 	margin-bottom: 180px;
 
 	h1 {
@@ -84,6 +84,7 @@
 
 @media screen and (max-width: 1300px) {
 	#visualWrap {
+		padding-top: 100px;
 		h1 {
 			font-size: 10vw;
 		}
@@ -113,8 +114,6 @@
 
 @media screen and (max-width: $mobile) {
 	#visualWrap {
-		padding-top: 30px;
-
 		h1 {
 			.title {
 				&:nth-of-type(2) {

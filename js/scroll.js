@@ -19,9 +19,10 @@ window.addEventListener('resize', () => {
 	if (eventBlocker) return;
 	eventBlocker = setTimeout(() => {
 		modifyPos();
-		eventBlocker - null;
+		eventBlocker = null;
 	}, speed);
 });
+
 autoScroll & window.addEventListener('mousewheel', moveAuto, { passive: false });
 
 navBtns.forEach((btn, idx) => {
@@ -67,9 +68,11 @@ function moveAuto(e) {
 	const active_index = Array.from(navLi).indexOf(active);
 
 	if (e.deltaY > 0) {
+		console.log('wheel down');
 		if (active_index === navLi.length - 1) return;
 		moveScroll(active_index + 1);
 	} else {
+		console.log('wheel up');
 		if (active_index === 0) return;
 		moveScroll(active_index - 1);
 	}

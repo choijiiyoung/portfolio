@@ -1,11 +1,15 @@
 #imprv {
 	.content {
 		display: flex;
-		gap: 235px;
+		gap: 185px;
 		margin-bottom: 50px;
 
+		.title_area {
+			flex: 1;
+		}
+
 		.txt_area {
-			width: 410px;
+			flex: 3;
 
 			p {
 				&:first-of-type {
@@ -38,43 +42,23 @@
 					justify-content: center;
 					align-items: center;
 					gap: 230px;
-					padding: 15px 0;
+					padding: 20px 0;
 					color: #222;
 					font: bold 18px 'arial';
 
 					.num {
 						display: inline-block;
-						flex-shrink: 0;
 						width: 210px;
 					}
 
 					.cross {
 						margin-left: auto;
-						// width: 30px;
-						// min-width: 30px;
-						// height: 30px;
 						min-width: 32px;
 						border: 1px solid #222;
 						border-radius: 50%;
 						display: flex;
 						justify-content: center;
 						align-items: center;
-
-						// span {
-						// 	&.row {
-						// 		left: 6px;
-						// 		width: 16px;
-						// 		height: 2px;
-						// 		margin-top: -1px;
-						// 	}
-
-						// 	&.col {
-						// 		top: 6px;
-						// 		width: 2px;
-						// 		height: 16px;
-						// 		margin-left: -1px;
-						// 	}
-						// }
 
 						span {
 							&.row {
@@ -89,12 +73,11 @@
 				}
 
 				.box {
-					gap: 240px;
-					padding-bottom: 30px;
 					display: none;
+					padding: 20px 0 30px;
+					gap: 240px;
 
 					.img_area {
-						flex-shrink: 0;
 						width: 200px;
 
 						.img {
@@ -105,7 +88,8 @@
 					}
 
 					.txt {
-						width: 410px;
+						flex: 4;
+						padding-right: 50px;
 
 						p + p {
 							margin-top: 20px;
@@ -137,14 +121,14 @@
 @media screen and (max-width: 1200px) {
 	#imprv {
 		.content {
-			gap: 140px;
+			gap: 70px;
 		}
 
 		.acco_wrap {
 			.list {
 				li {
 					a {
-						gap: 140px;
+						gap: 120px;
 					}
 
 					.box {
@@ -182,10 +166,6 @@
 							width: auto;
 						}
 
-						p {
-							font-size: 14px;
-						}
-
 						.icon {
 							flex: none;
 							display: inline-block;
@@ -196,6 +176,10 @@
 						gap: 8%;
 						flex-direction: row-reverse;
 						justify-content: space-between;
+
+						.img_area {
+							flex: 2;
+						}
 
 						.txt {
 							width: 100%;

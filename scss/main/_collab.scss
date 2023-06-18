@@ -87,11 +87,18 @@
 						text-align: left;
 					}
 				}
+			}
+		}
+	}
+}
 
+@media screen and (max-width: $tablet) {
+	#collab {
+		.collab_list {
+			li {
 				.box {
 					.img_area {
 						.img {
-							width: 100%;
 							height: 280px;
 						}
 					}

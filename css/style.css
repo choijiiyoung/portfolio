@@ -54,7 +54,7 @@ header .header_inner nav {
 }
 header .header_inner nav .gnb {
   display: flex;
-  gap: 20px;
+  gap: 30px;
 }
 header .header_inner nav .gnb a {
   font: 16px "arial";
@@ -356,7 +356,7 @@ main .cross span.col {
   }
 }
 #visualWrap {
-  padding-top: 70px;
+  padding-top: 150px;
   margin-bottom: 180px;
 }
 #visualWrap h1 {
@@ -429,6 +429,9 @@ main .cross span.col {
 }
 
 @media screen and (max-width: 1300px) {
+  #visualWrap {
+    padding-top: 100px;
+  }
   #visualWrap h1 {
     font-size: 10vw;
   }
@@ -446,9 +449,6 @@ main .cross span.col {
   }
 }
 @media screen and (max-width: 639px) {
-  #visualWrap {
-    padding-top: 30px;
-  }
   #visualWrap h1 .title:nth-of-type(2) {
     margin-left: 10px;
   }
@@ -580,11 +580,14 @@ main .cross span.col {
 }
 #imprv .content {
   display: flex;
-  gap: 235px;
+  gap: 185px;
   margin-bottom: 50px;
 }
+#imprv .content .title_area {
+  flex: 1;
+}
 #imprv .content .txt_area {
-  width: 410px;
+  flex: 3;
 }
 #imprv .content .txt_area p:first-of-type {
   margin-bottom: 20px;
@@ -607,13 +610,12 @@ main .cross span.col {
   justify-content: center;
   align-items: center;
   gap: 230px;
-  padding: 15px 0;
+  padding: 20px 0;
   color: #222;
   font: bold 18px "arial";
 }
 #imprv .acco_wrap .list li a .num {
   display: inline-block;
-  flex-shrink: 0;
   width: 210px;
 }
 #imprv .acco_wrap .list li a .cross {
@@ -632,12 +634,11 @@ main .cross span.col {
   width: 2px;
 }
 #imprv .acco_wrap .list li .box {
-  gap: 240px;
-  padding-bottom: 30px;
   display: none;
+  padding: 20px 0 30px;
+  gap: 240px;
 }
 #imprv .acco_wrap .list li .box .img_area {
-  flex-shrink: 0;
   width: 200px;
 }
 #imprv .acco_wrap .list li .box .img_area .img {
@@ -646,7 +647,8 @@ main .cross span.col {
   background-color: #ddd;
 }
 #imprv .acco_wrap .list li .box .txt {
-  width: 410px;
+  flex: 4;
+  padding-right: 50px;
 }
 #imprv .acco_wrap .list li .box .txt p + p {
   margin-top: 20px;
@@ -669,10 +671,10 @@ main .cross span.col {
 
 @media screen and (max-width: 1200px) {
   #imprv .content {
-    gap: 140px;
+    gap: 70px;
   }
   #imprv .acco_wrap .list li a {
-    gap: 140px;
+    gap: 120px;
   }
   #imprv .acco_wrap .list li .box {
     gap: 150px;
@@ -696,9 +698,6 @@ main .cross span.col {
   #imprv .acco_wrap .list li a .num {
     width: auto;
   }
-  #imprv .acco_wrap .list li a p {
-    font-size: 14px;
-  }
   #imprv .acco_wrap .list li a .icon {
     flex: none;
     display: inline-block;
@@ -707,6 +706,9 @@ main .cross span.col {
     gap: 8%;
     flex-direction: row-reverse;
     justify-content: space-between;
+  }
+  #imprv .acco_wrap .list li .box .img_area {
+    flex: 2;
   }
   #imprv .acco_wrap .list li .box .txt {
     width: 100%;
@@ -773,7 +775,7 @@ main .cross span.col {
   opacity: 0;
   position: absolute;
   right: 150px;
-  top: -6vw;
+  top: -4vw;
   width: 200px;
   height: 240px;
   background-color: #888;
@@ -782,13 +784,13 @@ main .cross span.col {
 
 @media screen and (max-width: 999px) {
   #prod .prod_list li a p {
-    width: calc(100% - 60px);
-    font-size: 20px;
+    width: calc(100% - 80px);
+    font-size: 18px;
   }
   #prod .prod_list li .img {
     right: 10vw;
-    width: 150px;
-    height: 180px;
+    width: 180px;
+    height: 220px;
   }
 }
 #collab .collab_list {
@@ -865,20 +867,19 @@ main .cross span.col {
     transform: none;
     text-align: left;
   }
+}
+@media screen and (max-width: 999px) {
   #collab .collab_list li .box .img_area .img {
-    width: 100%;
     height: 280px;
   }
 }
 #partnership .prs_wrap {
   display: flex;
+  gap: 2%;
 }
 #partnership .prs_wrap .item {
-  width: 49%;
+  flex: 1;
   border-top: 1px solid #ddd;
-}
-#partnership .prs_wrap .item + .item {
-  margin-left: 2%;
 }
 #partnership .prs_wrap .item .name {
   padding: 20px 0;
@@ -899,15 +900,14 @@ main .cross span.col {
   #partnership .prs_wrap {
     flex-wrap: wrap;
   }
-  #partnership .prs_wrap .item {
-    width: 100%;
-    border-top: 1px solid #ddd;
-  }
-  #partnership .prs_wrap .item + .item {
-    margin: 80px 0 0 0;
-  }
   #partnership .prs_wrap .item .img_area .img {
     height: 300px;
+  }
+}
+@media screen and (max-width: 639px) {
+  #partnership .prs_wrap .item {
+    flex: none;
+    width: 100%;
   }
 }
 #news .content {

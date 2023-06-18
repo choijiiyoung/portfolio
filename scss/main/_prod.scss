@@ -49,7 +49,7 @@
 				opacity: 0;
 				position: absolute;
 				right: 150px;
-				top: -6vw;
+				top: -4vw;
 				width: 200px;
 				height: 240px;
 				background-color: #888;
@@ -65,15 +65,15 @@
 			li {
 				a {
 					p {
-						width: calc(100% - 60px);
-						font-size: 20px;
+						width: calc(100% - 80px);
+						font-size: 18px;
 					}
 				}
 
 				.img {
 					right: 10vw;
-					width: 150px;
-					height: 180px;
+					width: 180px;
+					height: 220px;
 				}
 			}
 		}
