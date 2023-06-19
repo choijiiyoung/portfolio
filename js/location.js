@@ -1,5 +1,6 @@
 const mapContainer = document.querySelector('#map');
 const btns = document.querySelectorAll('.branch_list li');
+let active_index;
 
 const markerInfo = [
 	{
@@ -40,7 +41,7 @@ markerInfo.forEach((info, idx) => {
 	info.button.addEventListener('click', () => {
 		map.panTo(info.position);
 
-		for (const el of btn) el.classList.remove('on');
-		btn[idx].classList.add('on');
+		for (const el of btns) el.classList.remove('on');
+		btns[idx].classList.add('on');
 	});
 });
