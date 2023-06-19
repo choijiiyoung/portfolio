@@ -6,7 +6,6 @@ const prev = ytbWrap.querySelector('.prev');
 const next = ytbWrap.querySelector('.next');
 let tags;
 let idx;
-let count = 0;
 
 fetchData();
 
@@ -76,7 +75,7 @@ async function fetchData() {
 	const data = await fetch(url);
 	const json = await data.json();
 
-	console.log(data);
+	// console.log(data);
 
 	createSlide(json.items);
 	createTxt(json.items);
@@ -84,14 +83,6 @@ async function fetchData() {
 
 	slidePrev();
 	slideNext();
-
-	// prev.addEventListener('click', () => {
-	// 	elSlide.prepend(elSlide.lastElementChild);
-	// });
-
-	// next.addEventListener('click', () => {
-	// 	elSlide.append(elSlide.firstElementChild);
-	// });
 }
 
 //슬라이드 영역 생성 함수
@@ -201,18 +192,16 @@ function slidePrev() {
 	const panels = Array.from(elTxt.querySelectorAll('.panel'));
 	const slideItem = elSlide.querySelectorAll('article');
 	const slideArr = Array.from(slideItem);
+	let count = slideArr.length - 2;
 
 	prev.addEventListener('click', () => {
 		idx = count--;
-		console.log(idx, 'prev idx');
-
 		if (count < 0) {
 			count = slideArr.length - 1;
 		}
-
-		// active(slideArr, idx);
 		active(panels, idx);
 		elSlide.prepend(elSlide.lastElementChild);
+		console.log(idx, 'prev idx');
 	});
 }
 
@@ -221,22 +210,20 @@ function slideNext() {
 	const panels = Array.from(elTxt.querySelectorAll('.panel'));
 	const slideItem = elSlide.querySelectorAll('article');
 	const slideArr = Array.from(slideItem);
+	let count = slideArr.length - 1;
 
 	next.addEventListener('click', () => {
 		idx = count++;
-		console.log(idx, 'next idx');
-
 		if (count === slideArr.length) {
 			count = 0;
 		}
-
-		// active(slideArr, idx);
-		active(panels, idx);
+		activation(panels, idx);
 		elSlide.append(elSlide.firstElementChild);
+		console.log(idx, 'next idx');
 	});
 }
 
-function active(arr, index) {
+function activation(arr, index) {
 	for (const el of arr) el.classList.remove('on');
 	arr[index].classList.add('on');
 }

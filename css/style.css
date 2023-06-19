@@ -1277,26 +1277,26 @@ main .cross span.col {
   position: absolute;
   top: 0;
   width: 200px;
-  transition: 1s;
-  padding: 0 20px;
+  padding: 0 10px;
   transition: 1s;
 }
-.youtube .ytb_area .slide_wrap article:nth-of-type(4) {
-  right: -680px;
-  transition-delay: 0.3s;
+.youtube .ytb_area .slide_wrap article:nth-of-type(1) {
+  right: 840px;
+  transition: 0.5s;
+}
+.youtube .ytb_area .slide_wrap article:nth-of-type(2) {
+  right: 620px;
+  transition: 0.6s;
 }
 .youtube .ytb_area .slide_wrap article:nth-of-type(3) {
   right: 0;
-  width: 680px;
-  transition-delay: 0.2s;
+  width: 600px;
+  transition: 0.7s;
 }
-.youtube .ytb_area .slide_wrap article:nth-of-type(2) {
-  right: calc(35% + 200px);
-  transition-delay: 0.1s;
-}
-.youtube .ytb_area .slide_wrap article:nth-of-type(1) {
-  right: calc(35% + 400px);
-  transition-delay: 0s;
+.youtube .ytb_area .slide_wrap article:nth-of-type(4) {
+  right: -220px;
+  width: 200px;
+  transition: 0.8s;
 }
 .youtube .ytb_area .slide_wrap article .pic {
   position: relative;
