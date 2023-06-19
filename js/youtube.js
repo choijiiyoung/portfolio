@@ -75,8 +75,6 @@ async function fetchData() {
 	const data = await fetch(url);
 	const json = await data.json();
 
-	// console.log(data);
-
 	createSlide(json.items);
 	createTxt(json.items);
 	createList(json.items);
