@@ -1,17 +1,16 @@
 const secs = document.querySelectorAll('.my_scroll');
 const nav = document.querySelector('#scroll_navi');
 const navBtns = nav.querySelectorAll('li');
-const speed = 500;
+const visual = document.querySelector('#visualWrap');
 const baseline = -300;
+const speed = 500;
 let enableEvent = true;
 let autoScroll = true;
 let eventBlocker = null;
 
 window.addEventListener('load', () => {
-	console.log('load');
-	const visual = document.querySelector('#visualWrap');
-
 	setTimeout(() => {
+		console.log('load');
 		visual.classList.add('active');
 	}, 500);
 });

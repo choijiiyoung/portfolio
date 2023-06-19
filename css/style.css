@@ -782,6 +782,14 @@ main .cross span.col {
     padding-right: 0;
     word-break: break-all;
   }
+  #imprv .btn_wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #imprv .btn_wrap .btn {
+    width: 100%;
+  }
 }
 #prod .prod_list {
   border-top: 1px solid #ddd;
@@ -826,7 +834,7 @@ main .cross span.col {
   opacity: 0;
   position: absolute;
   right: 150px;
-  top: -4vw;
+  top: -6vw;
   width: 200px;
   height: 240px;
   background-color: #888;
@@ -839,9 +847,15 @@ main .cross span.col {
     font-size: 18px;
   }
   #prod .prod_list li .img {
-    right: 10vw;
-    width: 150px;
-    height: 190px;
+    right: 30px;
+    width: 130px;
+    height: 160px;
+  }
+}
+@media screen and (max-width: 639px) {
+  #prod .prod_list li a p {
+    width: calc(100% - 60px);
+    font-size: 16px;
   }
 }
 #collab .collab_list {
