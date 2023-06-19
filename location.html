@@ -9,7 +9,28 @@
   <script src="https://kit.fontawesome.com/801ede2cc6.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/style.css">
   <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=7a32a6d97db0b87ccc8c8bdbf26ff67f"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script defer src="js/location.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init('XT-0I8L5nMrP8bxB8');
+    })();
+  </script>
+  <script type="text/javascript">
+    window.onload = function () {
+      document.getElementById('contact-form').addEventListener('submit', function (event) {
+        event.preventDefault();
+        this.contact_number.value = Math.random() * 100000 | 0;
+        // service ID, template ID
+        emailjs.sendForm('service_893824x', 'template_3ej4pbc', this)
+          .then(function () {
+            console.log('SUCCESS!');
+          }, function (error) {
+            console.log('FAILED...', error);
+          });
+      });
+    }
+  </script>
 </head>
 
 <body>
@@ -47,7 +68,7 @@
         <figure class="sub_visual"></figure>
 
         <section>
-          <div class="inner">
+          <article class="inner place">
             <div class="map_wrap">
               <div id="map"></div>
             </div>
@@ -57,7 +78,27 @@
               <li>SBS</li>
             </ul>
             <span class="btn_toggle">Traffic OFF</span>
-          </div>
+          </article>
+
+          <article class="inner contact">
+            <form id="contact-form">
+              <!-- 내부적으로 고유 키값이 넘어가는 폼요소(수정필요 없음) -->
+              <input type="hidden" name="contact_number">
+
+              <!-- 작성하는 사용자 이름 입력받을 폼 요소 -->
+              <label>Name</label>
+              <input type="text" name="user_name">
+              <label>Email</label>
+
+              <!-- 작성하는 사용자의 이메일주소를 입력받을 폼 요소 -->
+              <input type="email" name="user_email">
+              <label>Message</label>
+
+              <!-- 작성 내용을 입력받을 폼 요소 -->
+              <textarea name="message"></textarea>
+              <input type="submit" value="Send">
+            </form>
+          </article>
         </section>
       </div>
     </div>
