@@ -7,6 +7,15 @@ let enableEvent = true;
 let autoScroll = true;
 let eventBlocker = null;
 
+window.addEventListener('load', () => {
+	console.log('load');
+	const visual = document.querySelector('#visualWrap');
+
+	setTimeout(() => {
+		visual.classList.add('active');
+	}, 500);
+});
+
 window.addEventListener('scroll', () => {
 	if (eventBlocker) return;
 	eventBlocker = setTimeout(() => {

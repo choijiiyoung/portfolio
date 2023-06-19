@@ -357,39 +357,71 @@ main .cross span.col {
   margin-bottom: 180px;
 }
 #visualWrap h1 {
+  overflow: hidden;
   display: flex;
   font: bold 140px "arial";
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
+  gap: 20px;
 }
-#visualWrap h1 .title:nth-of-type(2) {
-  margin-left: 30px;
+#visualWrap h1 .title {
+  flex: 1;
+  transform: translateY(200px);
+  opacity: 0;
+  transition: 0.5s;
 }
 #visualWrap h1 .title.small {
-  padding: 50px 40px 0 0;
-  margin-left: 30px;
+  padding-top: 50px;
   font-size: 14px;
   letter-spacing: 0em;
+  transition-delay: 1s;
+  overflow: hidden;
 }
 #visualWrap h1 .title.small span {
   display: block;
 }
+#visualWrap h1 .title.small span:nth-of-type(1) {
+  opacity: 0;
+  transform: translateY(80px);
+  transition: 2.2s;
+}
+#visualWrap h1 .title.small span:nth-of-type(2) {
+  margin-top: 5px;
+  opacity: 0;
+  transform: translateY(90px);
+  transition: 2.4s;
+}
 #visualWrap h1 .title.small span.line {
-  width: 170px;
-  height: 1px;
+  width: 0;
+  height: 2px;
   margin-top: 10px;
   background-color: #222;
+  transition: width 2s;
 }
 #visualWrap h1 .title.last {
   font-style: italic;
 }
-#visualWrap .img {
-  width: 100%;
-  height: 400px;
-  background-color: #efefef;
+#visualWrap h1 .title:not(.small):nth-of-type(1) {
+  transition-delay: 0s;
+}
+#visualWrap h1 .title:not(.small):nth-of-type(2) {
+  transition-delay: 0.1s;
+}
+#visualWrap h1 .title:not(.small):nth-of-type(3) {
+  transition-delay: 0.2s;
+}
+#visualWrap h1 .title:not(.small):nth-of-type(4) {
+  transition-delay: 0.3s;
+}
+#visualWrap .pic {
   margin-bottom: 20px;
+}
+#visualWrap .pic .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 #visualWrap .txt_wrap {
   display: flex;
@@ -425,6 +457,23 @@ main .cross span.col {
   color: #fff;
 }
 
+#visualWrap.active h1 .title {
+  transform: translateY(0);
+  opacity: 1;
+  transition: 0.5s;
+}
+#visualWrap.active h1 .title.small span:nth-of-type(1) {
+  opacity: 1;
+  transform: translateY(0);
+}
+#visualWrap.active h1 .title.small span:nth-of-type(2) {
+  opacity: 1;
+  transform: translateY(0);
+}
+#visualWrap.active h1 .title.small span.line {
+  width: 100%;
+}
+
 @media screen and (max-width: 1300px) {
   #visualWrap {
     padding-top: 100px;
@@ -437,33 +486,41 @@ main .cross span.col {
   }
 }
 @media screen and (max-width: 999px) {
+  #visualWrap {
+    padding-top: 80px;
+    margin-bottom: 80px;
+  }
   #visualWrap h1 {
-    font-size: 8vw;
+    gap: 10px;
   }
   #visualWrap h1 .title.small {
-    padding: 20px 20px 0 0;
-    margin-left: 20px;
+    padding-top: 20px;
+  }
+  #visualWrap .pic {
+    height: auto;
   }
 }
 @media screen and (max-width: 639px) {
-  #visualWrap h1 .title:nth-of-type(2) {
-    margin-left: 10px;
+  #visualWrap h1 {
+    overflow: visible;
+    font-size: 7vw;
+  }
+  #visualWrap h1 .title {
+    flex: none;
   }
   #visualWrap h1 .title.small {
-    padding: 10px 10px 0 0;
-    margin-left: 10px;
+    padding-top: 0;
     font-size: 12px;
   }
   #visualWrap h1 .title.small span.line {
-    width: 130px;
     height: 1px;
-    margin-top: 10px;
+    margin-top: 5px;
   }
   #visualWrap h1 .title.last {
     font-style: italic;
   }
   #visualWrap .img {
-    height: 300px;
+    height: 400px;
   }
   #visualWrap .txt_wrap {
     flex-wrap: wrap;
@@ -478,9 +535,10 @@ main .cross span.col {
   }
   #visualWrap .txt_wrap .btn {
     display: block;
-    height: 40px;
-    font: 12px/40px "arial";
-    border-radius: 20px;
+    width: 100%;
+    height: 50px;
+    font: 14px/50px "arial";
+    border-radius: 25px;
     margin: 0 auto;
   }
 }
