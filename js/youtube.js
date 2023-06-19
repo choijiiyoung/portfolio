@@ -199,7 +199,7 @@ function slidePrev() {
 		if (count < 0) {
 			count = slideArr.length - 1;
 		}
-		active(panels, idx);
+		activation(panels, idx);
 		elSlide.prepend(elSlide.lastElementChild);
 		console.log(idx, 'prev idx');
 	});

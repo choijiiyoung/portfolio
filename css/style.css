@@ -1281,22 +1281,30 @@ main .cross span.col {
   transition: 1s;
 }
 .youtube .ytb_area .slide_wrap article:nth-of-type(1) {
+  transition: 0.2s;
+}
+.youtube .ytb_area .slide_wrap article:nth-of-type(2) {
+  transition: 0.4s;
+}
+.youtube .ytb_area .slide_wrap article:nth-of-type(3) {
+  transition: 0.6s;
+}
+.youtube .ytb_area .slide_wrap article:nth-of-type(4) {
+  transition: 0.8s;
+}
+.youtube .ytb_area .slide_wrap article:nth-of-type(1) {
   right: 840px;
-  transition: 0.5s;
 }
 .youtube .ytb_area .slide_wrap article:nth-of-type(2) {
   right: 620px;
-  transition: 0.6s;
 }
 .youtube .ytb_area .slide_wrap article:nth-of-type(3) {
   right: 0;
   width: 600px;
-  transition: 0.7s;
 }
 .youtube .ytb_area .slide_wrap article:nth-of-type(4) {
   right: -220px;
   width: 200px;
-  transition: 0.8s;
 }
 .youtube .ytb_area .slide_wrap article .pic {
   position: relative;
@@ -1306,8 +1314,8 @@ main .cross span.col {
 }
 .youtube .ytb_area .slide_wrap article .pic .num {
   position: absolute;
-  right: 0;
-  bottom: 0;
+  right: 10px;
+  bottom: 5px;
   -webkit-text-stroke: 1px #fff;
   font-size: 60px;
   color: transparent;
@@ -1436,7 +1444,7 @@ main .cross span.col {
 .youtube .ytb_list li .title h3 {
   overflow: hidden;
   position: relative;
-  padding-left: 30px;
+  padding-left: 20px;
   min-height: 51px;
   margin-bottom: 20px;
 }
@@ -1444,16 +1452,13 @@ main .cross span.col {
   content: "";
   position: absolute;
   left: 0;
-  top: 10px;
+  top: 8px;
   width: 10px;
   height: 10px;
   background-color: #f9d800;
 }
 
 @media screen and (max-width: 999px) {
-  .youtube .ytb_wrap {
-    justify-content: center;
-  }
   .youtube .ytb_area {
     display: grid;
     flex-wrap: wrap;
@@ -1470,23 +1475,26 @@ main .cross span.col {
     padding: 0;
     width: 100%;
     flex: none;
+  }
+  .youtube .ytb_area .slide_wrap article:nth-of-type(1) {
+    right: 0;
+    width: 100%;
     transition: none;
   }
-  .youtube .ytb_area .slide_wrap article:nth-of-type(4) {
+  .youtube .ytb_area .slide_wrap article:nth-of-type(2) {
     right: 0;
+    width: 100%;
+    transition: none;
   }
   .youtube .ytb_area .slide_wrap article:nth-of-type(3) {
     right: 0;
     width: 100%;
-    transition-delay: 0.2s;
+    transition: none;
   }
-  .youtube .ytb_area .slide_wrap article:nth-of-type(2) {
+  .youtube .ytb_area .slide_wrap article:nth-of-type(4) {
     right: 0;
-    transition-delay: 0.1s;
-  }
-  .youtube .ytb_area .slide_wrap article:nth-of-type(1) {
-    right: 0;
-    transition-delay: 0s;
+    width: 100%;
+    transition: none;
   }
   .youtube .ytb_area .info_wrap {
     flex: none;
@@ -1566,7 +1574,6 @@ main .cross span.col {
     margin-bottom: 10px;
   }
   .youtube .ytb_list li .title h3 {
-    padding-left: 20px;
     min-height: auto;
   }
 }
