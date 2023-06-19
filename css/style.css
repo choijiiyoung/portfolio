@@ -168,7 +168,7 @@ footer .upper .util_wrap .sns_list li a {
 footer .lower {
   display: flex;
   gap: 50px;
-  padding: 30px 0 100px;
+  padding: 20px 0 30px;
   color: #888;
 }
 footer .lower address {
@@ -185,9 +185,6 @@ footer .lower address {
   }
   footer .upper .util_wrap {
     margin-left: 100px;
-  }
-  footer .lower {
-    padding: 30px 0 60px;
   }
 }
 @media screen and (max-width: 999px) {
