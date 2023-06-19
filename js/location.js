@@ -1,6 +1,8 @@
 const mapContainer = document.querySelector('#map');
 const btns = document.querySelectorAll('.branch_list li');
-let active_index;
+const btnToggle = document.querySelector('.btn_toggle');
+let active_index = 0;
+let toggle = false;
 
 const markerInfo = [
 	{
@@ -30,6 +32,13 @@ const markerInfo = [
 ];
 
 const map = new kakao.maps.Map(mapContainer, { center: markerInfo[0].position, level: 3 });
+map.setZoomable(false);
+
+const mapTypeControl = new kakao.maps.MapTypeControl();
+map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
+
+const zoomControl = new kakao.maps.ZoomControl();
+map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
 
 markerInfo.forEach((info, idx) => {
 	const marker = new kakao.maps.Marker({
@@ -39,9 +48,27 @@ markerInfo.forEach((info, idx) => {
 	marker.setMap(map);
 
 	info.button.addEventListener('click', () => {
+		active_index = idx;
 		map.panTo(info.position);
 
 		for (const el of btns) el.classList.remove('on');
 		btns[idx].classList.add('on');
 	});
+});
+
+//윈도우 리사이즈 시
+window.addEventListener('resize', () => {
+	map.setCenter(markerInfo[active_index].position);
+});
+
+//교통정보 토글버튼
+btnToggle.addEventListener('click', () => {
+	toggle = !toggle;
+	if (toggle) {
+		map.addOverlayMapTypeId(kakao.maps.MapTypeId.TRAFFIC);
+		btnToggle.innerHTML = 'Traffic ON';
+	} else {
+		map.removeOverlayMapTypeId(kakao.maps.MapTypeId.TRAFFIC);
+		btnToggle.innerHTML = 'Traffic OFF';
+	}
 });
