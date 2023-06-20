@@ -2,8 +2,11 @@
 	padding-top: 120px;
 	margin-bottom: 180px;
 
-	h1 {
+	.title_wrap {
 		overflow: hidden;
+	}
+
+	h1 {
 		display: flex;
 		font: bold 140px 'arial';
 		justify-content: center;
@@ -31,14 +34,14 @@
 					&:nth-of-type(1) {
 						transform: translateY(80px);
 						opacity: 0;
-						transition: 2s;
+						transition: 1.8s;
 					}
 
 					&:nth-of-type(2) {
 						margin-top: 5px;
 						transform: translateY(90px);
 						opacity: 0;
-						transition: 2.1s;
+						transition: 1.9s;
 					}
 
 					&.line {

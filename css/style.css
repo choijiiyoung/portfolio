@@ -367,8 +367,10 @@ main .cross span.col {
   padding-top: 120px;
   margin-bottom: 180px;
 }
-#visualWrap h1 {
+#visualWrap .title_wrap {
   overflow: hidden;
+}
+#visualWrap h1 {
   display: flex;
   font: bold 140px "arial";
   justify-content: center;
@@ -396,13 +398,13 @@ main .cross span.col {
 #visualWrap h1 .title.small span:nth-of-type(1) {
   transform: translateY(80px);
   opacity: 0;
-  transition: 2s;
+  transition: 1.8s;
 }
 #visualWrap h1 .title.small span:nth-of-type(2) {
   margin-top: 5px;
   transform: translateY(90px);
   opacity: 0;
-  transition: 2.1s;
+  transition: 1.9s;
 }
 #visualWrap h1 .title.small span.line {
   width: 0;
