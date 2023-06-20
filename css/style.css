@@ -383,14 +383,14 @@ main .cross span.col {
   display: block;
 }
 #visualWrap h1 .title.small span:nth-of-type(1) {
-  opacity: 0;
   transform: translateY(80px);
+  opacity: 0;
   transition: 2s;
 }
 #visualWrap h1 .title.small span:nth-of-type(2) {
   margin-top: 5px;
-  opacity: 0;
   transform: translateY(90px);
+  opacity: 0;
   transition: 2.1s;
 }
 #visualWrap h1 .title.small span.line {
@@ -462,23 +462,23 @@ main .cross span.col {
 }
 
 #visualWrap.active h1 .title {
-  transform: translateY(0);
+  transform: translateY(0px);
   opacity: 1;
   transition: 0.5s;
 }
 #visualWrap.active h1 .title.small span:nth-of-type(1) {
+  transform: translateY(0px);
   opacity: 1;
-  transform: translateY(0);
 }
 #visualWrap.active h1 .title.small span:nth-of-type(2) {
+  transform: translateY(0px);
   opacity: 1;
-  transform: translateY(0);
 }
 #visualWrap.active h1 .title.small span.line {
   width: 100%;
 }
 #visualWrap.active .pic {
-  transform: translateY(0);
+  transform: translateY(0px);
   opacity: 1;
 }
 
@@ -554,6 +554,12 @@ main .cross span.col {
   display: flex;
   gap: 30px;
   justify-content: space-between;
+  overflow: hidden;
+}
+#newProduct .content h1 {
+  transform: translateX(-200px);
+  opacity: 0;
+  transition: 1s 0.2s;
 }
 #newProduct .content .product_area {
   display: flex;
@@ -567,9 +573,18 @@ main .cross span.col {
   margin-bottom: 10px;
   background: #efefef;
 }
+#newProduct .content .product_area .item.first {
+  opacity: 0;
+  transition: 0.5s 0.1s;
+  transform: translateX(-240px);
+  transition: 0.9s 0.2s;
+}
 #newProduct .content .product_area .item.center {
   margin-left: 20px;
   width: 410px;
+  opacity: 0;
+  transform: translateY(200px);
+  transition: 0.9s 0.3s;
 }
 #newProduct .content .product_area .item.center .slide_wrap {
   width: 100%;
@@ -577,6 +592,9 @@ main .cross span.col {
 }
 #newProduct .content .product_area .item.last {
   margin-left: 110px;
+  opacity: 0;
+  transform: translateX(240px);
+  transition: 0.9s 0.4s;
 }
 #newProduct .content .product_area .item a {
   display: flex;
@@ -591,6 +609,23 @@ main .cross span.col {
 }
 #newProduct .content .product_area .item a .price {
   font-weight: 600;
+}
+
+#newProduct.on h1 {
+  transform: translateX(0px);
+  opacity: 1;
+}
+#newProduct.on .product_area .item.first {
+  transform: translateX(0px);
+  opacity: 1;
+}
+#newProduct.on .product_area .item.center {
+  transform: translateY(0px);
+  opacity: 1;
+}
+#newProduct.on .product_area .item.last {
+  transform: translateX(0px);
+  opacity: 1;
 }
 
 @media screen and (max-width: 1200px) {
