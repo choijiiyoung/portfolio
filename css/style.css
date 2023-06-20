@@ -385,20 +385,20 @@ main .cross span.col {
 #visualWrap h1 .title.small span:nth-of-type(1) {
   opacity: 0;
   transform: translateY(80px);
-  transition: 2.2s;
+  transition: 2s;
 }
 #visualWrap h1 .title.small span:nth-of-type(2) {
   margin-top: 5px;
   opacity: 0;
   transform: translateY(90px);
-  transition: 2.4s;
+  transition: 2.1s;
 }
 #visualWrap h1 .title.small span.line {
   width: 0;
   height: 2px;
   margin-top: 10px;
   background-color: #222;
-  transition: width 2s;
+  transition: width 1.5s;
 }
 #visualWrap h1 .title.last {
   font-style: italic;
@@ -416,9 +416,13 @@ main .cross span.col {
   transition-delay: 0.3s;
 }
 #visualWrap .pic {
+  overflow: hidden;
   margin-bottom: 20px;
+  transform: translateY(200px);
+  opacity: 0;
+  transition: 1.5s;
 }
-#visualWrap .pic .img img {
+#visualWrap .pic img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -473,6 +477,10 @@ main .cross span.col {
 #visualWrap.active h1 .title.small span.line {
   width: 100%;
 }
+#visualWrap.active .pic {
+  transform: translateY(0);
+  opacity: 1;
+}
 
 @media screen and (max-width: 1300px) {
   #visualWrap {
@@ -519,7 +527,7 @@ main .cross span.col {
   #visualWrap h1 .title.last {
     font-style: italic;
   }
-  #visualWrap .img {
+  #visualWrap .pic {
     height: 400px;
   }
   #visualWrap .txt_wrap {
