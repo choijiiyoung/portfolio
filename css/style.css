@@ -379,9 +379,9 @@ main .cross span.col {
 }
 #visualWrap h1 .title {
   flex: 1;
-  transform: translateY(200px);
+  transform: translateY(100px);
   opacity: 0;
-  transition: 0.5s;
+  transition: 0.8s;
 }
 #visualWrap h1 .title.small {
   padding-top: 50px;
@@ -431,7 +431,7 @@ main .cross span.col {
   margin-bottom: 20px;
   transform: translateY(200px);
   opacity: 0;
-  transition: 1.5s;
+  transition: 1s;
 }
 #visualWrap .pic img {
   width: 100%;

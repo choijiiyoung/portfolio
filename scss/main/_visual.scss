@@ -14,9 +14,9 @@
 
 		.title {
 			flex: 1;
-			transform: translateY(200px);
+			transform: translateY(100px);
 			opacity: 0;
-			transition: 0.5s;
+			transition: 0.8s;
 
 			&.small {
 				padding-top: 50px;
@@ -68,7 +68,7 @@
 		margin-bottom: 20px;
 		transform: translateY(200px);
 		opacity: 0;
-		transition: 1.5s;
+		transition: 1s;
 
 		img {
 			width: 100%;
