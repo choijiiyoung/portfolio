@@ -99,3 +99,15 @@ main {
 		}
 	}
 }
+
+@media screen and (max-width: $tablet) {
+	.container {
+		padding-bottom: 50px;
+
+		section {
+			&:first-of-type {
+				padding-top: 50px;
+			}
+		}
+	}
+}
