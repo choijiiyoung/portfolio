@@ -794,8 +794,8 @@ main .cross span.col {
 #imprv .btn_wrap .btn {
   display: inline-block;
   height: 50px;
-  padding: 0 30px;
-  font: 14px/48px "arial";
+  padding: 0 40px;
+  font: 15px/48px "arial";
   border: 1px solid #000;
   border-radius: 25px;
   text-align: center;
@@ -1021,9 +1021,9 @@ main .cross span.col {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: translateY(300px);
+  transform: translateY(200px);
   opacity: 0;
-  transition: 0.8s;
+  transition: 1s;
 }
 
 #collabo.on .collabo_list li .box .img_area img {
