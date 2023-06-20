@@ -680,12 +680,19 @@ main .cross span.col {
   display: flex;
   gap: 185px;
   margin-bottom: 50px;
+  overflow: hidden;
 }
 #imprv .content .title_area {
   flex: 1;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: 0.5s;
 }
 #imprv .content .txt_area {
   flex: 3;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: 0.5s;
 }
 #imprv .content .txt_area p:first-of-type {
   margin-bottom: 20px;
@@ -765,6 +772,15 @@ main .cross span.col {
   border-radius: 25px;
   text-align: center;
   color: #000;
+}
+
+#imprv.on .content .title_area {
+  transform: translateY(0px);
+  opacity: 1;
+}
+#imprv.on .content .txt_area {
+  transform: translateY(0px);
+  opacity: 1;
 }
 
 @media screen and (max-width: 1200px) {
@@ -901,83 +917,87 @@ main .cross span.col {
     font-size: 16px;
   }
 }
-#collab .collab_list {
+#collabo .collabo_list {
   display: flex;
   border: 1px solid #ddd;
 }
-#collab .collab_list li {
+#collabo .collabo_list li {
   flex: 1;
+  height: 490px;
 }
-#collab .collab_list li + li {
+#collabo .collabo_list li + li {
   border-left: 1px solid #ddd;
 }
-#collab .collab_list li.on {
-  flex: 6;
+#collabo .collabo_list li.on {
+  flex: 3;
 }
-#collab .collab_list li.on a {
+#collabo .collabo_list li.on a {
   display: none;
 }
-#collab .collab_list li.on .box {
+#collabo .collabo_list li.on .box {
   display: block;
 }
-#collab .collab_list li.on .box .name {
+#collabo .collabo_list li.on .box .name {
   font-weight: bold;
 }
-#collab .collab_list li a {
+#collabo .collabo_list li a {
   display: block;
   padding: 20px 0;
   height: 100%;
   text-align: center;
 }
-#collab .collab_list li a .name {
+#collabo .collabo_list li a .name {
   display: inline-flex;
   text-align: center;
   transform: translateY(100%) rotate(-90deg);
   color: #979697;
+  font-size: 18px;
 }
-#collab .collab_list li .box {
+#collabo .collabo_list li .box {
   display: none;
 }
-#collab .collab_list li .box .txt_area {
+#collabo .collabo_list li .box .txt_area {
   display: flex;
   padding: 25px 20px;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #ddd;
+  font-size: 20px;
 }
-#collab .collab_list li .box .img_area {
+#collabo .collabo_list li .box .img_area {
   padding: 30px;
 }
-#collab .collab_list li .box .img_area .img {
+#collabo .collabo_list li .box .img_area img {
   width: 100%;
-  height: 400px;
-  background: #000;
+  height: 100%;
+  object-fit: cover;
 }
 
 @media screen and (max-width: 999px) {
-  #collab .collab_list {
+  #collabo .collabo_list {
     flex-wrap: wrap;
   }
-  #collab .collab_list li {
+  #collabo .collabo_list li {
     flex: none;
     width: 100%;
+    height: auto;
   }
-  #collab .collab_list li + li {
+  #collabo .collabo_list li + li {
     border-left: 0;
     border-top: 1px solid #ddd;
   }
-  #collab .collab_list li a {
+  #collabo .collabo_list li a {
     padding: 25px 20px;
     text-align: left;
   }
-  #collab .collab_list li a .name {
+  #collabo .collabo_list li a .name {
     display: block;
     transform: none;
     text-align: left;
   }
 }
 @media screen and (max-width: 999px) {
-  #collab .collab_list li .box .img_area .img {
+  #collabo .collabo_list li .box .img_area .img {
     height: 280px;
   }
 }

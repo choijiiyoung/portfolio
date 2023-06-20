@@ -3,13 +3,20 @@
 		display: flex;
 		gap: 185px;
 		margin-bottom: 50px;
+		overflow: hidden;
 
 		.title_area {
 			flex: 1;
+			transform: translateY(100px);
+			opacity: 0;
+			transition: 0.5s;
 		}
 
 		.txt_area {
 			flex: 3;
+			transform: translateY(100px);
+			opacity: 0;
+			transition: 0.5s;
 
 			p {
 				&:first-of-type {
@@ -114,6 +121,20 @@
 			border-radius: 25px;
 			text-align: center;
 			color: #000;
+		}
+	}
+}
+
+#imprv.on {
+	.content {
+		.title_area {
+			transform: translateY(0px);
+			opacity: 1;
+		}
+
+		.txt_area {
+			transform: translateY(0px);
+			opacity: 1;
 		}
 	}
 }

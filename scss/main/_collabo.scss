@@ -1,17 +1,18 @@
-#collab {
-	.collab_list {
+#collabo {
+	.collabo_list {
 		display: flex;
 		border: 1px solid #ddd;
 
 		li {
 			flex: 1;
+			height: 490px;
 
 			+ li {
 				border-left: 1px solid #ddd;
 			}
 
 			&.on {
-				flex: 6;
+				flex: 3;
 
 				a {
 					display: none;
@@ -37,6 +38,7 @@
 					text-align: center;
 					transform: translateY(100%) rotate(-90deg);
 					color: #979697;
+					font-size: 18px;
 				}
 			}
 
@@ -49,14 +51,15 @@
 					justify-content: space-between;
 					align-items: center;
 					border-bottom: 1px solid #ddd;
+					font-size: 20px;
 				}
 				.img_area {
 					padding: 30px;
 
-					.img {
+					img {
 						width: 100%;
-						height: 400px;
-						background: #000;
+						height: 100%;
+						object-fit: cover;
 					}
 				}
 			}
@@ -65,12 +68,13 @@
 }
 
 @media screen and (max-width: $tablet) {
-	#collab {
-		.collab_list {
+	#collabo {
+		.collabo_list {
 			flex-wrap: wrap;
 			li {
 				flex: none;
 				width: 100%;
+				height: auto;
 
 				+ li {
 					border-left: 0;
@@ -93,8 +97,8 @@
 }
 
 @media screen and (max-width: $tablet) {
-	#collab {
-		.collab_list {
+	#collabo {
+		.collabo_list {
 			li {
 				.box {
 					.img_area {
