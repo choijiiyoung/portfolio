@@ -39,11 +39,13 @@ navBtns.forEach((btn, idx) => {
 function activation() {
 	const scroll = window.scrollY;
 
+	if (scroll <= 500) {
+		for (const el of secs) el.classList.remove('on');
+	}
+
 	secs.forEach((_, idx) => {
 		if (scroll > secs[idx].offsetTop + baseline) {
-			for (const el of secs) el.classList.remove('on');
 			secs[idx].classList.add('on');
-
 			for (const el of navBtns) el.classList.remove('on');
 			navBtns[idx].classList.add('on');
 		}

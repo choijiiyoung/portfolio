@@ -2,10 +2,20 @@
 	.prs_wrap {
 		display: flex;
 		gap: 2%;
+		overflow: hidden;
 
 		.item {
 			flex: 1;
 			border-top: 1px solid #ddd;
+			transition: 1s;
+
+			@for $i from 1 to 3 {
+				&:nth-of-type(#{$i}) {
+					opacity: 0;
+					transform: translateY($i * 100px);
+					transition-delay: $i * 0.1s;
+				}
+			}
 
 			.name {
 				padding: 20px 0;
@@ -19,10 +29,23 @@
 			}
 
 			.img_area {
-				.img {
+				img {
 					width: 100%;
-					height: 500px;
-					background: #ddd;
+					height: 100%;
+					object-fit: cover;
+				}
+			}
+		}
+	}
+}
+
+#partnership.on {
+	.prs_wrap {
+		.item {
+			@for $i from 1 to 3 {
+				&:nth-of-type(#{$i}) {
+					opacity: 1;
+					transform: translateY(0);
 				}
 			}
 		}

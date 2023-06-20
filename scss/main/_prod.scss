@@ -21,7 +21,7 @@
 					}
 				}
 
-				.img {
+				.pic {
 					opacity: 1;
 				}
 			}
@@ -45,15 +45,21 @@
 				}
 			}
 
-			.img {
+			.pic {
 				opacity: 0;
 				position: absolute;
 				right: 150px;
-				top: -6vw;
+				top: -50px;
 				width: 200px;
 				height: 240px;
 				background-color: #888;
 				z-index: 1;
+
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
 			}
 		}
 	}
@@ -65,13 +71,14 @@
 			li {
 				a {
 					p {
-						width: calc(100% - 80px);
+						width: auto;
 						font-size: 18px;
 					}
 				}
 
-				.img {
-					right: 30px;
+				.pic {
+					top: -30px;
+					right: 100px;
 					width: 130px;
 					height: 160px;
 				}
@@ -89,6 +96,10 @@
 						width: calc(100% - 60px);
 						font-size: 16px;
 					}
+				}
+
+				.pic {
+					right: 28px;
 				}
 			}
 		}

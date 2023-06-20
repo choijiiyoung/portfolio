@@ -1,14 +1,18 @@
 #news {
 	.content {
 		display: flex;
+		justify-content: space-between;
 		gap: 220px;
+		overflow: hidden;
 
 		.title_area {
 			display: flex;
-			flex-shrink: 0;
 			width: 210px;
 			flex-direction: column;
 			justify-content: space-between;
+			transform: translateX(-200px);
+			opacity: 0;
+			transition: 0.8s;
 
 			.btn_view {
 				width: 62px;
@@ -17,6 +21,9 @@
 
 		.txt_area {
 			flex: 1;
+			transform: translateX(200px);
+			opacity: 0;
+			transition: 0.8s;
 
 			.news_list {
 				display: flex;
@@ -66,6 +73,20 @@
 			border-bottom: 1px solid #000;
 			font-size: 14px;
 			color: #1e1d1d;
+		}
+	}
+}
+
+#news.on {
+	.content {
+		.title_area {
+			transform: translateX(0px);
+			opacity: 1;
+		}
+
+		.txt_area {
+			transform: translateX(0px);
+			opacity: 1;
 		}
 	}
 }
