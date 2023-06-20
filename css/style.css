@@ -284,6 +284,9 @@ main .cross span.col {
   }
 }
 @media screen and (max-width: 999px) {
+  main {
+    padding-bottom: 50px;
+  }
   main .inner {
     padding: 0 30px;
   }
