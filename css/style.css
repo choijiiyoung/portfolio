@@ -994,12 +994,21 @@ main .cross span.col {
   font-size: 20px;
 }
 #collabo .collabo_list li .box .img_area {
+  overflow: hidden;
   padding: 30px;
 }
 #collabo .collabo_list li .box .img_area img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transform: translateY(300px);
+  opacity: 0;
+  transition: 0.8s;
+}
+
+#collabo.on .collabo_list li .box .img_area img {
+  transform: translateY(0px);
+  opacity: 1;
 }
 
 @media screen and (max-width: 999px) {
