@@ -28,15 +28,13 @@
 	}
 
 	.acco_wrap {
+		overflow: hidden;
 		margin-bottom: 30px;
 
 		.list {
 			li {
 				border-bottom: 1px solid #ddd;
-
-				&:last-of-type {
-					border: 0;
-				}
+				transition: 1.5s;
 
 				&.on {
 					.box {
@@ -103,6 +101,18 @@
 						}
 					}
 				}
+
+				@for $i from 1 to 4 {
+					&:nth-of-type(#{$i}) {
+						opacity: 0;
+						transform: translateY($i * 100px);
+						transition-delay: $i * 0.1s;
+					}
+				}
+
+				&:last-of-type {
+					border: 0;
+				}
 			}
 		}
 	}
@@ -135,6 +145,19 @@
 		.txt_area {
 			transform: translateY(0px);
 			opacity: 1;
+		}
+	}
+
+	.acco_wrap {
+		.list {
+			li {
+				@for $i from 1 to 4 {
+					&:nth-of-type(#{$i}) {
+						opacity: 1;
+						transform: translateY(0px);
+					}
+				}
+			}
 		}
 	}
 }
