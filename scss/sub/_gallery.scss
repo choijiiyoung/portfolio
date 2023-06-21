@@ -41,6 +41,7 @@
 	}
 
 	.gallery_wrap {
+		min-height: 500px;
 		opacity: 0;
 		transform: translateY(100px);
 		transition: 1s;
