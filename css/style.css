@@ -1488,6 +1488,7 @@ main .cross span.col {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  filter: saturate(80%);
 }
 .youtube .ytb_wrap {
   display: flex;
@@ -1541,6 +1542,9 @@ main .cross span.col {
   height: 400px;
   margin-bottom: 20px;
   box-shadow: 6px 8px 12px rgba(0, 0, 0, 0.3);
+}
+.youtube .ytb_area .slide_wrap article .pic img {
+  filter: saturate(80%);
 }
 .youtube .ytb_area .slide_wrap article .pic .num {
   position: absolute;
