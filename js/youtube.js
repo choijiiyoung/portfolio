@@ -68,7 +68,6 @@ document.body.addEventListener('click', (e) => {
 async function fetchData() {
 	const key = 'AIzaSyAuF0TpI6-3VX54rC1jnTjptdGcBXybDGU';
 	const list = 'PLFAS7kFpzjoPZEvZ5LcpGZkgyn_FOx9Qg';
-	// const num = 3;
 	const num = 4;
 	const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${list}&key=${key}&maxResults=${num}`;
 
