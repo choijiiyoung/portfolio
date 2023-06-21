@@ -91,6 +91,7 @@ $padding: 20px;
 				display: flex;
 				flex-direction: column-reverse;
 				margin-bottom: 50px;
+				min-height: 500px;
 
 				.panel {
 					display: flex;
@@ -243,14 +244,6 @@ $padding: 20px;
 			flex-wrap: wrap;
 
 			.slide_wrap {
-				article {
-					.pic {
-						box-shadow: none;
-					}
-				}
-			}
-
-			.slide_wrap {
 				width: auto;
 				margin-bottom: 40px;
 
@@ -266,6 +259,10 @@ $padding: 20px;
 							width: 100%;
 							transition: none;
 						}
+					}
+
+					.pic {
+						box-shadow: none;
 					}
 				}
 			}
@@ -347,6 +344,12 @@ $padding: 20px;
 					.pic {
 						height: 200px;
 					}
+				}
+			}
+
+			.info_wrap {
+				.txt_wrap {
+					height: 415px;
 				}
 			}
 		}

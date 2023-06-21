@@ -1566,6 +1566,7 @@ main .cross span.col {
   display: flex;
   flex-direction: column-reverse;
   margin-bottom: 50px;
+  min-height: 500px;
 }
 .youtube .ytb_area .info_wrap .txt_wrap .panel {
   display: flex;
@@ -1693,9 +1694,6 @@ main .cross span.col {
     display: grid;
     flex-wrap: wrap;
   }
-  .youtube .ytb_area .slide_wrap article .pic {
-    box-shadow: none;
-  }
   .youtube .ytb_area .slide_wrap {
     width: auto;
     margin-bottom: 40px;
@@ -1725,6 +1723,9 @@ main .cross span.col {
     right: 0;
     width: 100%;
     transition: none;
+  }
+  .youtube .ytb_area .slide_wrap article .pic {
+    box-shadow: none;
   }
   .youtube .ytb_area .info_wrap {
     flex: none;
@@ -1782,6 +1783,9 @@ main .cross span.col {
 @media screen and (max-width: 639px) {
   .youtube .ytb_area .slide_wrap article .pic {
     height: 200px;
+  }
+  .youtube .ytb_area .info_wrap .txt_wrap {
+    height: 415px;
   }
   .youtube section + section {
     margin-top: 100px;
