@@ -120,6 +120,12 @@
 
 @media screen and (max-width: $mobile) {
 	.gallery {
+		.loading {
+			img {
+				width: 100%;
+			}
+		}
+
 		.top_wrap {
 			flex-wrap: wrap;
 

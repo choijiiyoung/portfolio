@@ -1913,6 +1913,9 @@ main .cross span.col {
   }
 }
 @media screen and (max-width: 639px) {
+  .gallery .loading img {
+    width: 100%;
+  }
   .gallery .top_wrap {
     flex-wrap: wrap;
   }
