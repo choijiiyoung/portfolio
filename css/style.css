@@ -2133,6 +2133,7 @@ main .cross span.col {
   background: #fff;
   border: 1px solid #000;
   font: 16px/48px "arial";
+  color: #111;
   cursor: pointer;
 }
 .location .inner.contact .form_wrap .msg_wrap + .btn_wrap input[type=submit]:hover {
