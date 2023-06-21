@@ -288,6 +288,9 @@ main .cross span.col {
   main {
     padding-bottom: 50px;
   }
+  main section {
+    margin-bottom: 60px;
+  }
   main .inner {
     padding: 0 30px;
   }

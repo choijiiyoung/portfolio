@@ -62,6 +62,10 @@ main {
 @media screen and (max-width: $tablet) {
 	main {
 		padding-bottom: 50px;
+
+		section {
+			margin-bottom: 60px;
+		}
 		.inner {
 			padding: 0 30px;
 		}
