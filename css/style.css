@@ -2119,6 +2119,7 @@ main .cross span.col {
 }
 .location .inner.contact .form_wrap .msg_wrap textarea {
   height: 100px;
+  resize: none;
 }
 .location .inner.contact .form_wrap .msg_wrap + .btn_wrap {
   display: flex;
