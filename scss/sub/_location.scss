@@ -134,8 +134,39 @@
 
 @media screen and (max-width: $tablet) {
 	.location {
+		.inner.place {
+			.branch_list {
+				li {
+					&:hover {
+						background: #fff;
+						color: #111;
+					}
+				}
+			}
+			.map_wrap {
+				#map {
+					&:hover {
+						filter: grayscale(100%);
+					}
+				}
+			}
+		}
+
 		.inner.contact {
 			gap: 20px;
+
+			.form_wrap {
+				.msg_wrap {
+					+ .btn_wrap {
+						input[type='submit'] {
+							&:hover {
+								background: #fff;
+								color: #111;
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 }

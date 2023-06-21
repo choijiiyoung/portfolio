@@ -2141,8 +2141,19 @@ main .cross span.col {
 }
 
 @media screen and (max-width: 999px) {
+  .location .inner.place .branch_list li:hover {
+    background: #fff;
+    color: #111;
+  }
+  .location .inner.place .map_wrap #map:hover {
+    filter: grayscale(100%);
+  }
   .location .inner.contact {
     gap: 20px;
+  }
+  .location .inner.contact .form_wrap .msg_wrap + .btn_wrap input[type=submit]:hover {
+    background: #fff;
+    color: #111;
   }
 }
 @media screen and (max-width: 639px) {
