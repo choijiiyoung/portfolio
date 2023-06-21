@@ -239,7 +239,8 @@ main {
   padding-bottom: 200px;
 }
 main section {
-  margin-bottom: 150px;
+  padding-top: 50px;
+  margin-bottom: 100px;
 }
 main section:last-child {
   margin-bottom: 0;
@@ -2016,19 +2017,13 @@ main .cross span.col {
     margin: 0 0 0 10px;
   }
 }
-.location .map_wrap #map {
-  width: 100%;
-  height: 400px;
-  background: #efefef;
-  position: relative;
-}
 .location .branch_list {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 20px;
-  border: 1px solid #111;
   flex: 3;
+  margin-bottom: 20px;
+  border: 1px solid #111;
 }
 .location .branch_list li {
   flex: 1;
@@ -2042,6 +2037,12 @@ main .cross span.col {
 .location .branch_list li.on {
   background: #111;
   color: #fff;
+}
+.location .map_wrap #map {
+  width: 100%;
+  height: 400px;
+  background: #efefef;
+  position: relative;
 }
 
 /*# sourceMappingURL=style.css.map */

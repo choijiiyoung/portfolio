@@ -5,7 +5,6 @@ const visual = document.querySelector('#visualWrap');
 const baseline = -300;
 const speed = 500;
 let enableEvent = true;
-let autoScroll = true;
 let eventBlocker = null;
 
 window.addEventListener('load', () => {
@@ -29,8 +28,6 @@ window.addEventListener('resize', () => {
 		eventBlocker = null;
 	}, speed);
 });
-
-autoScroll & window.addEventListener('mousewheel', moveAuto, { passive: false });
 
 navBtns.forEach((btn, idx) => {
 	btn.addEventListener('click', () => enableEvent && moveScroll(idx));
@@ -66,20 +63,4 @@ function modifyPos() {
 	const active = nav.querySelector('li.on');
 	const active_index = Array.from(navBtns).indexOf(active);
 	window.scrollTo({ top: secs[active_index].offsetTop, behavior: 'smooth' });
-}
-
-function moveAuto(e) {
-	e.preventDefault();
-	const active = nav.querySelector('li.on');
-	const active_index = Array.from(navBtns).indexOf(active);
-
-	if (e.deltaY > 0) {
-		console.log('wheel down');
-		if (active_index === navBtns.length - 1) return;
-		moveScroll(active_index + 1);
-	} else {
-		console.log('wheel up');
-		if (active_index === 0) return;
-		moveScroll(active_index - 1);
-	}
 }
