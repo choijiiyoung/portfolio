@@ -2012,6 +2012,7 @@ main .cross span.col {
   .members form table th input[type=submit],
   .members form table th input[type=reset] {
     width: 48%;
+    margin: 0;
   }
   .members form table td {
     display: block;
