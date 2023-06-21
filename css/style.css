@@ -2029,7 +2029,10 @@ main .cross span.col {
     margin: 0 0 0 10px;
   }
 }
-.location .branch_list {
+.location .inner.place {
+  margin-bottom: 50px;
+}
+.location .inner.place .branch_list {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -2037,28 +2040,61 @@ main .cross span.col {
   margin-bottom: 20px;
   border: 1px solid #111;
 }
-.location .branch_list li {
+.location .inner.place .branch_list li {
   flex: 1;
-  padding: 10px 0;
+  padding: 20px 0;
   text-align: center;
   cursor: pointer;
+  font-size: 18px;
 }
-.location .branch_list li + li {
+.location .inner.place .branch_list li + li {
   border-left: 1px solid #111;
 }
-.location .branch_list li.on {
+.location .inner.place .branch_list li.on, .location .inner.place .branch_list li:hover {
   background: #111;
   color: #fff;
 }
-.location .map_wrap #map {
+.location .inner.place .map_wrap #map {
   width: 100%;
   height: 400px;
   background: #efefef;
   position: relative;
   filter: grayscale(100%);
 }
-.location .map_wrap #map:hover {
+.location .inner.place .map_wrap #map:hover {
   filter: grayscale(0%);
+}
+.location .inner.contact {
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+}
+.location .inner.contact .btn_wrap {
+  padding: 0 20px;
+}
+.location .inner.contact .btn_wrap .btn_area {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  width: 300px;
+  padding: 150px 20px 20px;
+  border: 2px solid #111;
+}
+.location .inner.contact .btn_wrap .btn_area p {
+  margin-bottom: 30px;
+}
+.location .inner.contact .btn_wrap .btn_area .btn_toggle {
+  width: 200px;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 16px;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+.location .inner.contact .form_wrap {
+  flex: 1;
 }
 
 /*# sourceMappingURL=style.css.map */

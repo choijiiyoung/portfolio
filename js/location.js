@@ -67,8 +67,10 @@ btnToggle.addEventListener('click', () => {
 	if (toggle) {
 		map.addOverlayMapTypeId(kakao.maps.MapTypeId.TRAFFIC);
 		btnToggle.innerHTML = 'Traffic ON';
+		mapContainer.style.filter = 'grayscale(0%)';
 	} else {
 		map.removeOverlayMapTypeId(kakao.maps.MapTypeId.TRAFFIC);
 		btnToggle.innerHTML = 'Traffic OFF';
+		mapContainer.style.filter = 'grayscale(100%)';
 	}
 });

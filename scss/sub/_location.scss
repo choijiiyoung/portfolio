@@ -1,40 +1,82 @@
 .location {
-	.branch_list {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		flex: 3;
-		margin-bottom: 20px;
-		border: 1px solid #111;
+	.inner.place {
+		margin-bottom: 50px;
 
-		li {
-			flex: 1;
-			padding: 10px 0;
-			text-align: center;
-			cursor: pointer;
+		.branch_list {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex: 3;
+			margin-bottom: 20px;
+			border: 1px solid #111;
 
-			+ li {
-				border-left: 1px solid #111;
+			li {
+				flex: 1;
+				padding: 20px 0;
+				text-align: center;
+				cursor: pointer;
+				font-size: 18px;
+
+				+ li {
+					border-left: 1px solid #111;
+				}
+
+				&.on,
+				&:hover {
+					background: #111;
+					color: #fff;
+				}
 			}
+		}
+		.map_wrap {
+			#map {
+				width: 100%;
+				height: 400px;
+				background: #efefef;
+				position: relative;
+				filter: grayscale(100%);
 
-			&.on {
-				background: #111;
-				color: #fff;
+				&:hover {
+					filter: grayscale(0%);
+				}
 			}
 		}
 	}
 
-	.map_wrap {
-		#map {
-			width: 100%;
-			height: 400px;
-			background: #efefef;
-			position: relative;
-			filter: grayscale(100%);
+	.inner.contact {
+		display: flex;
+		justify-content: space-between;
+		gap: 100px;
 
-			&:hover {
-				filter: grayscale(0%);
+		.btn_wrap {
+			padding: 0 20px;
+			.btn_area {
+				display: flex;
+				justify-content: flex-end;
+				align-items: center;
+				flex-direction: column;
+				width: 300px;
+				padding: 150px 20px 20px;
+				border: 2px solid #111;
+
+				p {
+					margin-bottom: 30px;
+				}
+
+				.btn_toggle {
+					width: 200px;
+					padding: 15px 0;
+					text-align: center;
+					font-size: 16px;
+					background: #000;
+					color: #fff;
+					cursor: pointer;
+				}
 			}
+		}
+
+		.form_wrap {
+			flex: 1;
 		}
 	}
 }
