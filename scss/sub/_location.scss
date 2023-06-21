@@ -30,6 +30,11 @@
 			height: 400px;
 			background: #efefef;
 			position: relative;
+			filter: grayscale(100%);
+
+			&:hover {
+				filter: grayscale(0%);
+			}
 		}
 	}
 }

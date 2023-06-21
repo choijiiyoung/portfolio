@@ -2055,6 +2055,10 @@ main .cross span.col {
   height: 400px;
   background: #efefef;
   position: relative;
+  filter: grayscale(100%);
+}
+.location .map_wrap #map:hover {
+  filter: grayscale(0%);
 }
 
 /*# sourceMappingURL=style.css.map */
