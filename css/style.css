@@ -2031,7 +2031,7 @@ main .cross span.col {
   }
 }
 .location .inner.place {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 .location .inner.place .branch_list {
   display: flex;
@@ -2043,7 +2043,7 @@ main .cross span.col {
 }
 .location .inner.place .branch_list li {
   flex: 1;
-  padding: 20px 0;
+  padding: 15px 0;
   text-align: center;
   cursor: pointer;
   font-size: 18px;
@@ -2070,33 +2070,123 @@ main .cross span.col {
   justify-content: space-between;
   gap: 100px;
 }
-.location .inner.contact .btn_wrap {
+.location .inner.contact > .btn_wrap {
   position: relative;
   padding: 0 20px;
 }
-.location .inner.contact .btn_wrap .btn_area {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  flex-direction: column;
+.location .inner.contact > .btn_wrap .btn_area {
   width: 300px;
-  padding: 150px 20px 20px;
+  padding: 170px 20px 20px;
   border: 2px solid #111;
+  margin-top: -150px;
 }
-.location .inner.contact .btn_wrap .btn_area p {
+.location .inner.contact > .btn_wrap .btn_area p {
   margin-bottom: 30px;
+  word-break: break-all;
 }
-.location .inner.contact .btn_wrap .btn_area .btn_toggle {
+.location .inner.contact > .btn_wrap .btn_area .btn_toggle {
+  display: block;
   width: 200px;
-  padding: 15px 0;
+  height: 50px;
   text-align: center;
-  font-size: 16px;
+  font: 16px/50px "arial";
   background: #000;
   color: #fff;
   cursor: pointer;
 }
 .location .inner.contact .form_wrap {
   flex: 1;
+}
+.location .inner.contact .form_wrap .form_area {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.location .inner.contact .form_wrap input[type=text],
+.location .inner.contact .form_wrap input[type=email],
+.location .inner.contact .form_wrap textarea {
+  width: 100%;
+  padding: 15px 10px;
+  border: 0;
+  border-bottom: 1px solid #000;
+}
+.location .inner.contact .form_wrap .input_wrap {
+  width: 48%;
+}
+.location .inner.contact .form_wrap .msg_wrap {
+  width: 100%;
+  margin-top: 30px;
+}
+.location .inner.contact .form_wrap .msg_wrap textarea {
+  height: 100px;
+}
+.location .inner.contact .form_wrap .msg_wrap + .btn_wrap {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: 20px;
+}
+.location .inner.contact .form_wrap .msg_wrap + .btn_wrap input[type=submit] {
+  width: 200px;
+  height: 50px;
+  background: #fff;
+  border: 1px solid #000;
+  font: 16px/48px "arial";
+  cursor: pointer;
+}
+.location .inner.contact .form_wrap .msg_wrap + .btn_wrap input[type=submit]:hover {
+  background: #111;
+  color: #fff;
+}
+
+@media screen and (max-width: 999px) {
+  .location .inner.contact {
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 639px) {
+  .location .inner.contact {
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  .location .inner.contact > .btn_wrap {
+    padding: 0;
+  }
+  .location .inner.contact > .btn_wrap .btn_area {
+    width: 100%;
+    flex: none;
+    padding: 20px;
+    margin-top: 0;
+  }
+  .location .inner.contact > .btn_wrap .btn_area .btn_toggle {
+    width: 100%;
+  }
+  .location .inner.contact .form_wrap {
+    flex: none;
+    width: 100%;
+  }
+  .location .inner.contact .form_wrap .input_wrap {
+    width: 100%;
+  }
+  .location .inner.contact .form_wrap .input_wrap + .input_wrap {
+    margin-top: 10px;
+  }
+  .location .inner.contact .form_wrap .msg_wrap {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .location .inner.contact .form_wrap .msg_wrap textarea {
+    height: 100px;
+  }
+  .location .inner.contact .form_wrap .msg_wrap + .btn_wrap {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 20px;
+  }
+  .location .inner.contact .form_wrap .msg_wrap + .btn_wrap input[type=submit] {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -35,10 +35,10 @@ const map = new kakao.maps.Map(mapContainer, { center: markerInfo[0].position, l
 map.setZoomable(false);
 
 const mapTypeControl = new kakao.maps.MapTypeControl();
-map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
+map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPLEFT);
 
 const zoomControl = new kakao.maps.ZoomControl();
-map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
+map.addControl(zoomControl, kakao.maps.ControlPosition.LEFT);
 
 markerInfo.forEach((info, idx) => {
 	const marker = new kakao.maps.Marker({
