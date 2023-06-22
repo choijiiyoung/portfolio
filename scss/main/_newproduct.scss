@@ -8,7 +8,7 @@
 		h1 {
 			transform: translateX(-200px);
 			opacity: 0;
-			transition: 1s 0.2s;
+			transition: 0.8s 0.2s;
 		}
 
 		.product_area {
@@ -26,9 +26,8 @@
 
 				&.first {
 					opacity: 0;
-					transition: 0.5s 0.1s;
 					transform: translateX(-240px);
-					transition: 0.9s 0.2s;
+					transition: 0.8s 0.1s;
 				}
 
 				&.center {
@@ -36,7 +35,7 @@
 					width: 410px;
 					opacity: 0;
 					transform: translateY(200px);
-					transition: 0.9s 0.3s;
+					transition: 0.8s 0.2s;
 
 					.slide_wrap {
 						width: 100%;
@@ -48,7 +47,7 @@
 					margin-left: 110px;
 					opacity: 0;
 					transform: translateX(240px);
-					transition: 0.9s 0.4s;
+					transition: 0.8s 0.3s;
 				}
 
 				a {
