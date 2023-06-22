@@ -702,7 +702,7 @@ main .cross span.col {
 }
 #imprv .acco_wrap .list li {
   border-bottom: 1px solid #ddd;
-  transition: 1.5s;
+  transition: 1.2s;
 }
 #imprv .acco_wrap .list li.on .box {
   display: flex;
