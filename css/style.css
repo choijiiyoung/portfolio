@@ -1075,11 +1075,7 @@ main .cross span.col {
   object-fit: cover;
 }
 
-#partnership.on .prs_wrap .item:nth-of-type(1) {
-  opacity: 1;
-  transform: translateY(0);
-}
-#partnership.on .prs_wrap .item:nth-of-type(2) {
+#partnership.on .prs_wrap .item {
   opacity: 1;
   transform: translateY(0);
 }

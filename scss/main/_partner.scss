@@ -37,12 +37,8 @@
 #partnership.on {
 	.prs_wrap {
 		.item {
-			@for $i from 1 to 3 {
-				&:nth-of-type(#{$i}) {
-					opacity: 1;
-					transform: translateY(0);
-				}
-			}
+			opacity: 1;
+			transform: translateY(0);
 		}
 	}
 }
