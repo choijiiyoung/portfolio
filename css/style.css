@@ -368,6 +368,7 @@ main .cross span.col {
   }
 }
 #visualWrap {
+  overflow: hidden;
   padding-top: 120px;
   margin-bottom: 180px;
 }
@@ -433,7 +434,6 @@ main .cross span.col {
   transition-delay: 0.3s;
 }
 #visualWrap .pic {
-  overflow: hidden;
   margin-bottom: 20px;
   transform: translateY(200px);
   opacity: 0;
@@ -449,23 +449,12 @@ main .cross span.col {
   justify-content: space-between;
 }
 #visualWrap .txt_wrap .txt {
-  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 50%;
   padding-top: 10px;
-}
-#visualWrap .txt_wrap .txt::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 2px;
-  background-color: #efefee;
-}
-#visualWrap .txt_wrap .txt .cross {
-  position: absolute;
-  right: 0;
-  top: 10px;
+  border-top: 1px solid #efefef;
 }
 #visualWrap .txt_wrap .btn {
   display: inline-block;
@@ -505,9 +494,6 @@ main .cross span.col {
   }
   #visualWrap h1 {
     font-size: 10vw;
-  }
-  #visualWrap .txt_wrap .txt {
-    padding-right: 5%;
   }
 }
 @media screen and (max-width: 999px) {
@@ -551,12 +537,8 @@ main .cross span.col {
     flex-wrap: wrap;
   }
   #visualWrap .txt_wrap .txt {
-    padding-right: 0;
     width: 100%;
     margin-bottom: 30px;
-  }
-  #visualWrap .txt_wrap .txt .cross {
-    display: none;
   }
   #visualWrap .txt_wrap .btn {
     display: block;
