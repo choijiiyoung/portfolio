@@ -2065,7 +2065,7 @@ main .cross span.col {
   position: relative;
   filter: grayscale(100%);
 }
-.location .inner.place .map_wrap #map:hover {
+.location .inner.place .map_wrap #map.on {
   filter: grayscale(0%);
 }
 .location .inner.contact {
@@ -2148,9 +2148,6 @@ main .cross span.col {
   .location .inner.place .branch_list li:hover {
     background: #fff;
     color: #111;
-  }
-  .location .inner.place .map_wrap #map:hover {
-    filter: grayscale(100%);
   }
   .location .inner.contact {
     gap: 20px;

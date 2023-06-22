@@ -36,7 +36,7 @@
 				position: relative;
 				filter: grayscale(100%);
 
-				&:hover {
+				&.on {
 					filter: grayscale(0%);
 				}
 			}
@@ -141,13 +141,6 @@
 					&:hover {
 						background: #fff;
 						color: #111;
-					}
-				}
-			}
-			.map_wrap {
-				#map {
-					&:hover {
-						filter: grayscale(100%);
 					}
 				}
 			}
