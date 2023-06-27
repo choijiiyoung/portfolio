@@ -1,4 +1,4 @@
-#visualWrap {
+#visual {
 	overflow: hidden;
 	padding-top: 120px;
 	margin-bottom: 180px;
@@ -105,7 +105,7 @@
 	}
 }
 
-#visualWrap.active {
+#visual.active {
 	h1 {
 		.title {
 			transform: translateY(0px);
@@ -139,7 +139,7 @@
 }
 
 @media screen and (max-width: 1300px) {
-	#visualWrap {
+	#visual {
 		padding-top: 100px;
 		h1 {
 			font-size: 10vw;
@@ -148,7 +148,7 @@
 }
 
 @media screen and (max-width: $tablet) {
-	#visualWrap {
+	#visual {
 		padding-top: 80px;
 		margin-bottom: 80px;
 		h1 {
@@ -167,7 +167,7 @@
 }
 
 @media screen and (max-width: $mobile) {
-	#visualWrap {
+	#visual {
 		h1 {
 			overflow: visible;
 			font-size: 7vw;
