@@ -68,6 +68,7 @@
 	}
 
 	.pic {
+		min-height: 530px;
 		margin-bottom: 20px;
 		transform: translateY(100px);
 		opacity: 0;
@@ -161,7 +162,7 @@
 		}
 
 		.pic {
-			height: auto;
+			min-height: auto;
 		}
 	}
 }

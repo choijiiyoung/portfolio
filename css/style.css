@@ -432,6 +432,7 @@ main .cross span.col {
   transition-delay: 0.3s;
 }
 #visual .pic {
+  min-height: 530px;
   margin-bottom: 20px;
   transform: translateY(100px);
   opacity: 0;
@@ -506,7 +507,7 @@ main .cross span.col {
     padding-top: 20px;
   }
   #visual .pic {
-    height: auto;
+    min-height: auto;
   }
 }
 @media screen and (max-width: 639px) {
