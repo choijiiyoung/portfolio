@@ -8,7 +8,7 @@ $padding: 20px;
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
-		filter: saturate(80%);
+		filter: saturate(0.7);
 	}
 
 	.ytb_wrap {
@@ -62,10 +62,6 @@ $padding: 20px;
 					height: 400px;
 					margin-bottom: 20px;
 					box-shadow: 6px 8px 12px rgba(0, 0, 0, 0.3);
-
-					img {
-						filter: saturate(80%);
-					}
 
 					.num {
 						position: absolute;
