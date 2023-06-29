@@ -1762,6 +1762,7 @@ main .cross span.col {
     height: 200px;
   }
   .youtube .ytb_area .info_wrap .txt_wrap {
+    min-height: auto;
     height: 415px;
   }
   .youtube section + section {
