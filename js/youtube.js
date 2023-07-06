@@ -1,85 +1,49 @@
 const ytbWrap = document.querySelector('.youtube');
-const elSlide = ytbWrap.querySelector('.slide_wrap');
+const elSlide = ytbWrap.querySelector('.slide_area');
 const elTxt = ytbWrap.querySelector('.info_wrap .txt_wrap');
 const elList = ytbWrap.querySelector('.ytb_list');
 const prev = ytbWrap.querySelector('.prev');
 const next = ytbWrap.querySelector('.next');
+const baseURL = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet`;
+const key = 'AIzaSyAuF0TpI6-3VX54rC1jnTjptdGcBXybDGU';
 let tags;
-let idx;
+let num = 0;
+let activeNum = 0;
 
-fetchData();
+fetchSlide();
+fetchList();
 
 document.body.addEventListener('click', (e) => {
 	if (e.target.className === 'thumb') createPop(e.target.getAttribute('alt'));
 	if (e.target.className === 'close') removePop();
 });
 
-// fetch(url)
-// 	.then((data) => {
-// 		return data.json();
-// 	})
-// 	.then((json) => {
-// 		console.log(json.items);
-
-// 		tags = '';
-// 		json.items.forEach((item, idx) => {
-// 			let thumb = item.snippet.thumbnails.standard.url;
-// 			let videoId = item.snippet.resourceId.videoId;
-// 			let date = item.snippet.publishedAt;
-
-// 			tags += `
-// 				<article>
-// 					<div class='pic'>
-// 						<img class="thumb" src="${thumb}" alt=${videoId}/>
-// 						<span class='num'>0${idx + 1}</span>
-// 					</div>
-
-// 					<div class='txt'>
-// 						<p>${date.split('T')[0].split('-').join('.')}</p>
-// 					</div>
-// 				</article>
-// 			`;
-// 		});
-// 		elSlide.innerHTML = tags;
-// 		elSlide.querySelectorAll('article')[2].classList.add('on');
-
-// 		tags = '';
-// 		json.items.forEach((item, idx) => {
-// 			let tit = item.snippet.title;
-// 			let desc = item.snippet.description;
-
-// 			tags += `
-// 				<div class='panel'>
-// 					<div class='num'>
-// 						<span>0${idx + 1}</span>
-// 					</div>
-// 					<div class='txt'>
-// 						<h2>${tit.length > 40 ? tit.substr(0, 40) + '...' : tit}</h2>
-// 						<p>${desc.length > 100 ? desc.substr(0, 100) + '...' : desc}</p>
-// 					</div>
-// 				</div>
-// 			`;
-// 		});
-// 		elTxt.innerHTML = tags;
-// 		elTxt.querySelectorAll('.panel')[2].classList.add('on');
-// 	});
-
-//데이터 fetching함수
-async function fetchData() {
-	const key = 'AIzaSyAuF0TpI6-3VX54rC1jnTjptdGcBXybDGU';
+//슬라이드 fetching함수
+async function fetchSlide() {
+	num = 5;
 	const list = 'PLFAS7kFpzjoPZEvZ5LcpGZkgyn_FOx9Qg';
-	const num = 4;
-	const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${list}&key=${key}&maxResults=${num}`;
+	const url = `${baseURL}&playlistId=${list}&key=${key}&maxResults=${num}`;
 
 	const data = await fetch(url);
 	const json = await data.json();
-
 	createSlide(json.items);
 	createTxt(json.items);
-	createList(json.items);
 
+	elSlide.append(elSlide.firstElementChild);
+	elSlide.append(elSlide.firstElementChild);
 	slidePrev();
 	slideNext();
+}
+
+//리스트 fetching함수
+async function fetchList() {
+	num = 4;
+	const list = 'PLFAS7kFpzjoPZEvZ5LcpGZkgyn_FOx9Qg';
+	const url = `${baseURL}&playlistId=${list}&key=${key}&maxResults=${num}`;
+
+	const data = await fetch(url);
+	const json = await data.json();
+	createList(json.items);
 }
 
 //슬라이드 영역 생성 함수
@@ -104,7 +68,7 @@ function createSlide(arr) {
 			`;
 	});
 	elSlide.innerHTML = tags;
-	// elSlide.querySelectorAll('article')[2].classList.add('on');
+	elSlide.querySelectorAll('article')[0].classList.add('on');
 }
 
 //텍스트 영역 생성 함수
@@ -120,14 +84,14 @@ function createTxt(arr) {
 						<span>0${idx + 1}</span>
 					</div>
 					<div class='txt'>
-						<h2>${tit.length > 40 ? tit.substr(0, 40) + '...' : tit}</h2>
-						<p>${desc.length > 100 ? desc.substr(0, 100) + '...' : desc}</p>
+						<h2>${tit.length > 30 ? tit.substr(0, 30) + '...' : tit}</h2>
+						<p>${desc.length > 80 ? desc.substr(0, 80) + '...' : desc}</p>
 					</div>
 				</div>
 			`;
 	});
 	elTxt.innerHTML = tags;
-	elTxt.querySelectorAll('.panel')[2].classList.add('on');
+	elTxt.querySelectorAll('.panel')[0].classList.add('on');
 }
 
 //리스트 영역 생성 함수
@@ -184,39 +148,29 @@ function removePop() {
 	document.body.style.overflow = 'auto';
 }
 
-//슬라이드 Prev 버튼 테스트
-function slidePrev() {
-	const panels = Array.from(elTxt.querySelectorAll('.panel'));
-	const slideItem = elSlide.querySelectorAll('article');
-	const slideArr = Array.from(slideItem);
-	let count = slideArr.length - 2;
-
-	prev.addEventListener('click', () => {
-		idx = count--;
-		if (count < 0) {
-			count = slideArr.length - 1;
-		}
-		activation(panels, idx);
-		elSlide.prepend(elSlide.lastElementChild);
-		console.log(idx, 'prev idx');
-	});
-}
-
 //슬라이드  Next 버튼 테스트
 function slideNext() {
 	const panels = Array.from(elTxt.querySelectorAll('.panel'));
 	const slideItem = elSlide.querySelectorAll('article');
 	const slideArr = Array.from(slideItem);
-	let count = slideArr.length - 1;
 
 	next.addEventListener('click', () => {
-		idx = count++;
-		if (count === slideArr.length) {
-			count = 0;
-		}
-		activation(panels, idx);
 		elSlide.append(elSlide.firstElementChild);
-		console.log(idx, 'next idx');
+		activeNum === slideArr.length - 1 ? (activeNum = 0) : activeNum++;
+		activation(panels, activeNum);
+	});
+}
+
+//슬라이드 Prev 버튼 테스트
+function slidePrev() {
+	const panels = Array.from(elTxt.querySelectorAll('.panel'));
+	const slideItem = elSlide.querySelectorAll('article');
+	const slideArr = Array.from(slideItem);
+
+	prev.addEventListener('click', () => {
+		elSlide.prepend(elSlide.lastElementChild);
+		activeNum === 0 ? (activeNum = slideArr.length - 1) : activeNum--;
+		activation(panels, activeNum);
 	});
 }
 

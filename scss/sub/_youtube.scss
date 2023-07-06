@@ -1,8 +1,3 @@
-$initPos: 60px;
-$wid: 200px;
-$activeWid: 600px;
-$padding: 20px;
-
 .youtube {
 	img {
 		width: 100%;
@@ -15,136 +10,155 @@ $padding: 20px;
 		display: flex;
 		justify-content: flex-end;
 		align-items: center;
-	}
 
-	.ytb_area {
-		display: flex;
-
-		.slide_wrap {
-			position: relative;
+		.ytb_area {
 			display: flex;
-			width: 1340px;
-			overflow: hidden;
 
-			article {
-				position: absolute;
-				top: 0;
-				width: $wid;
-				padding: 0 10px;
-				transition: 1s;
+			.slide_frame {
+				overflow: hidden;
+				position: relative;
+				width: 1200px;
 
-				@for $i from 1 through 4 {
-					&:nth-of-type(#{$i}) {
-						transition: 0.2s * $i;
-					}
-				}
-
-				&:nth-of-type(1) {
-					right: calc($activeWid + $padding * 2 + 200px);
-				}
-
-				&:nth-of-type(2) {
-					right: calc($activeWid + $padding);
-				}
-
-				&:nth-of-type(3) {
+				.slide_wrap {
+					position: absolute;
 					right: 0;
-					width: $activeWid;
-				}
+					width: 600px;
+					height: 100%;
 
-				&:nth-of-type(4) {
-					right: -($wid + 20px);
-					width: $wid;
-				}
+					.slide_area {
+						width: 100%;
+						height: 100%;
+						position: relative;
 
-				.pic {
-					position: relative;
-					height: 400px;
-					margin-bottom: 20px;
-					box-shadow: 6px 8px 12px rgba(0, 0, 0, 0.3);
+						article {
+							position: absolute;
+							top: 0;
+							left: 0;
+							width: 100%;
+							height: 100%;
+							transition: 0.5s;
 
-					.num {
-						position: absolute;
-						right: 10px;
-						bottom: 5px;
-						-webkit-text-stroke: 1px #fff;
-						font-size: 60px;
-						color: transparent;
-						font-weight: bold;
+							&:nth-of-type(1) {
+								left: calc((30% + 20px) * -3);
+								width: 30%;
+								opacity: 0.4;
+							}
+
+							&:nth-of-type(2) {
+								left: calc((30% + 20px) * -2);
+								width: 30%;
+								opacity: 0.6;
+							}
+
+							&:nth-of-type(3) {
+								left: calc((30% + 20px) * -1);
+								width: 30%;
+								opacity: 0.8;
+							}
+
+							&:nth-of-type(4) {
+								left: 0;
+								width: 100%;
+								opacity: 1;
+							}
+
+							&:nth-of-type(5) {
+								left: 100%;
+								width: 100%;
+								opacity: 0;
+							}
+
+							.pic {
+								position: relative;
+								height: 400px;
+								margin-bottom: 20px;
+
+								.num {
+									position: absolute;
+									right: 10px;
+									bottom: 5px;
+									-webkit-text-stroke: 1px #fff;
+									font-size: 50px;
+									color: transparent;
+									font-weight: bold;
+								}
+							}
+
+							.txt {
+								overflow: hidden;
+								position: relative;
+								padding-left: 10px;
+								border-left: 3px solid #888;
+								font-size: 20px;
+							}
+						}
 					}
-				}
-
-				.txt {
-					overflow: hidden;
-					position: relative;
-					padding-left: 10px;
-					border-left: 3px solid #888;
-					font-size: 20px;
 				}
 			}
-		}
 
-		.info_wrap {
-			width: 420px;
-			margin-left: 20px;
+			.info_wrap {
+				width: 420px;
+				margin-left: 20px;
 
-			.txt_wrap {
-				display: flex;
-				flex-direction: column-reverse;
-				margin-bottom: 50px;
-				min-height: 510px;
-
-				.panel {
+				.txt_wrap {
 					display: flex;
-					justify-content: space-between;
-					align-items: center;
-					height: 100px;
+					flex-direction: column;
+					margin-bottom: 30px;
+					min-height: 460px;
 
-					&.on {
-						align-items: flex-start;
-						height: auto;
+					.panel {
+						display: flex;
+						justify-content: space-between;
+						align-items: center;
+						height: 80px;
+
+						&.on {
+							align-items: flex-start;
+							height: auto;
+
+							.num {
+								-webkit-text-stroke: 2px #dbdcde;
+								color: #fff;
+								font-size: 70px;
+								padding-left: 70px;
+								text-align: left;
+
+								&::before {
+									width: 50px;
+								}
+							}
+							.txt {
+								opacity: 1;
+							}
+						}
 
 						.num {
-							-webkit-text-stroke: 2px #dbdcde;
-							color: #fff;
-							font-size: 70px;
-							padding-left: 80px;
-							text-align: left;
+							position: relative;
+							width: 170px;
+							text-align: center;
+							font: bold 24px 'arial';
+							color: #dbdcde;
 
 							&::before {
-								width: 60px;
+								content: '';
+								display: block;
+								position: absolute;
+								left: 0;
+								top: 50%;
+								transform: translateY(-50%);
+								width: 0;
+								height: 3px;
+								background-color: #dbdcde;
 							}
 						}
 						.txt {
-							opacity: 1;
-						}
-					}
+							opacity: 0;
+							width: calc(100% - 130px);
+							word-break: break-all;
 
-					.num {
-						position: relative;
-						width: 170px;
-						text-align: center;
-						font: bold 24px 'arial';
-						color: #dbdcde;
-
-						&::before {
-							content: '';
-							display: block;
-							position: absolute;
-							left: 0;
-							top: 50%;
-							transform: translateY(-50%);
-							width: 0;
-							height: 3px;
-							background-color: #dbdcde;
-						}
-					}
-					.txt {
-						opacity: 0;
-						width: calc(100% - 180px);
-
-						h2 {
-							margin-bottom: 20px;
+							h2 {
+								margin-bottom: 10px;
+							}
 						}
 					}
 				}
@@ -240,78 +254,60 @@ $padding: 20px;
 
 @media screen and (max-width: $tablet) {
 	.youtube {
-		.ytb_area {
-			display: grid;
-			flex-wrap: wrap;
+		.ytb_wrap {
+			.ytb_area {
+				.slide_frame {
+					.slide_wrap {
+						width: 400px;
 
-			.slide_wrap {
-				width: auto;
-				margin-bottom: 40px;
-
-				article {
-					position: unset;
-					padding: 0;
-					width: 100%;
-					flex: none;
-
-					@for $i from 1 through 4 {
-						&:nth-of-type(#{$i}) {
-							right: 0;
+						.slide_area {
 							width: 100%;
-							transition: none;
+
+							article {
+								.pic {
+									height: 300px;
+								}
+							}
 						}
 					}
+				}
 
-					.pic {
-						box-shadow: none;
+				.info_wrap {
+					width: 360px;
+					.txt_wrap {
+						min-height: 370px;
+
+						.panel {
+							height: 60px;
+
+							&.on {
+								.num {
+									font-size: 55px;
+									padding-left: 40px;
+
+									&::before {
+										width: 30px;
+									}
+								}
+							}
+
+							.num {
+								width: 110px;
+							}
+							.txt {
+								h2 {
+									font-size: 20px;
+								}
+							}
+						}
 					}
 				}
 			}
+		}
 
-			.info_wrap {
-				flex: none;
-				width: 100%;
-				margin-left: 0;
-
-				.txt_wrap {
-					margin-bottom: 0;
-
-					.panel {
-						flex-wrap: wrap;
-						height: 30px;
-						margin-bottom: 30px;
-
-						&.on {
-							.num {
-								padding-left: 50px;
-								font-size: 50px;
-
-								&::before {
-									width: 40px;
-								}
-							}
-							.txt {
-								opacity: 1;
-							}
-						}
-
-						.num {
-							flex: none;
-							width: 100%;
-							text-align: left;
-						}
-
-						.txt {
-							flex: none;
-							width: 100%;
-							margin-left: 0;
-
-							h2 {
-								margin-bottom: 20px;
-							}
-						}
-					}
-				}
+		section {
+			+ section {
+				margin-top: 120px;
 			}
 		}
 
@@ -339,27 +335,65 @@ $padding: 20px;
 
 @media screen and (max-width: $mobile) {
 	.youtube {
-		.ytb_area {
-			.slide_wrap {
-				article {
-					.pic {
-						height: 200px;
+		.ytb_wrap {
+			justify-content: center;
+			.ytb_area {
+				flex-wrap: wrap;
+
+				.slide_frame {
+					width: 100%;
+					height: 250px;
+
+					.slide_wrap {
+						width: 100%;
+
+						.slide_area {
+							width: 100%;
+
+							article {
+								.pic {
+									height: 190px;
+								}
+							}
+						}
 					}
 				}
-			}
 
-			.info_wrap {
-				.txt_wrap {
-					min-height: auto;
-					height: 415px;
+				.info_wrap {
+					width: 100%;
+					margin-left: 0;
+					.txt_wrap {
+						.panel {
+							&.on {
+								.num {
+									width: 70px;
+									font-size: 40px;
+									padding-left: 0;
+
+									&::before {
+										width: 0;
+									}
+								}
+							}
+
+							.num {
+								width: 50px;
+							}
+							.txt {
+								width: 100%;
+								h2 {
+									font-size: 20px;
+								}
+							}
+						}
+					}
 				}
 			}
 		}
 
 		section {
 			+ section {
-				margin-top: 100px;
-
+				margin-top: 80px;
 				h2 {
 					font-size: 28px;
 				}
