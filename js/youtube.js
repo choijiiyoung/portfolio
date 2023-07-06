@@ -148,7 +148,7 @@ function removePop() {
 	document.body.style.overflow = 'auto';
 }
 
-//슬라이드  Next 버튼 테스트
+//슬라이드 Next 버튼
 function slideNext() {
 	const panels = Array.from(elTxt.querySelectorAll('.panel'));
 	const slideItem = elSlide.querySelectorAll('article');
@@ -161,7 +161,7 @@ function slideNext() {
 	});
 }
 
-//슬라이드 Prev 버튼 테스트
+//슬라이드 Prev 버튼
 function slidePrev() {
 	const panels = Array.from(elTxt.querySelectorAll('.panel'));
 	const slideItem = elSlide.querySelectorAll('article');
