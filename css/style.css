@@ -1770,9 +1770,6 @@ main .cross span.col {
   .youtube .ytb_wrap .ytb_area .info_wrap .txt_wrap .panel.on .num::before {
     width: 0;
   }
-  .youtube .ytb_wrap .ytb_area .info_wrap .txt_wrap .panel .num {
-    width: 50px;
-  }
   .youtube .ytb_wrap .ytb_area .info_wrap .txt_wrap .panel .txt {
     width: 100%;
   }
