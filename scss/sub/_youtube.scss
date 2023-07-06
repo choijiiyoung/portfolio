@@ -111,7 +111,6 @@
 						justify-content: space-between;
 						align-items: center;
 						height: 80px;
-
 						&.on {
 							align-items: flex-start;
 							height: auto;
@@ -122,7 +121,6 @@
 								font-size: 70px;
 								padding-left: 70px;
 								text-align: left;
-
 								&::before {
 									width: 50px;
 								}
@@ -262,7 +260,6 @@
 
 						.slide_area {
 							width: 100%;
-
 							article {
 								.pic {
 									height: 300px;
@@ -279,12 +276,10 @@
 
 						.panel {
 							height: 60px;
-
 							&.on {
 								.num {
 									font-size: 55px;
 									padding-left: 40px;
-
 									&::before {
 										width: 30px;
 									}

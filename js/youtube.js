@@ -1,5 +1,6 @@
 const ytbWrap = document.querySelector('.youtube');
 const elSlide = ytbWrap.querySelector('.slide_area');
+const slideItem = elSlide.querySelectorAll('article');
 const elTxt = ytbWrap.querySelector('.info_wrap .txt_wrap');
 const elList = ytbWrap.querySelector('.ytb_list');
 const prev = ytbWrap.querySelector('.prev');
@@ -23,7 +24,6 @@ async function fetchSlide() {
 	num = 5;
 	const list = 'PLFAS7kFpzjoPZEvZ5LcpGZkgyn_FOx9Qg';
 	const url = `${baseURL}&playlistId=${list}&key=${key}&maxResults=${num}`;
-
 	const data = await fetch(url);
 	const json = await data.json();
 	createSlide(json.items);
@@ -31,8 +31,8 @@ async function fetchSlide() {
 
 	elSlide.append(elSlide.firstElementChild);
 	elSlide.append(elSlide.firstElementChild);
-	slidePrev();
 	slideNext();
+	slidePrev();
 }
 
 //리스트 fetching함수
@@ -40,7 +40,6 @@ async function fetchList() {
 	num = 4;
 	const list = 'PLFAS7kFpzjoOzH0K-VNLbCyY2fnoyMYh8';
 	const url = `${baseURL}&playlistId=${list}&key=${key}&maxResults=${num}`;
-
 	const data = await fetch(url);
 	const json = await data.json();
 	createList(json.items);
@@ -151,7 +150,6 @@ function removePop() {
 //슬라이드 Next 버튼
 function slideNext() {
 	const panels = Array.from(elTxt.querySelectorAll('.panel'));
-	const slideItem = elSlide.querySelectorAll('article');
 	const slideArr = Array.from(slideItem);
 
 	next.addEventListener('click', () => {
@@ -164,7 +162,6 @@ function slideNext() {
 //슬라이드 Prev 버튼
 function slidePrev() {
 	const panels = Array.from(elTxt.querySelectorAll('.panel'));
-	const slideItem = elSlide.querySelectorAll('article');
 	const slideArr = Array.from(slideItem);
 
 	prev.addEventListener('click', () => {
