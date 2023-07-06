@@ -38,7 +38,7 @@ async function fetchSlide() {
 //리스트 fetching함수
 async function fetchList() {
 	num = 4;
-	const list = 'PLFAS7kFpzjoPZEvZ5LcpGZkgyn_FOx9Qg';
+	const list = 'PLFAS7kFpzjoOzH0K-VNLbCyY2fnoyMYh8';
 	const url = `${baseURL}&playlistId=${list}&key=${key}&maxResults=${num}`;
 
 	const data = await fetch(url);
