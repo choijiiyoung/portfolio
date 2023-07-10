@@ -1,6 +1,5 @@
 const ytbWrap = document.querySelector('.youtube');
 const elSlide = ytbWrap.querySelector('.slide_area');
-const slideItem = elSlide.querySelectorAll('article');
 const elTxt = ytbWrap.querySelector('.info_wrap .txt_wrap');
 const elList = ytbWrap.querySelector('.ytb_list');
 const prev = ytbWrap.querySelector('.prev');
@@ -150,6 +149,7 @@ function removePop() {
 //슬라이드 Next 버튼
 function slideNext() {
 	const panels = Array.from(elTxt.querySelectorAll('.panel'));
+	const slideItem = elSlide.querySelectorAll('article');
 	const slideArr = Array.from(slideItem);
 
 	next.addEventListener('click', () => {
@@ -162,6 +162,7 @@ function slideNext() {
 //슬라이드 Prev 버튼
 function slidePrev() {
 	const panels = Array.from(elTxt.querySelectorAll('.panel'));
+	const slideItem = elSlide.querySelectorAll('article');
 	const slideArr = Array.from(slideItem);
 
 	prev.addEventListener('click', () => {
@@ -174,4 +175,5 @@ function slidePrev() {
 function activation(arr, index) {
 	for (const el of arr) el.classList.remove('on');
 	arr[index].classList.add('on');
+	console.log(index);
 }
