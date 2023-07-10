@@ -28,10 +28,12 @@ async function fetchSlide() {
 	createSlide(json.items);
 	createTxt(json.items);
 
+	const slides = Array.from(elSlide.querySelectorAll('article'));
+	const panels = Array.from(elTxt.querySelectorAll('.panel'));
 	elSlide.append(elSlide.firstElementChild);
 	elSlide.append(elSlide.firstElementChild);
-	slideNext();
-	slidePrev();
+	slideNext(slides, panels);
+	slidePrev(slides, panels);
 }
 
 //리스트 fetching함수
@@ -147,26 +149,20 @@ function removePop() {
 }
 
 //슬라이드 Next 버튼
-function slideNext() {
-	const panels = Array.from(elTxt.querySelectorAll('.panel'));
-	const slideArr = Array.from(elSlide.querySelectorAll('article'));
-
+function slideNext(slideArr, txtArr) {
 	next.addEventListener('click', () => {
 		elSlide.append(elSlide.firstElementChild);
 		activeNum === slideArr.length - 1 ? (activeNum = 0) : activeNum++;
-		activation(panels, activeNum);
+		activation(txtArr, activeNum);
 	});
 }
 
 //슬라이드 Prev 버튼
-function slidePrev() {
-	const panels = Array.from(elTxt.querySelectorAll('.panel'));
-	const slideArr = Array.from(elSlide.querySelectorAll('article'));
-
+function slidePrev(slideArr, txtArr) {
 	prev.addEventListener('click', () => {
 		elSlide.prepend(elSlide.lastElementChild);
 		activeNum === 0 ? (activeNum = slideArr.length - 1) : activeNum--;
-		activation(panels, activeNum);
+		activation(txtArr, activeNum);
 	});
 }
 
