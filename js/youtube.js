@@ -149,8 +149,7 @@ function removePop() {
 //슬라이드 Next 버튼
 function slideNext() {
 	const panels = Array.from(elTxt.querySelectorAll('.panel'));
-	const slideItem = elSlide.querySelectorAll('article');
-	const slideArr = Array.from(slideItem);
+	const slideArr = Array.from(elSlide.querySelectorAll('article'));
 
 	next.addEventListener('click', () => {
 		elSlide.append(elSlide.firstElementChild);
@@ -162,8 +161,7 @@ function slideNext() {
 //슬라이드 Prev 버튼
 function slidePrev() {
 	const panels = Array.from(elTxt.querySelectorAll('.panel'));
-	const slideItem = elSlide.querySelectorAll('article');
-	const slideArr = Array.from(slideItem);
+	const slideArr = Array.from(elSlide.querySelectorAll('article'));
 
 	prev.addEventListener('click', () => {
 		elSlide.prepend(elSlide.lastElementChild);
