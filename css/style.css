@@ -958,7 +958,6 @@ main .cross span.col {
 }
 #collabo .collabo_list li {
   flex: 1;
-  height: 490px;
 }
 #collabo .collabo_list li + li {
   border-left: 1px solid #ddd;
@@ -999,11 +998,14 @@ main .cross span.col {
   border-bottom: 1px solid #ddd;
   font-size: 20px;
 }
-#collabo .collabo_list li .box .img_area {
-  overflow: hidden;
+#collabo .collabo_list li .box .img_wrap {
   padding: 30px;
 }
-#collabo .collabo_list li .box .img_area img {
+#collabo .collabo_list li .box .img_wrap .img_area {
+  overflow: hidden;
+  height: 350px;
+}
+#collabo .collabo_list li .box .img_wrap .img_area img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -1012,7 +1014,7 @@ main .cross span.col {
   transition: 0.65s;
 }
 
-#collabo.on .collabo_list li .box .img_area img {
+#collabo.on .collabo_list li .box .img_wrap .img_area img {
   transform: translateY(0px);
   opacity: 1;
 }
@@ -1024,7 +1026,6 @@ main .cross span.col {
   #collabo .collabo_list li {
     flex: none;
     width: 100%;
-    height: auto;
   }
   #collabo .collabo_list li + li {
     border-left: 0;
@@ -1040,8 +1041,8 @@ main .cross span.col {
     text-align: left;
   }
 }
-@media screen and (max-width: 999px) {
-  #collabo .collabo_list li .box .img_area .img {
+@media screen and (max-width: 639px) {
+  #collabo .collabo_list li .box .img_wrap .img_area {
     height: 280px;
   }
 }
