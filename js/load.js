@@ -3,11 +3,11 @@ const mask = document.querySelector('.mask');
 let tags = '';
 const baseURL = 'https://choijiiyoung.github.io/portfolio';
 const imgs = [
-	baseURL + '/img/sub/Department.jpg',
-	baseURL + '/img/sub/Gallery.jpg',
-	baseURL + '/img/sub/Location.jpg',
-	baseURL + '/img/sub/Youtube.jpg',
-	baseURL + '/img/sub/Members.jpg',
+	baseURL + './img/sub/Department.jpg',
+	baseURL + './img/sub/Gallery.jpg',
+	baseURL + './img/sub/Location.jpg',
+	baseURL + './img/sub/Youtube.jpg',
+	baseURL + './img/sub/Members.jpg',
 ];
 const lenImg = imgs.length;
 
