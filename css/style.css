@@ -1311,7 +1311,7 @@ main .cross span.col {
 }
 
 .department .sub_visual {
-  background-image: url("../../img/sub/Department.jpg");
+  background-image: url("../img/sub/Department.jpg");
 }
 .department section.first {
   margin-bottom: 80px;
@@ -1493,7 +1493,7 @@ main .cross span.col {
   }
 }
 .youtube .sub_visual {
-  background-image: url("../../img/sub/Youtube.jpg");
+  background-image: url("../img/sub/Youtube.jpg");
 }
 .youtube img {
   width: 100%;
@@ -1841,7 +1841,7 @@ main .cross span.col {
   width: 100%;
 }
 .gallery .sub_visual {
-  background-image: url("../../img/sub/Gallery.jpg");
+  background-image: url("../img/sub/Gallery.jpg");
 }
 .gallery .loading {
   position: fixed;
@@ -1965,7 +1965,7 @@ main .cross span.col {
   }
 }
 .members .sub_visual {
-  background-image: url("../../img/sub/Members.jpg");
+  background-image: url("../img/sub/Members.jpg");
 }
 .members form table {
   width: 100%;
@@ -2060,7 +2060,7 @@ main .cross span.col {
   }
 }
 .location .sub_visual {
-  background-image: url("../../img/sub/Location.jpg");
+  background-image: url("../img/sub/Location.jpg");
 }
 .location .inner.place {
   margin-bottom: 30px;
