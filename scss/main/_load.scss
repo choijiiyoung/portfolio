@@ -1,0 +1,25 @@
+.defaults {
+	position: absolute;
+	top: -99999px;
+}
+
+.mask {
+	width: 100%;
+	height: 100vh;
+	background: #111;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	opacity: 1;
+	transition: opacity 2s;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font: 20px/1 'arial';
+	color: #fff;
+
+	&.off {
+		opacity: 0;
+	}
+}

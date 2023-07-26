@@ -302,7 +302,10 @@ main .cross span.col {
   width: 100%;
   height: 300px;
   margin-bottom: 100px;
-  background: gray;
+  background-color: gray;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .container section .inner {
   max-width: 1200px;
@@ -1282,6 +1285,34 @@ main .cross span.col {
     border-radius: 8px;
   }
 }
+.defaults {
+  position: absolute;
+  top: -99999px;
+}
+
+.mask {
+  width: 100%;
+  height: 100vh;
+  background: #111;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  opacity: 1;
+  transition: opacity 2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: 20px/1 "arial";
+  color: #fff;
+}
+.mask.off {
+  opacity: 0;
+}
+
+.department .sub_visual {
+  background-image: url("../../img/sub/Department.jpg");
+}
 .department section.first {
   margin-bottom: 80px;
 }
@@ -1460,6 +1491,9 @@ main .cross span.col {
   .department section.last .right .list_area ul li {
     width: 100%;
   }
+}
+.youtube .sub_visual {
+  background-image: url("../../img/sub/Youtube.jpg");
 }
 .youtube img {
   width: 100%;
@@ -1806,6 +1840,9 @@ main .cross span.col {
   position: relative;
   width: 100%;
 }
+.gallery .sub_visual {
+  background-image: url("../../img/sub/Gallery.jpg");
+}
 .gallery .loading {
   position: fixed;
   top: 50%;
@@ -1927,6 +1964,9 @@ main .cross span.col {
     width: 100%;
   }
 }
+.members .sub_visual {
+  background-image: url("../../img/sub/Members.jpg");
+}
 .members form table {
   width: 100%;
   border: none;
@@ -2018,6 +2058,9 @@ main .cross span.col {
   .members form table td input[type=radio] {
     margin: 0 0 0 10px;
   }
+}
+.location .sub_visual {
+  background-image: url("../../img/sub/Location.jpg");
 }
 .location .inner.place {
   margin-bottom: 30px;
